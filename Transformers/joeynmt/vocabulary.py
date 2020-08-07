@@ -175,17 +175,16 @@ def build_vocab(field: str, max_size: int, min_freq: int, dataset: object,
             vocab_tokens = [i[0] for i in tokens_and_frequencies[:limit]]
             return vocab_tokens
 
-        tokens = []
+        vocab_tokens = []
         for label in dataset[1]:
             for word in label:
-                tokens.extend(word)
+                vocab_tokens.append(word)
 
-        counter = Counter(tokens)
-        if min_freq > -1:
-            counter = filter_min(counter, min_freq)
-        vocab_tokens = sort_and_cut(counter, max_size)
+        # counter = Counter(vocab_tokens)
+        # if min_freq > -1:
+        #     counter = filter_min(counter, min_freq)
+        # vocab_tokens = sort_and_cut(counter, max_size)
         assert len(vocab_tokens) <= max_size
-
         vocab = Vocabulary(tokens=vocab_tokens)
         assert len(vocab) <= max_size + len(vocab.specials)
         assert vocab.itos[DEFAULT_UNK_ID()] == UNK_TOKEN

@@ -25,6 +25,7 @@ def get_dataset(file_list: str) -> object:
         content = []
         currFile = open(arkFile.strip("\n"))
         for frame in currFile:
+            line = frame
             if "[" in frame:
                 line = frame.split("[ ")[1]
             elif "]" in frame:
@@ -33,19 +34,16 @@ def get_dataset(file_list: str) -> object:
             line = line.strip("\n").split(" ")
             for f in line:
                 try:
-                    features.append(float(f)*1000)
+                    features.append(float(f))
                 except:
                     pass
             if len(features) != 0:
                 content.append(torch.tensor(features, dtype=torch.float).view(1, 1, -1))
         
-        curr_dataset_floats.append(torch.tensor(content, dtype=torch.float))
-        curr_dataset_labels.append(arkFile.split("/").split(".")[1].strip("\n").split())
+        curr_dataset_floats.append(content)
+        curr_dataset_labels.append(arkFile.split("/")[-1].split(".")[1].strip("\n").split("_"))
     
     return (curr_dataset_floats, curr_dataset_labels)
-    
-
-
 
 def load_data(data_cfg: dict) -> (object, object, Optional[object], Vocabulary):
     src_lang = data_cfg["src"]
@@ -73,7 +71,6 @@ def load_data(data_cfg: dict) -> (object, object, Optional[object], Vocabulary):
     if test_path is not None:
         test_data = get_dataset(test_path+"."+src_lang)
 
-    
     return train_data, dev_data, test_data, trg_vocab
     
 

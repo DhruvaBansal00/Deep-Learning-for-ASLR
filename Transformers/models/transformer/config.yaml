@@ -8,7 +8,7 @@ data: # specify your data here
     test: "/home/dhruva/Desktop/CopyCat/Deep-Learning-for-ASLR/Transformers/test/data/asl/test"      # test data for testing final model; optional
     level: "word"                   # segmentation level: either "word", "bpe" or "char"
     lowercase: True                 # lowercase the data, also for validation
-    max_sent_length: 30             # filter out longer sentences from training (src+trg)
+    max_sent_length: 400             # filter out longer sentences from training (src+trg)
     src_voc_min_freq: 1             # src minimum frequency for a token to become part of the vocabulary
     src_voc_limit: 101              # src vocabulary only includes this many most frequent tokens, default: unlimited
     trg_voc_min_freq: 1             # trg minimum frequency for a token to become part of the vocabulary
