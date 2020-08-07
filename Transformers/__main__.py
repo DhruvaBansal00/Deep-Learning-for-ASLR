@@ -1,5 +1,5 @@
 import argparse
-
+import joeynmt
 from joeynmt.training import train
 from joeynmt.prediction import test
 from joeynmt.prediction import translate

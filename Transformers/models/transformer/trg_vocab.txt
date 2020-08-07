@@ -1,0 +1,5 @@
+<unk>
+<pad>
+<s>
+</s>
+alligator_above_bed

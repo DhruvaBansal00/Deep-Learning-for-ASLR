@@ -18,8 +18,6 @@ import torch
 from torch import Tensor
 from torch.utils.tensorboard import SummaryWriter
 
-from torchtext.data import Dataset
-
 from joeynmt.model import build_model
 from joeynmt.batch import Batch
 from joeynmt.helpers import log_data_info, load_config, log_cfg, \
@@ -267,7 +265,7 @@ class TrainManager:
     # pylint: disable=unnecessary-comprehension
     # pylint: disable=too-many-branches
     # pylint: disable=too-many-statements
-    def train_and_validate(self, train_data: Dataset, valid_data: Dataset) \
+    def train_and_validate(self, train_data: object, valid_data: object) \
             -> None:
         """
         Train the model and validate it from time to time on the validation set.
@@ -621,6 +619,8 @@ def train(cfg_file: str) -> None:
 
     # set the random seed
     set_seed(seed=cfg["training"].get("random_seed", 42))
+
+    print("HERE")
 
     # load the data
     train_data, dev_data, test_data, trg_vocab = load_data(data_cfg=cfg["data"])

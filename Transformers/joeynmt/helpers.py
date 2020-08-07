@@ -18,7 +18,6 @@ import torch
 from torch import nn, Tensor
 from torch.utils.tensorboard import SummaryWriter
 
-from torchtext.data import Dataset
 import yaml
 from joeynmt.vocabulary import Vocabulary
 from joeynmt.plotting import plot_heatmap
@@ -123,7 +122,7 @@ def set_seed(seed: int) -> None:
     random.seed(seed)
 
 
-def log_data_info(train_data: Dataset, valid_data: Dataset, test_data: Dataset,
+def log_data_info(train_data: object, valid_data: object, test_data: object,
                   trg_vocab: Vocabulary,
                   logging_function: Callable[[str], None]) -> None:
     """

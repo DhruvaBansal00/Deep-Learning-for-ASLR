@@ -9,6 +9,7 @@ import os.path
 from typing import Optional
 
 from torchtext.datasets import TranslationDataset
+import torch
 from torchtext import data
 from torchtext.data import Dataset, Iterator, Field
 
@@ -16,7 +17,69 @@ from joeynmt.constants import UNK_TOKEN, EOS_TOKEN, BOS_TOKEN, PAD_TOKEN
 from joeynmt.vocabulary import build_vocab, Vocabulary
 
 
-def load_data(data_cfg: dict) -> (Dataset, Dataset, Optional[Dataset],
+def get_dataset(file_list: str) -> object:
+    curr_dataset_floats = []
+    curr_dataset_labels = []
+    fileList = open(file_list)
+    for arkFile in fileList:
+        content = []
+        currFile = open(arkFile.strip("\n"))
+        for frame in currFile:
+            if "[" in frame:
+                line = frame.split("[ ")[1]
+            elif "]" in frame:
+                line = frame.split("]")[0]
+            features = []
+            line = line.strip("\n").split(" ")
+            for f in line:
+                try:
+                    features.append(float(f)*1000)
+                except:
+                    pass
+            if len(features) != 0:
+                content.append(torch.tensor(features, dtype=torch.float).view(1, 1, -1))
+        
+        curr_dataset_floats.append(torch.tensor(content, dtype=torch.float))
+        curr_dataset_labels.append(arkFile.split("/").split(".")[1].strip("\n").split())
+    
+    return (curr_dataset_floats, curr_dataset_labels)
+    
+
+
+
+def load_data(data_cfg: dict) -> (object, object, Optional[object], Vocabulary):
+    src_lang = data_cfg["src"]
+    trg_lang = data_cfg["trg"]
+    train_path = data_cfg["train"]
+    dev_path = data_cfg["dev"]
+    test_path = data_cfg.get("test", None)
+    level = data_cfg["level"]
+    lowercase = data_cfg["lowercase"]
+    max_sent_length = data_cfg["max_sent_length"]
+    tok_fun = lambda s: list(s) if level == "char" else s.split()
+
+    trg_max_size = data_cfg.get("trg_voc_limit", sys.maxsize)
+    trg_min_freq = data_cfg.get("trg_voc_min_freq", 1)
+
+    trg_vocab_file = data_cfg.get("trg_vocab", None)
+    train_data = get_dataset(train_path+"."+src_lang)
+
+    trg_vocab = build_vocab(field="trg", min_freq=trg_min_freq,
+                            max_size=trg_max_size,
+                            dataset=train_data, vocab_file=trg_vocab_file)
+    
+    dev_data = get_dataset(dev_path+"."+src_lang)
+    test_data = None
+    if test_path is not None:
+        test_data = get_dataset(test_path+"."+src_lang)
+
+    
+    return train_data, dev_data, test_data, trg_vocab
+    
+
+
+
+def old_load_data(data_cfg: dict) -> (Dataset, Dataset, Optional[Dataset],
                                   Vocabulary, Vocabulary):
     """
     Load train, dev and optionally test data as specified in configuration.
