@@ -28,9 +28,7 @@ class Model(nn.Module):
     def __init__(self,
                  encoder: Encoder,
                  decoder: Decoder,
-                 src_embed: Embeddings,
                  trg_embed: Embeddings,
-                 src_vocab: Vocabulary,
                  trg_vocab: Vocabulary) -> None:
         """
         Create a new encoder-decoder model
@@ -44,11 +42,9 @@ class Model(nn.Module):
         """
         super(Model, self).__init__()
 
-        self.src_embed = src_embed
         self.trg_embed = trg_embed
         self.encoder = encoder
         self.decoder = decoder
-        self.src_vocab = src_vocab
         self.trg_vocab = trg_vocab
         self.bos_index = self.trg_vocab.stoi[BOS_TOKEN]
         self.pad_index = self.trg_vocab.stoi[PAD_TOKEN]
@@ -89,7 +85,7 @@ class Model(nn.Module):
         :param src_mask:
         :return: encoder outputs (output, hidden_concat)
         """
-        return self.encoder(self.src_embed(src), src_length, src_mask)
+        return self.encoder(src, src_length, src_mask)
 
     def decode(self, encoder_output: Tensor, encoder_hidden: Tensor,
                src_mask: Tensor, trg_input: Tensor,
@@ -192,13 +188,11 @@ class Model(nn.Module):
         return "%s(\n" \
                "\tencoder=%s,\n" \
                "\tdecoder=%s,\n" \
-               "\tsrc_embed=%s,\n" \
                "\ttrg_embed=%s)" % (self.__class__.__name__, self.encoder,
-                   self.decoder, self.src_embed, self.trg_embed)
+                   self.decoder, self.trg_embed)
 
 
 def build_model(cfg: dict = None,
-                src_vocab: Vocabulary = None,
                 trg_vocab: Vocabulary = None) -> Model:
     """
     Build and initialize the model according to the configuration.
@@ -208,22 +202,13 @@ def build_model(cfg: dict = None,
     :param trg_vocab: target vocabulary
     :return: built and initialized model
     """
-    src_padding_idx = src_vocab.stoi[PAD_TOKEN]
     trg_padding_idx = trg_vocab.stoi[PAD_TOKEN]
-
-    src_embed = Embeddings(
-        **cfg["encoder"]["embeddings"], vocab_size=len(src_vocab),
-        padding_idx=src_padding_idx)
 
     # this ties source and target embeddings
     # for softmax layer tying, see further below
     if cfg.get("tied_embeddings", False):
-        if src_vocab.itos == trg_vocab.itos:
-            # share embeddings for src and trg
-            trg_embed = src_embed
-        else:
-            raise ConfigurationError(
-                "Embedding cannot be tied since vocabularies differ.")
+        raise ConfigurationError(
+            "Embedding cannot be tied since no src vocab exists.")
     else:
         trg_embed = Embeddings(
             **cfg["decoder"]["embeddings"], vocab_size=len(trg_vocab),
@@ -238,11 +223,10 @@ def build_model(cfg: dict = None,
                "for transformer, emb_size must be hidden_size"
 
         encoder = TransformerEncoder(**cfg["encoder"],
-                                     emb_size=src_embed.embedding_dim,
                                      emb_dropout=enc_emb_dropout)
     else:
         encoder = RecurrentEncoder(**cfg["encoder"],
-                                   emb_size=src_embed.embedding_dim,
+                                   emb_size=cfg["encoder"]["embeddings"],
                                    emb_dropout=enc_emb_dropout)
 
     # build decoder
@@ -258,8 +242,7 @@ def build_model(cfg: dict = None,
             emb_size=trg_embed.embedding_dim, emb_dropout=dec_emb_dropout)
 
     model = Model(encoder=encoder, decoder=decoder,
-                  src_embed=src_embed, trg_embed=trg_embed,
-                  src_vocab=src_vocab, trg_vocab=trg_vocab)
+                  trg_embed=trg_embed, trg_vocab=trg_vocab)
 
     # tie softmax layer with trg embeddings
     if cfg.get("tied_softmax", False):
@@ -274,6 +257,6 @@ def build_model(cfg: dict = None,
                 "The decoder must be a Transformer.")
 
     # custom initialization of model parameters
-    initialize_model(model, cfg, src_padding_idx, trg_padding_idx)
+    initialize_model(model, cfg, trg_padding_idx)
 
     return model
