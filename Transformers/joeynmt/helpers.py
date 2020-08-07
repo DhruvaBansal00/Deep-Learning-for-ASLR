@@ -124,7 +124,7 @@ def set_seed(seed: int) -> None:
 
 
 def log_data_info(train_data: Dataset, valid_data: Dataset, test_data: Dataset,
-                  src_vocab: Vocabulary, trg_vocab: Vocabulary,
+                  trg_vocab: Vocabulary,
                   logging_function: Callable[[str], None]) -> None:
     """
     Log statistics of data and vocabulary.
@@ -145,12 +145,9 @@ def log_data_info(train_data: Dataset, valid_data: Dataset, test_data: Dataset,
         " ".join(vars(train_data[0])['src']),
         " ".join(vars(train_data[0])['trg']))
 
-    logging_function("First 10 words (src): %s", " ".join(
-        '(%d) %s' % (i, t) for i, t in enumerate(src_vocab.itos[:10])))
     logging_function("First 10 words (trg): %s", " ".join(
         '(%d) %s' % (i, t) for i, t in enumerate(trg_vocab.itos[:10])))
 
-    logging_function("Number of Src words (types): %d", len(src_vocab))
     logging_function("Number of Trg words (types): %d", len(trg_vocab))
 
 

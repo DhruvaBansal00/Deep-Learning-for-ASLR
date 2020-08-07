@@ -72,17 +72,11 @@ def load_data(data_cfg: dict) -> (Dataset, Dataset, Optional[Dataset],
                                     and len(vars(x)['trg'])
                                     <= max_sent_length)
 
-    src_max_size = data_cfg.get("src_voc_limit", sys.maxsize)
-    src_min_freq = data_cfg.get("src_voc_min_freq", 1)
     trg_max_size = data_cfg.get("trg_voc_limit", sys.maxsize)
     trg_min_freq = data_cfg.get("trg_voc_min_freq", 1)
 
-    src_vocab_file = data_cfg.get("src_vocab", None)
     trg_vocab_file = data_cfg.get("trg_vocab", None)
 
-    src_vocab = build_vocab(field="src", min_freq=src_min_freq,
-                            max_size=src_max_size,
-                            dataset=train_data, vocab_file=src_vocab_file)
     trg_vocab = build_vocab(field="trg", min_freq=trg_min_freq,
                             max_size=trg_max_size,
                             dataset=train_data, vocab_file=trg_vocab_file)
@@ -110,9 +104,8 @@ def load_data(data_cfg: dict) -> (Dataset, Dataset, Optional[Dataset],
             # no target is given -> create dataset from src only
             test_data = MonoDataset(path=test_path, ext="." + src_lang,
                                     field=src_field)
-    src_field.vocab = src_vocab
     trg_field.vocab = trg_vocab
-    return train_data, dev_data, test_data, src_vocab, trg_vocab
+    return train_data, dev_data, test_data, trg_vocab
 
 
 # pylint: disable=global-at-module-level
