@@ -38,14 +38,16 @@ def get_dataset(file_list: str, max_src_length: int, max_trg_length: int) -> obj
                 except:
                     pass
             if len(features) != 0:
-                content.append(torch.tensor(features, dtype=torch.float))
+                # content.append(torch.tensor(features, dtype=torch.float))
+                content.append(features)
         if len(content) <= max_src_length:
             
             while len(content) < max_src_length:
                 features = [SRC_PAD_TOKEN for i in range(len(content[1]))]
-                content.append(torch.tensor(features, dtype=torch.float))
+                # content.append(torch.tensor(features, dtype=torch.float))
+                content.append(features)
 
-            curr_dataset_floats.append(content)
+            curr_dataset_floats.append(torch.tensor(content, dtype=torch.float))
             curr_label = arkFile.split("/")[-1].split(".")[1].strip("\n").split("_")
 
             while len(curr_label) < max_trg_length:
