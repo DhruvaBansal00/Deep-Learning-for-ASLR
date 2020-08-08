@@ -45,7 +45,7 @@ def get_dataset(file_list: str, max_src_length: int, max_trg_length: int) -> obj
                 features = [SRC_PAD_TOKEN for i in range(len(content[1]))]
                 content.append(features)
 
-            curr_dataset_floats.append(torch.tensor(content, dtype=torch.float))
+            curr_dataset_floats.append(content)
             curr_label = [BOS_TOKEN]
             curr_label.extend(arkFile.split("/")[-1].split(".")[1].strip("\n").split("_"))
             curr_label.extend(EOS_TOKEN)
@@ -241,7 +241,7 @@ def make_data_iter(dataset: Dataset,
     for initIndex in range(0, len(dataset[0]), batch_size):
         curr_batch = [dataset[0][i] for i in range(initIndex, min(len(dataset[0]), initIndex + batch_size))]
         curr_labels = [dataset[1][i] for i in range(initIndex, min(len(dataset[0]), initIndex + batch_size))]
-        data_iter.append(curr_batch)
+        data_iter.append(torch.tensor(curr_batch, dtype=float))
         data_labels.append(curr_labels)
 
     return data_iter, data_labels
