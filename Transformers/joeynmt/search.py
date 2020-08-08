@@ -221,14 +221,14 @@ def beam_search(
 
     encoder_output = tile(encoder_output.contiguous(), size,
                           dim=0)  # batch*k x src_len x enc_hidden_size
-    src_mask = tile(src_mask, size, dim=0)  # batch*k x 1 x src_len
+    src_mask = tile(src_mask, size, dim=0).unsqueeze(1)  # batch*k x 1 x src_len
 
     # Transformer only: create target mask
     if transformer:
         trg_mask = src_mask.new_ones([1, 1, 1])  # transformer only
     else:
         trg_mask = None
-
+    
     # numbering elements in the batch
     batch_offset = torch.arange(
         batch_size, dtype=torch.long, device=encoder_output.device)
@@ -313,7 +313,6 @@ def beam_search(
 
         # pick currently best top k hypotheses (flattened order)
         topk_scores, topk_ids = curr_scores.topk(size, dim=-1)
-
         if alpha > -1:
             # recover original log probs
             topk_log_probs = topk_scores * length_penalty
@@ -321,7 +320,7 @@ def beam_search(
             topk_log_probs = topk_scores.clone()
 
         # reconstruct beam origin and true word ids from flattened order
-        topk_beam_index = topk_ids.div(decoder.output_size)
+        topk_beam_index = topk_ids.true_divide(decoder.output_size).floor().int()
         topk_ids = topk_ids.fmod(decoder.output_size)
 
         # map beam_index to batch_index in the flat representation

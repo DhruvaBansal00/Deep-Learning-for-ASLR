@@ -224,7 +224,7 @@ def test(cfg_file,
     _, dev_data, test_data, trg_vocab = load_data(
         data_cfg=cfg["data"])
 
-    data_to_predict = {"dev": dev_data, "test": test_data}
+    data_to_predict = {"test": test_data}
 
     # load model state from disk
     model_checkpoint = load_checkpoint(ckpt, use_cuda=use_cuda)
@@ -258,7 +258,7 @@ def test(cfg_file,
             beam_alpha=beam_alpha, logger=logger, postprocess=postprocess)
         #pylint: enable=unused-variable
 
-        if "trg" in data_set.fields:
+        if data_set[1]:
             decoding_description = "Greedy decoding" if beam_size < 2 else \
                 "Beam search decoding with beam size = {} and alpha = {}".\
                     format(beam_size, beam_alpha)
