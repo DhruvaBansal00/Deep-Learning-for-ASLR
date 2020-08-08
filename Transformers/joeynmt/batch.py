@@ -38,7 +38,6 @@ class Batch:
         self.trg = trg[:, 1:]
         # we exclude the padded areas from the loss computation
         self.trg_mask = (self.trg_input != pad_index).unsqueeze(1)
-        print(self.trg_mask)
         self.ntokens = (self.trg != pad_index).data.sum().item()
 
         if use_cuda:
