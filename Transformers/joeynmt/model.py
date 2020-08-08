@@ -70,6 +70,8 @@ class Model(nn.Module):
                                                      src_length=src_lengths,
                                                      src_mask=src_mask)
         unroll_steps = trg_input.size(1)
+        print("Encoder output = " + str(encoder_output.size()))
+        print("Encoder hidden = " + str(encoder_hidden))
         return self.decode(encoder_output=encoder_output,
                            encoder_hidden=encoder_hidden,
                            src_mask=src_mask, trg_input=trg_input,

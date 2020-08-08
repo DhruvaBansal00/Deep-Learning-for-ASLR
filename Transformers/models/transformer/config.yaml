@@ -78,12 +78,12 @@ model:                              # specify your model architecture here
     decoder:
         type: "transformer"         # decoder type: "recurrent" for LSTM or GRU, or "transformer" for a Transformer
         num_layers: 3               # number of layers
-        num_heads: 4                # number of transformer heads
+        num_heads: 2                # number of transformer heads
         embeddings:
-            embedding_dim: 64
+            embedding_dim: 94
             scale: True
             freeze: False           # if True, embeddings are not updated during training
-        hidden_size: 64             # size of hidden layer; must be divisible by number of heads
+        hidden_size: 94             # size of hidden layer; must be divisible by number of heads
         ff_size: 128                # size of position-wise feed-forward layer
         dropout: 0.1
         freeze: False               # if True, decoder parameters are not updated during training (does not include embedding parameters, but attention)

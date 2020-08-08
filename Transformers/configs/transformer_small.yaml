@@ -78,7 +78,7 @@ model:                              # specify your model architecture here
     decoder:
         type: "transformer"         # decoder type: "recurrent" for LSTM or GRU, or "transformer" for a Transformer
         num_layers: 3               # number of layers
-        num_heads: 4                # number of transformer heads
+        num_heads: 2                # number of transformer heads
         embeddings:
             embedding_dim: 94
             scale: True
