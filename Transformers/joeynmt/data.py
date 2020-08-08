@@ -16,6 +16,15 @@ from torchtext.data import Dataset, Iterator, Field
 from joeynmt.constants import UNK_TOKEN, EOS_TOKEN, BOS_TOKEN, PAD_TOKEN, SRC_PAD_TOKEN
 from joeynmt.vocabulary import build_vocab, Vocabulary
 
+def label_to_int(labels, vocab):
+    print(labels)
+    int_labels = []
+    for label in labels:
+        currLabel = [vocab.stoi[word] for word in label]
+        int_labels.append(currLabel)
+    return int_labels
+
+
 
 def get_dataset(file_list: str, max_src_length: int, max_trg_length: int) -> object:
     curr_dataset_floats = []
@@ -48,8 +57,8 @@ def get_dataset(file_list: str, max_src_length: int, max_trg_length: int) -> obj
             curr_dataset_floats.append(content)
             curr_label = [BOS_TOKEN]
             curr_label.extend(arkFile.split("/")[-1].split(".")[1].strip("\n").split("_"))
-            curr_label.extend(EOS_TOKEN)
-
+            curr_label.append(EOS_TOKEN)
+            
             while len(curr_label) < max_trg_length:
                 curr_label.append(PAD_TOKEN)
             curr_dataset_labels.append(curr_label)
@@ -82,6 +91,14 @@ def load_data(data_cfg: dict) -> (object, object, Optional[object], Vocabulary):
     test_data = None
     if test_path is not None:
         test_data = get_dataset(test_path+"."+src_lang, max_src_length, max_trg_length)
+        test_data_labels = label_to_int(train_data[1], trg_vocab)
+        test_data = (test_data[0], test_data_labels)
+    
+    train_data_labels = label_to_int(train_data[1], trg_vocab)
+    dev_data_labels = label_to_int(train_data[1], trg_vocab)
+
+    train_data = (train_data[0], train_data_labels)
+    dev_data = (dev_data[0], dev_data_labels)
 
     return train_data, dev_data, test_data, trg_vocab
     
@@ -242,7 +259,7 @@ def make_data_iter(dataset: Dataset,
         curr_batch = [dataset[0][i] for i in range(initIndex, min(len(dataset[0]), initIndex + batch_size))]
         curr_labels = [dataset[1][i] for i in range(initIndex, min(len(dataset[0]), initIndex + batch_size))]
         data_iter.append(torch.tensor(curr_batch, dtype=float))
-        data_labels.append(curr_labels)
+        data_labels.append(torch.tensor(curr_labels, dtype=float))
 
     return data_iter, data_labels
 

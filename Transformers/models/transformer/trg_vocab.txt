@@ -5,7 +5,3 @@
 alligator
 above
 bed
-<
-/
-s
->

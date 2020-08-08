@@ -303,6 +303,7 @@ class TrainManager:
 
             for i, batch in enumerate(iter(train_iter)):
                 print(batch)
+                print(train_labels[i])
                 # reactivate training
                 self.model.train()
                 # create a Batch object from torchtext batch
