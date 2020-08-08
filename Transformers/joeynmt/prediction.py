@@ -116,7 +116,7 @@ def validate_on_data(model: Model, data: Dataset,
                 attention_scores
                 if attention_scores is not None else [])
 
-        assert len(all_outputs) == len(data)
+        assert len(all_outputs) == len(data[1])
 
         if loss_function is not None and total_ntokens > 0:
             # total validation loss
@@ -128,13 +128,18 @@ def validate_on_data(model: Model, data: Dataset,
             valid_ppl = -1
 
         # decode back to symbols
-        decoded_valid = model.trg_vocab.arrays_to_sentences(arrays=all_outputs,
-                                                            cut_at_eos=True)
+        bos_cutoff_labels = []
+        for label in data[1]:
+            currLabel = label[1:]
+            bos_cutoff_labels.append(currLabel)
+        
+        decoded_valid = model.trg_vocab.arrays_to_sentences(arrays=all_outputs)
+        reference_valid = model.trg_vocab.arrays_to_sentences(arrays=bos_cutoff_labels)
 
         # evaluate with metric on full dataset
         join_char = " " if level in ["word", "bpe"] else ""
-        valid_sources = [join_char.join(s) for s in data.src]
-        valid_references = [join_char.join(t) for t in data.trg]
+        valid_sources = data[0]
+        valid_references = [join_char.join(t) for t in reference_valid]
         valid_hypotheses = [join_char.join(t) for t in decoded_valid]
 
         # post-process

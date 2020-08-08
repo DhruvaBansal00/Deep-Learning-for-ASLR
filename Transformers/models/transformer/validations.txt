@@ -1,0 +1,1 @@
+Steps: 100	Loss: 2.09372	PPL: 1.68781	sequence_accuracy: 100.00000	LR: 0.00016308	*

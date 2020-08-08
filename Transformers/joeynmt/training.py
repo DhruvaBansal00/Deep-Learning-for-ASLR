@@ -375,7 +375,7 @@ class TrainManager:
                             loss_function=self.loss,
                             beam_size=1,  # greedy validations
                             batch_type=self.eval_batch_type,
-                            postprocess=True # always remove BPE for validation
+                            postprocess=False # always remove BPE for validation
                         )
 
                     self.tb_writer.add_scalar("valid/valid_loss",
@@ -586,14 +586,14 @@ class TrainManager:
 
             self.logger.info("Example #%d", p)
 
-            if sources_raw is not None:
-                self.logger.debug("\tRaw source:     %s", sources_raw[p])
+            # if sources_raw is not None:
+            #     self.logger.debug("\tRaw source:     %s", sources_raw[p])
             if references_raw is not None:
                 self.logger.debug("\tRaw reference:  %s", references_raw[p])
             if hypotheses_raw is not None:
                 self.logger.debug("\tRaw hypothesis: %s", hypotheses_raw[p])
 
-            self.logger.info("\tSource:     %s", sources[p])
+            # self.logger.info("\tSource:     %s", sources[p])
             self.logger.info("\tReference:  %s", references[p])
             self.logger.info("\tHypothesis: %s", hypotheses[p])
 
