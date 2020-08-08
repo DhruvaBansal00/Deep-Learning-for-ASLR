@@ -17,7 +17,6 @@ from joeynmt.constants import UNK_TOKEN, EOS_TOKEN, BOS_TOKEN, PAD_TOKEN, SRC_PA
 from joeynmt.vocabulary import build_vocab, Vocabulary
 
 def label_to_int(labels, vocab):
-    print(labels)
     int_labels = []
     for label in labels:
         currLabel = [vocab.stoi[word] for word in label]
@@ -58,7 +57,7 @@ def get_dataset(file_list: str, max_src_length: int, max_trg_length: int) -> obj
             curr_label = [BOS_TOKEN]
             curr_label.extend(arkFile.split("/")[-1].split(".")[1].strip("\n").split("_"))
             curr_label.append(EOS_TOKEN)
-            
+
             while len(curr_label) < max_trg_length:
                 curr_label.append(PAD_TOKEN)
             curr_dataset_labels.append(curr_label)
@@ -258,8 +257,8 @@ def make_data_iter(dataset: Dataset,
     for initIndex in range(0, len(dataset[0]), batch_size):
         curr_batch = [dataset[0][i] for i in range(initIndex, min(len(dataset[0]), initIndex + batch_size))]
         curr_labels = [dataset[1][i] for i in range(initIndex, min(len(dataset[0]), initIndex + batch_size))]
-        data_iter.append(torch.tensor(curr_batch, dtype=float))
-        data_labels.append(torch.tensor(curr_labels, dtype=float))
+        data_iter.append(torch.tensor(curr_batch))
+        data_labels.append(torch.tensor(curr_labels))
 
     return data_iter, data_labels
 

@@ -620,9 +620,7 @@ def train(cfg_file: str) -> None:
 
     # set the random seed
     set_seed(seed=cfg["training"].get("random_seed", 42))
-
-    print("HERE")
-
+    
     # load the data
     train_data, dev_data, test_data, trg_vocab = load_data(data_cfg=cfg["data"])
 
