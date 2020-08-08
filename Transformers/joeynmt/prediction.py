@@ -17,7 +17,7 @@ from joeynmt.metrics import bleu, chrf, token_accuracy, sequence_accuracy
 from joeynmt.model import build_model, Model
 from joeynmt.batch import Batch
 from joeynmt.data import load_data, make_data_iter, MonoDataset
-from joeynmt.constants import UNK_TOKEN, PAD_TOKEN, EOS_TOKEN
+from joeynmt.constants import UNK_TOKEN, PAD_TOKEN, EOS_TOKEN, SRC_PAD_TOKEN
 from joeynmt.vocabulary import Vocabulary
 
 
@@ -73,11 +73,15 @@ def validate_on_data(model: Model, data: Dataset,
             "this? 'batch_size' is > 1000 for sentence-batching. "
             "Consider decreasing it or switching to"
             " 'eval_batch_type: token'.")
-    valid_iter = make_data_iter(
-        dataset=data, batch_size=batch_size, batch_type=batch_type,
-        shuffle=False, train=False)
-    valid_sources_raw = data.src
-    pad_index = model.src_vocab.stoi[PAD_TOKEN]
+    valid_iter, valid_labels = make_data_iter(data,
+                                    batch_size=batch_size,
+                                    batch_type=batch_type,
+                                    train=False, shuffle=False)
+
+    # valid_sources_raw = data[0]
+    # src_padding = model.src_pad
+    # trg_padding = model.trg_vocab.stoi[PAD_TOKEN]
+
     # disable dropout
     model.eval()
     # don't track gradients during validation
@@ -87,12 +91,11 @@ def validate_on_data(model: Model, data: Dataset,
         total_loss = 0
         total_ntokens = 0
         total_nseqs = 0
-        for valid_batch in iter(valid_iter):
+        for i, valid_batch in enumerate(iter(valid_iter)):
             # run as during training to get validation loss (e.g. xent)
-
-            batch = Batch(valid_batch, pad_index, use_cuda=use_cuda)
+            batch = Batch(valid_batch, SRC_PAD_TOKEN, valid_labels[i], model.pad_index, use_cuda=use_cuda)
             # sort batch now by src length and keep track of order
-            sort_reverse_index = batch.sort_by_src_lengths()
+            # sort_reverse_index = batch.sort_by_src_lengths()
 
             # run as during training with teacher forcing
             if loss_function is not None and batch.trg is not None:
@@ -108,9 +111,9 @@ def validate_on_data(model: Model, data: Dataset,
                 max_output_length=max_output_length)
 
             # sort outputs back to original order
-            all_outputs.extend(output[sort_reverse_index])
+            all_outputs.extend(output)
             valid_attention_scores.extend(
-                attention_scores[sort_reverse_index]
+                attention_scores
                 if attention_scores is not None else [])
 
         assert len(all_outputs) == len(data)
@@ -162,7 +165,7 @@ def validate_on_data(model: Model, data: Dataset,
             current_valid_score = -1
 
     return current_valid_score, valid_loss, valid_ppl, valid_sources, \
-        valid_sources_raw, valid_references, valid_hypotheses, \
+        valid_iter, valid_references, valid_hypotheses, \
         decoded_valid, valid_attention_scores
 
 
@@ -213,7 +216,7 @@ def test(cfg_file,
     max_output_length = cfg["training"].get("max_output_length", None)
 
     # load the data
-    _, dev_data, test_data, src_vocab, trg_vocab = load_data(
+    _, dev_data, test_data, trg_vocab = load_data(
         data_cfg=cfg["data"])
 
     data_to_predict = {"dev": dev_data, "test": test_data}
@@ -222,7 +225,7 @@ def test(cfg_file,
     model_checkpoint = load_checkpoint(ckpt, use_cuda=use_cuda)
 
     # build model and load parameters into it
-    model = build_model(cfg["model"], src_vocab=src_vocab, trg_vocab=trg_vocab)
+    model = build_model(cfg["model"], trg_vocab=trg_vocab)
     model.load_state_dict(model_checkpoint["model_state"])
 
     if use_cuda:

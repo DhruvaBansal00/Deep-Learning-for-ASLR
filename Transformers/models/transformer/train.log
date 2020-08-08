@@ -1,102 +1,288 @@
-2020-08-08 15:54:28,258 Hello! This is Joey-NMT.
-2020-08-08 15:54:29,228 Total params: 471050
-2020-08-08 15:54:29,229 Trainable parameters: ['decoder.layer_norm.bias', 'decoder.layer_norm.weight', 'decoder.layers.0.dec_layer_norm.bias', 'decoder.layers.0.dec_layer_norm.weight', 'decoder.layers.0.feed_forward.layer_norm.bias', 'decoder.layers.0.feed_forward.layer_norm.weight', 'decoder.layers.0.feed_forward.pwff_layer.0.bias', 'decoder.layers.0.feed_forward.pwff_layer.0.weight', 'decoder.layers.0.feed_forward.pwff_layer.3.bias', 'decoder.layers.0.feed_forward.pwff_layer.3.weight', 'decoder.layers.0.src_trg_att.k_layer.bias', 'decoder.layers.0.src_trg_att.k_layer.weight', 'decoder.layers.0.src_trg_att.output_layer.bias', 'decoder.layers.0.src_trg_att.output_layer.weight', 'decoder.layers.0.src_trg_att.q_layer.bias', 'decoder.layers.0.src_trg_att.q_layer.weight', 'decoder.layers.0.src_trg_att.v_layer.bias', 'decoder.layers.0.src_trg_att.v_layer.weight', 'decoder.layers.0.trg_trg_att.k_layer.bias', 'decoder.layers.0.trg_trg_att.k_layer.weight', 'decoder.layers.0.trg_trg_att.output_layer.bias', 'decoder.layers.0.trg_trg_att.output_layer.weight', 'decoder.layers.0.trg_trg_att.q_layer.bias', 'decoder.layers.0.trg_trg_att.q_layer.weight', 'decoder.layers.0.trg_trg_att.v_layer.bias', 'decoder.layers.0.trg_trg_att.v_layer.weight', 'decoder.layers.0.x_layer_norm.bias', 'decoder.layers.0.x_layer_norm.weight', 'decoder.layers.1.dec_layer_norm.bias', 'decoder.layers.1.dec_layer_norm.weight', 'decoder.layers.1.feed_forward.layer_norm.bias', 'decoder.layers.1.feed_forward.layer_norm.weight', 'decoder.layers.1.feed_forward.pwff_layer.0.bias', 'decoder.layers.1.feed_forward.pwff_layer.0.weight', 'decoder.layers.1.feed_forward.pwff_layer.3.bias', 'decoder.layers.1.feed_forward.pwff_layer.3.weight', 'decoder.layers.1.src_trg_att.k_layer.bias', 'decoder.layers.1.src_trg_att.k_layer.weight', 'decoder.layers.1.src_trg_att.output_layer.bias', 'decoder.layers.1.src_trg_att.output_layer.weight', 'decoder.layers.1.src_trg_att.q_layer.bias', 'decoder.layers.1.src_trg_att.q_layer.weight', 'decoder.layers.1.src_trg_att.v_layer.bias', 'decoder.layers.1.src_trg_att.v_layer.weight', 'decoder.layers.1.trg_trg_att.k_layer.bias', 'decoder.layers.1.trg_trg_att.k_layer.weight', 'decoder.layers.1.trg_trg_att.output_layer.bias', 'decoder.layers.1.trg_trg_att.output_layer.weight', 'decoder.layers.1.trg_trg_att.q_layer.bias', 'decoder.layers.1.trg_trg_att.q_layer.weight', 'decoder.layers.1.trg_trg_att.v_layer.bias', 'decoder.layers.1.trg_trg_att.v_layer.weight', 'decoder.layers.1.x_layer_norm.bias', 'decoder.layers.1.x_layer_norm.weight', 'decoder.layers.2.dec_layer_norm.bias', 'decoder.layers.2.dec_layer_norm.weight', 'decoder.layers.2.feed_forward.layer_norm.bias', 'decoder.layers.2.feed_forward.layer_norm.weight', 'decoder.layers.2.feed_forward.pwff_layer.0.bias', 'decoder.layers.2.feed_forward.pwff_layer.0.weight', 'decoder.layers.2.feed_forward.pwff_layer.3.bias', 'decoder.layers.2.feed_forward.pwff_layer.3.weight', 'decoder.layers.2.src_trg_att.k_layer.bias', 'decoder.layers.2.src_trg_att.k_layer.weight', 'decoder.layers.2.src_trg_att.output_layer.bias', 'decoder.layers.2.src_trg_att.output_layer.weight', 'decoder.layers.2.src_trg_att.q_layer.bias', 'decoder.layers.2.src_trg_att.q_layer.weight', 'decoder.layers.2.src_trg_att.v_layer.bias', 'decoder.layers.2.src_trg_att.v_layer.weight', 'decoder.layers.2.trg_trg_att.k_layer.bias', 'decoder.layers.2.trg_trg_att.k_layer.weight', 'decoder.layers.2.trg_trg_att.output_layer.bias', 'decoder.layers.2.trg_trg_att.output_layer.weight', 'decoder.layers.2.trg_trg_att.q_layer.bias', 'decoder.layers.2.trg_trg_att.q_layer.weight', 'decoder.layers.2.trg_trg_att.v_layer.bias', 'decoder.layers.2.trg_trg_att.v_layer.weight', 'decoder.layers.2.x_layer_norm.bias', 'decoder.layers.2.x_layer_norm.weight', 'encoder.layer_norm.bias', 'encoder.layer_norm.weight', 'encoder.layers.0.feed_forward.layer_norm.bias', 'encoder.layers.0.feed_forward.layer_norm.weight', 'encoder.layers.0.feed_forward.pwff_layer.0.bias', 'encoder.layers.0.feed_forward.pwff_layer.0.weight', 'encoder.layers.0.feed_forward.pwff_layer.3.bias', 'encoder.layers.0.feed_forward.pwff_layer.3.weight', 'encoder.layers.0.layer_norm.bias', 'encoder.layers.0.layer_norm.weight', 'encoder.layers.0.src_src_att.k_layer.bias', 'encoder.layers.0.src_src_att.k_layer.weight', 'encoder.layers.0.src_src_att.output_layer.bias', 'encoder.layers.0.src_src_att.output_layer.weight', 'encoder.layers.0.src_src_att.q_layer.bias', 'encoder.layers.0.src_src_att.q_layer.weight', 'encoder.layers.0.src_src_att.v_layer.bias', 'encoder.layers.0.src_src_att.v_layer.weight', 'encoder.layers.1.feed_forward.layer_norm.bias', 'encoder.layers.1.feed_forward.layer_norm.weight', 'encoder.layers.1.feed_forward.pwff_layer.0.bias', 'encoder.layers.1.feed_forward.pwff_layer.0.weight', 'encoder.layers.1.feed_forward.pwff_layer.3.bias', 'encoder.layers.1.feed_forward.pwff_layer.3.weight', 'encoder.layers.1.layer_norm.bias', 'encoder.layers.1.layer_norm.weight', 'encoder.layers.1.src_src_att.k_layer.bias', 'encoder.layers.1.src_src_att.k_layer.weight', 'encoder.layers.1.src_src_att.output_layer.bias', 'encoder.layers.1.src_src_att.output_layer.weight', 'encoder.layers.1.src_src_att.q_layer.bias', 'encoder.layers.1.src_src_att.q_layer.weight', 'encoder.layers.1.src_src_att.v_layer.bias', 'encoder.layers.1.src_src_att.v_layer.weight', 'encoder.layers.2.feed_forward.layer_norm.bias', 'encoder.layers.2.feed_forward.layer_norm.weight', 'encoder.layers.2.feed_forward.pwff_layer.0.bias', 'encoder.layers.2.feed_forward.pwff_layer.0.weight', 'encoder.layers.2.feed_forward.pwff_layer.3.bias', 'encoder.layers.2.feed_forward.pwff_layer.3.weight', 'encoder.layers.2.layer_norm.bias', 'encoder.layers.2.layer_norm.weight', 'encoder.layers.2.src_src_att.k_layer.bias', 'encoder.layers.2.src_src_att.k_layer.weight', 'encoder.layers.2.src_src_att.output_layer.bias', 'encoder.layers.2.src_src_att.output_layer.weight', 'encoder.layers.2.src_src_att.q_layer.bias', 'encoder.layers.2.src_src_att.q_layer.weight', 'encoder.layers.2.src_src_att.v_layer.bias', 'encoder.layers.2.src_src_att.v_layer.weight', 'trg_embed.lut.weight']
-2020-08-08 15:54:29,230 cfg.name                           : my_experiment
-2020-08-08 15:54:29,230 cfg.data.src                       : data
-2020-08-08 15:54:29,230 cfg.data.trg                       : en
-2020-08-08 15:54:29,230 cfg.data.train                     : /home/dhruva/Desktop/CopyCat/Deep-Learning-for-ASLR/Transformers/test/data/asl/train
-2020-08-08 15:54:29,230 cfg.data.dev                       : /home/dhruva/Desktop/CopyCat/Deep-Learning-for-ASLR/Transformers/test/data/asl/dev
-2020-08-08 15:54:29,230 cfg.data.test                      : /home/dhruva/Desktop/CopyCat/Deep-Learning-for-ASLR/Transformers/test/data/asl/test
-2020-08-08 15:54:29,230 cfg.data.level                     : word
-2020-08-08 15:54:29,230 cfg.data.lowercase                 : True
-2020-08-08 15:54:29,230 cfg.data.max_src_length            : 400
-2020-08-08 15:54:29,231 cfg.data.max_trg_length            : 7
-2020-08-08 15:54:29,231 cfg.data.src_voc_min_freq          : 1
-2020-08-08 15:54:29,231 cfg.data.src_voc_limit             : 101
-2020-08-08 15:54:29,231 cfg.data.trg_voc_min_freq          : 1
-2020-08-08 15:54:29,231 cfg.data.trg_voc_limit             : 102
-2020-08-08 15:54:29,231 cfg.testing.beam_size              : 5
-2020-08-08 15:54:29,231 cfg.testing.alpha                  : 1.0
-2020-08-08 15:54:29,231 cfg.training.reset_best_ckpt       : False
-2020-08-08 15:54:29,231 cfg.training.reset_scheduler       : False
-2020-08-08 15:54:29,231 cfg.training.reset_optimizer       : False
-2020-08-08 15:54:29,231 cfg.training.random_seed           : 42
-2020-08-08 15:54:29,231 cfg.training.optimizer             : adam
-2020-08-08 15:54:29,231 cfg.training.adam_betas            : [0.9, 0.98]
-2020-08-08 15:54:29,231 cfg.training.learning_rate         : 0.001
-2020-08-08 15:54:29,231 cfg.training.learning_rate_min     : 1e-06
-2020-08-08 15:54:29,231 cfg.training.learning_rate_factor  : 0.5
-2020-08-08 15:54:29,231 cfg.training.learning_rate_warmup  : 1000
-2020-08-08 15:54:29,231 cfg.training.weight_decay          : 0.0
-2020-08-08 15:54:29,231 cfg.training.batch_size            : 250
-2020-08-08 15:54:29,231 cfg.training.batch_type            : token
-2020-08-08 15:54:29,231 cfg.training.batch_multiplier      : 1
-2020-08-08 15:54:29,231 cfg.training.normalization         : batch
-2020-08-08 15:54:29,231 cfg.training.scheduling            : noam
-2020-08-08 15:54:29,231 cfg.training.epochs                : 10
-2020-08-08 15:54:29,231 cfg.training.validation_freq       : 100
-2020-08-08 15:54:29,232 cfg.training.logging_freq          : 10
-2020-08-08 15:54:29,232 cfg.training.eval_metric           : bleu
-2020-08-08 15:54:29,232 cfg.training.early_stopping_metric : loss
-2020-08-08 15:54:29,232 cfg.training.model_dir             : models/transformer
-2020-08-08 15:54:29,232 cfg.training.overwrite             : True
-2020-08-08 15:54:29,232 cfg.training.shuffle               : True
-2020-08-08 15:54:29,232 cfg.training.use_cuda              : False
-2020-08-08 15:54:29,232 cfg.training.max_output_length     : 31
-2020-08-08 15:54:29,232 cfg.training.print_valid_sents     : [0, 1, 2]
-2020-08-08 15:54:29,232 cfg.training.keep_last_ckpts       : 3
-2020-08-08 15:54:29,232 cfg.training.label_smoothing       : 0.0
-2020-08-08 15:54:29,232 cfg.model.initializer              : xavier
-2020-08-08 15:54:29,232 cfg.model.init_gain                : 1.0
-2020-08-08 15:54:29,232 cfg.model.bias_initializer         : zeros
-2020-08-08 15:54:29,232 cfg.model.embed_initializer        : xavier
-2020-08-08 15:54:29,232 cfg.model.embed_init_gain          : 1.0
-2020-08-08 15:54:29,232 cfg.model.tied_embeddings          : False
-2020-08-08 15:54:29,232 cfg.model.tied_softmax             : True
-2020-08-08 15:54:29,232 cfg.model.encoder.type             : transformer
-2020-08-08 15:54:29,232 cfg.model.encoder.num_layers       : 3
-2020-08-08 15:54:29,232 cfg.model.encoder.num_heads        : 2
-2020-08-08 15:54:29,232 cfg.model.encoder.embeddings.embedding_dim : 94
-2020-08-08 15:54:29,232 cfg.model.encoder.embeddings.scale : True
-2020-08-08 15:54:29,232 cfg.model.encoder.embeddings.freeze : False
-2020-08-08 15:54:29,232 cfg.model.encoder.hidden_size      : 94
-2020-08-08 15:54:29,232 cfg.model.encoder.ff_size          : 128
-2020-08-08 15:54:29,233 cfg.model.encoder.dropout          : 0.1
-2020-08-08 15:54:29,233 cfg.model.encoder.freeze           : False
-2020-08-08 15:54:29,233 cfg.model.decoder.type             : transformer
-2020-08-08 15:54:29,233 cfg.model.decoder.num_layers       : 3
-2020-08-08 15:54:29,233 cfg.model.decoder.num_heads        : 2
-2020-08-08 15:54:29,233 cfg.model.decoder.embeddings.embedding_dim : 94
-2020-08-08 15:54:29,233 cfg.model.decoder.embeddings.scale : True
-2020-08-08 15:54:29,233 cfg.model.decoder.embeddings.freeze : False
-2020-08-08 15:54:29,233 cfg.model.decoder.hidden_size      : 94
-2020-08-08 15:54:29,233 cfg.model.decoder.ff_size          : 128
-2020-08-08 15:54:29,233 cfg.model.decoder.dropout          : 0.1
-2020-08-08 15:54:29,233 cfg.model.decoder.freeze           : False
-2020-08-08 15:54:29,233 Model(
+2020-08-08 16:32:13,284 Hello! This is Joey-NMT.
+2020-08-08 16:32:14,244 Total params: 471050
+2020-08-08 16:32:14,245 Trainable parameters: ['decoder.layer_norm.bias', 'decoder.layer_norm.weight', 'decoder.layers.0.dec_layer_norm.bias', 'decoder.layers.0.dec_layer_norm.weight', 'decoder.layers.0.feed_forward.layer_norm.bias', 'decoder.layers.0.feed_forward.layer_norm.weight', 'decoder.layers.0.feed_forward.pwff_layer.0.bias', 'decoder.layers.0.feed_forward.pwff_layer.0.weight', 'decoder.layers.0.feed_forward.pwff_layer.3.bias', 'decoder.layers.0.feed_forward.pwff_layer.3.weight', 'decoder.layers.0.src_trg_att.k_layer.bias', 'decoder.layers.0.src_trg_att.k_layer.weight', 'decoder.layers.0.src_trg_att.output_layer.bias', 'decoder.layers.0.src_trg_att.output_layer.weight', 'decoder.layers.0.src_trg_att.q_layer.bias', 'decoder.layers.0.src_trg_att.q_layer.weight', 'decoder.layers.0.src_trg_att.v_layer.bias', 'decoder.layers.0.src_trg_att.v_layer.weight', 'decoder.layers.0.trg_trg_att.k_layer.bias', 'decoder.layers.0.trg_trg_att.k_layer.weight', 'decoder.layers.0.trg_trg_att.output_layer.bias', 'decoder.layers.0.trg_trg_att.output_layer.weight', 'decoder.layers.0.trg_trg_att.q_layer.bias', 'decoder.layers.0.trg_trg_att.q_layer.weight', 'decoder.layers.0.trg_trg_att.v_layer.bias', 'decoder.layers.0.trg_trg_att.v_layer.weight', 'decoder.layers.0.x_layer_norm.bias', 'decoder.layers.0.x_layer_norm.weight', 'decoder.layers.1.dec_layer_norm.bias', 'decoder.layers.1.dec_layer_norm.weight', 'decoder.layers.1.feed_forward.layer_norm.bias', 'decoder.layers.1.feed_forward.layer_norm.weight', 'decoder.layers.1.feed_forward.pwff_layer.0.bias', 'decoder.layers.1.feed_forward.pwff_layer.0.weight', 'decoder.layers.1.feed_forward.pwff_layer.3.bias', 'decoder.layers.1.feed_forward.pwff_layer.3.weight', 'decoder.layers.1.src_trg_att.k_layer.bias', 'decoder.layers.1.src_trg_att.k_layer.weight', 'decoder.layers.1.src_trg_att.output_layer.bias', 'decoder.layers.1.src_trg_att.output_layer.weight', 'decoder.layers.1.src_trg_att.q_layer.bias', 'decoder.layers.1.src_trg_att.q_layer.weight', 'decoder.layers.1.src_trg_att.v_layer.bias', 'decoder.layers.1.src_trg_att.v_layer.weight', 'decoder.layers.1.trg_trg_att.k_layer.bias', 'decoder.layers.1.trg_trg_att.k_layer.weight', 'decoder.layers.1.trg_trg_att.output_layer.bias', 'decoder.layers.1.trg_trg_att.output_layer.weight', 'decoder.layers.1.trg_trg_att.q_layer.bias', 'decoder.layers.1.trg_trg_att.q_layer.weight', 'decoder.layers.1.trg_trg_att.v_layer.bias', 'decoder.layers.1.trg_trg_att.v_layer.weight', 'decoder.layers.1.x_layer_norm.bias', 'decoder.layers.1.x_layer_norm.weight', 'decoder.layers.2.dec_layer_norm.bias', 'decoder.layers.2.dec_layer_norm.weight', 'decoder.layers.2.feed_forward.layer_norm.bias', 'decoder.layers.2.feed_forward.layer_norm.weight', 'decoder.layers.2.feed_forward.pwff_layer.0.bias', 'decoder.layers.2.feed_forward.pwff_layer.0.weight', 'decoder.layers.2.feed_forward.pwff_layer.3.bias', 'decoder.layers.2.feed_forward.pwff_layer.3.weight', 'decoder.layers.2.src_trg_att.k_layer.bias', 'decoder.layers.2.src_trg_att.k_layer.weight', 'decoder.layers.2.src_trg_att.output_layer.bias', 'decoder.layers.2.src_trg_att.output_layer.weight', 'decoder.layers.2.src_trg_att.q_layer.bias', 'decoder.layers.2.src_trg_att.q_layer.weight', 'decoder.layers.2.src_trg_att.v_layer.bias', 'decoder.layers.2.src_trg_att.v_layer.weight', 'decoder.layers.2.trg_trg_att.k_layer.bias', 'decoder.layers.2.trg_trg_att.k_layer.weight', 'decoder.layers.2.trg_trg_att.output_layer.bias', 'decoder.layers.2.trg_trg_att.output_layer.weight', 'decoder.layers.2.trg_trg_att.q_layer.bias', 'decoder.layers.2.trg_trg_att.q_layer.weight', 'decoder.layers.2.trg_trg_att.v_layer.bias', 'decoder.layers.2.trg_trg_att.v_layer.weight', 'decoder.layers.2.x_layer_norm.bias', 'decoder.layers.2.x_layer_norm.weight', 'encoder.layer_norm.bias', 'encoder.layer_norm.weight', 'encoder.layers.0.feed_forward.layer_norm.bias', 'encoder.layers.0.feed_forward.layer_norm.weight', 'encoder.layers.0.feed_forward.pwff_layer.0.bias', 'encoder.layers.0.feed_forward.pwff_layer.0.weight', 'encoder.layers.0.feed_forward.pwff_layer.3.bias', 'encoder.layers.0.feed_forward.pwff_layer.3.weight', 'encoder.layers.0.layer_norm.bias', 'encoder.layers.0.layer_norm.weight', 'encoder.layers.0.src_src_att.k_layer.bias', 'encoder.layers.0.src_src_att.k_layer.weight', 'encoder.layers.0.src_src_att.output_layer.bias', 'encoder.layers.0.src_src_att.output_layer.weight', 'encoder.layers.0.src_src_att.q_layer.bias', 'encoder.layers.0.src_src_att.q_layer.weight', 'encoder.layers.0.src_src_att.v_layer.bias', 'encoder.layers.0.src_src_att.v_layer.weight', 'encoder.layers.1.feed_forward.layer_norm.bias', 'encoder.layers.1.feed_forward.layer_norm.weight', 'encoder.layers.1.feed_forward.pwff_layer.0.bias', 'encoder.layers.1.feed_forward.pwff_layer.0.weight', 'encoder.layers.1.feed_forward.pwff_layer.3.bias', 'encoder.layers.1.feed_forward.pwff_layer.3.weight', 'encoder.layers.1.layer_norm.bias', 'encoder.layers.1.layer_norm.weight', 'encoder.layers.1.src_src_att.k_layer.bias', 'encoder.layers.1.src_src_att.k_layer.weight', 'encoder.layers.1.src_src_att.output_layer.bias', 'encoder.layers.1.src_src_att.output_layer.weight', 'encoder.layers.1.src_src_att.q_layer.bias', 'encoder.layers.1.src_src_att.q_layer.weight', 'encoder.layers.1.src_src_att.v_layer.bias', 'encoder.layers.1.src_src_att.v_layer.weight', 'encoder.layers.2.feed_forward.layer_norm.bias', 'encoder.layers.2.feed_forward.layer_norm.weight', 'encoder.layers.2.feed_forward.pwff_layer.0.bias', 'encoder.layers.2.feed_forward.pwff_layer.0.weight', 'encoder.layers.2.feed_forward.pwff_layer.3.bias', 'encoder.layers.2.feed_forward.pwff_layer.3.weight', 'encoder.layers.2.layer_norm.bias', 'encoder.layers.2.layer_norm.weight', 'encoder.layers.2.src_src_att.k_layer.bias', 'encoder.layers.2.src_src_att.k_layer.weight', 'encoder.layers.2.src_src_att.output_layer.bias', 'encoder.layers.2.src_src_att.output_layer.weight', 'encoder.layers.2.src_src_att.q_layer.bias', 'encoder.layers.2.src_src_att.q_layer.weight', 'encoder.layers.2.src_src_att.v_layer.bias', 'encoder.layers.2.src_src_att.v_layer.weight', 'trg_embed.lut.weight']
+2020-08-08 16:32:14,246 cfg.name                           : my_experiment
+2020-08-08 16:32:14,246 cfg.data.src                       : data
+2020-08-08 16:32:14,246 cfg.data.trg                       : en
+2020-08-08 16:32:14,246 cfg.data.train                     : /home/dhruva/Desktop/CopyCat/Deep-Learning-for-ASLR/Transformers/test/data/asl/train
+2020-08-08 16:32:14,246 cfg.data.dev                       : /home/dhruva/Desktop/CopyCat/Deep-Learning-for-ASLR/Transformers/test/data/asl/dev
+2020-08-08 16:32:14,246 cfg.data.test                      : /home/dhruva/Desktop/CopyCat/Deep-Learning-for-ASLR/Transformers/test/data/asl/test
+2020-08-08 16:32:14,247 cfg.data.level                     : word
+2020-08-08 16:32:14,247 cfg.data.lowercase                 : True
+2020-08-08 16:32:14,247 cfg.data.max_src_length            : 400
+2020-08-08 16:32:14,247 cfg.data.max_trg_length            : 7
+2020-08-08 16:32:14,247 cfg.data.src_voc_min_freq          : 1
+2020-08-08 16:32:14,247 cfg.data.src_voc_limit             : 101
+2020-08-08 16:32:14,247 cfg.data.trg_voc_min_freq          : 1
+2020-08-08 16:32:14,247 cfg.data.trg_voc_limit             : 102
+2020-08-08 16:32:14,247 cfg.testing.beam_size              : 5
+2020-08-08 16:32:14,247 cfg.testing.alpha                  : 1.0
+2020-08-08 16:32:14,247 cfg.training.reset_best_ckpt       : False
+2020-08-08 16:32:14,247 cfg.training.reset_scheduler       : False
+2020-08-08 16:32:14,247 cfg.training.reset_optimizer       : False
+2020-08-08 16:32:14,247 cfg.training.random_seed           : 42
+2020-08-08 16:32:14,247 cfg.training.optimizer             : adam
+2020-08-08 16:32:14,247 cfg.training.adam_betas            : [0.9, 0.98]
+2020-08-08 16:32:14,247 cfg.training.learning_rate         : 0.001
+2020-08-08 16:32:14,247 cfg.training.learning_rate_min     : 1e-06
+2020-08-08 16:32:14,247 cfg.training.learning_rate_factor  : 0.5
+2020-08-08 16:32:14,247 cfg.training.learning_rate_warmup  : 1000
+2020-08-08 16:32:14,247 cfg.training.weight_decay          : 0.0
+2020-08-08 16:32:14,247 cfg.training.batch_size            : 250
+2020-08-08 16:32:14,247 cfg.training.batch_type            : token
+2020-08-08 16:32:14,247 cfg.training.batch_multiplier      : 1
+2020-08-08 16:32:14,247 cfg.training.normalization         : batch
+2020-08-08 16:32:14,247 cfg.training.scheduling            : noam
+2020-08-08 16:32:14,247 cfg.training.epochs                : 100
+2020-08-08 16:32:14,247 cfg.training.validation_freq       : 100
+2020-08-08 16:32:14,247 cfg.training.logging_freq          : 10
+2020-08-08 16:32:14,247 cfg.training.eval_metric           : bleu
+2020-08-08 16:32:14,248 cfg.training.early_stopping_metric : loss
+2020-08-08 16:32:14,248 cfg.training.model_dir             : models/transformer
+2020-08-08 16:32:14,248 cfg.training.overwrite             : True
+2020-08-08 16:32:14,248 cfg.training.shuffle               : True
+2020-08-08 16:32:14,248 cfg.training.use_cuda              : False
+2020-08-08 16:32:14,248 cfg.training.max_output_length     : 31
+2020-08-08 16:32:14,248 cfg.training.print_valid_sents     : [0, 1, 2]
+2020-08-08 16:32:14,248 cfg.training.keep_last_ckpts       : 3
+2020-08-08 16:32:14,248 cfg.training.label_smoothing       : 0.0
+2020-08-08 16:32:14,248 cfg.model.initializer              : xavier
+2020-08-08 16:32:14,248 cfg.model.init_gain                : 1.0
+2020-08-08 16:32:14,248 cfg.model.bias_initializer         : zeros
+2020-08-08 16:32:14,248 cfg.model.embed_initializer        : xavier
+2020-08-08 16:32:14,248 cfg.model.embed_init_gain          : 1.0
+2020-08-08 16:32:14,248 cfg.model.tied_embeddings          : False
+2020-08-08 16:32:14,248 cfg.model.tied_softmax             : True
+2020-08-08 16:32:14,248 cfg.model.encoder.type             : transformer
+2020-08-08 16:32:14,248 cfg.model.encoder.num_layers       : 3
+2020-08-08 16:32:14,248 cfg.model.encoder.num_heads        : 2
+2020-08-08 16:32:14,248 cfg.model.encoder.embeddings.embedding_dim : 94
+2020-08-08 16:32:14,248 cfg.model.encoder.embeddings.scale : True
+2020-08-08 16:32:14,248 cfg.model.encoder.embeddings.freeze : False
+2020-08-08 16:32:14,248 cfg.model.encoder.hidden_size      : 94
+2020-08-08 16:32:14,248 cfg.model.encoder.ff_size          : 128
+2020-08-08 16:32:14,248 cfg.model.encoder.dropout          : 0.1
+2020-08-08 16:32:14,249 cfg.model.encoder.freeze           : False
+2020-08-08 16:32:14,249 cfg.model.decoder.type             : transformer
+2020-08-08 16:32:14,249 cfg.model.decoder.num_layers       : 3
+2020-08-08 16:32:14,249 cfg.model.decoder.num_heads        : 2
+2020-08-08 16:32:14,249 cfg.model.decoder.embeddings.embedding_dim : 94
+2020-08-08 16:32:14,249 cfg.model.decoder.embeddings.scale : True
+2020-08-08 16:32:14,249 cfg.model.decoder.embeddings.freeze : False
+2020-08-08 16:32:14,249 cfg.model.decoder.hidden_size      : 94
+2020-08-08 16:32:14,249 cfg.model.decoder.ff_size          : 128
+2020-08-08 16:32:14,249 cfg.model.decoder.dropout          : 0.1
+2020-08-08 16:32:14,249 cfg.model.decoder.freeze           : False
+2020-08-08 16:32:14,249 Model(
 	encoder=TransformerEncoder(num_layers=3, num_heads=2),
 	decoder=TransformerDecoder(num_layers=3, num_heads=2),
 	trg_embed=Embeddings(embedding_dim=94, vocab_size=7))
-2020-08-08 15:54:29,235 EPOCH 1
-2020-08-08 15:54:29,285 Epoch   1: total training loss 23.12
-2020-08-08 15:54:29,286 EPOCH 2
-2020-08-08 15:54:29,333 Epoch   2: total training loss 18.12
-2020-08-08 15:54:29,333 EPOCH 3
-2020-08-08 15:54:29,378 Epoch   3: total training loss 17.92
-2020-08-08 15:54:29,379 EPOCH 4
-2020-08-08 15:54:29,423 Epoch   4: total training loss 19.98
-2020-08-08 15:54:29,423 EPOCH 5
-2020-08-08 15:54:29,469 Epoch   5: total training loss 17.70
-2020-08-08 15:54:29,470 EPOCH 6
-2020-08-08 15:54:29,516 Epoch   6: total training loss 20.04
-2020-08-08 15:54:29,516 EPOCH 7
-2020-08-08 15:54:29,560 Epoch   7: total training loss 17.27
-2020-08-08 15:54:29,560 EPOCH 8
-2020-08-08 15:54:29,605 Epoch   8: total training loss 18.66
-2020-08-08 15:54:29,605 EPOCH 9
-2020-08-08 15:54:29,651 Epoch   9: total training loss 17.35
-2020-08-08 15:54:29,651 EPOCH 10
-2020-08-08 15:54:29,696 Epoch  10 Step:       10 Batch Loss:    18.675886 Tokens per Sec:       91, Lr: 0.000016
-2020-08-08 15:54:29,696 Epoch  10: total training loss 18.68
-2020-08-08 15:54:29,696 Training ended after  10 epochs.
-2020-08-08 15:54:29,696 Best validation result (greedy) at step        0:    inf loss.
+2020-08-08 16:32:14,251 EPOCH 1
+2020-08-08 16:32:14,302 Epoch   1: total training loss 23.12
+2020-08-08 16:32:14,302 EPOCH 2
+2020-08-08 16:32:14,348 Epoch   2: total training loss 18.12
+2020-08-08 16:32:14,348 EPOCH 3
+2020-08-08 16:32:14,393 Epoch   3: total training loss 17.92
+2020-08-08 16:32:14,393 EPOCH 4
+2020-08-08 16:32:14,436 Epoch   4: total training loss 19.98
+2020-08-08 16:32:14,436 EPOCH 5
+2020-08-08 16:32:14,482 Epoch   5: total training loss 17.70
+2020-08-08 16:32:14,482 EPOCH 6
+2020-08-08 16:32:14,524 Epoch   6: total training loss 20.04
+2020-08-08 16:32:14,524 EPOCH 7
+2020-08-08 16:32:14,569 Epoch   7: total training loss 17.27
+2020-08-08 16:32:14,569 EPOCH 8
+2020-08-08 16:32:14,612 Epoch   8: total training loss 18.66
+2020-08-08 16:32:14,612 EPOCH 9
+2020-08-08 16:32:14,654 Epoch   9: total training loss 17.35
+2020-08-08 16:32:14,654 EPOCH 10
+2020-08-08 16:32:14,696 Epoch  10 Step:       10 Batch Loss:    18.675886 Tokens per Sec:       95, Lr: 0.000016
+2020-08-08 16:32:14,697 Epoch  10: total training loss 18.68
+2020-08-08 16:32:14,697 EPOCH 11
+2020-08-08 16:32:14,742 Epoch  11: total training loss 16.74
+2020-08-08 16:32:14,742 EPOCH 12
+2020-08-08 16:32:14,784 Epoch  12: total training loss 15.67
+2020-08-08 16:32:14,784 EPOCH 13
+2020-08-08 16:32:14,827 Epoch  13: total training loss 18.98
+2020-08-08 16:32:14,828 EPOCH 14
+2020-08-08 16:32:14,870 Epoch  14: total training loss 19.25
+2020-08-08 16:32:14,870 EPOCH 15
+2020-08-08 16:32:14,914 Epoch  15: total training loss 18.56
+2020-08-08 16:32:14,914 EPOCH 16
+2020-08-08 16:32:14,958 Epoch  16: total training loss 17.97
+2020-08-08 16:32:14,958 EPOCH 17
+2020-08-08 16:32:15,001 Epoch  17: total training loss 16.48
+2020-08-08 16:32:15,001 EPOCH 18
+2020-08-08 16:32:15,044 Epoch  18: total training loss 19.90
+2020-08-08 16:32:15,044 EPOCH 19
+2020-08-08 16:32:15,087 Epoch  19: total training loss 16.20
+2020-08-08 16:32:15,088 EPOCH 20
+2020-08-08 16:32:15,132 Epoch  20 Step:       20 Batch Loss:    17.099443 Tokens per Sec:       91, Lr: 0.000033
+2020-08-08 16:32:15,132 Epoch  20: total training loss 17.10
+2020-08-08 16:32:15,132 EPOCH 21
+2020-08-08 16:32:15,175 Epoch  21: total training loss 16.67
+2020-08-08 16:32:15,175 EPOCH 22
+2020-08-08 16:32:15,217 Epoch  22: total training loss 17.86
+2020-08-08 16:32:15,217 EPOCH 23
+2020-08-08 16:32:15,261 Epoch  23: total training loss 15.74
+2020-08-08 16:32:15,261 EPOCH 24
+2020-08-08 16:32:15,304 Epoch  24: total training loss 18.52
+2020-08-08 16:32:15,304 EPOCH 25
+2020-08-08 16:32:15,346 Epoch  25: total training loss 15.57
+2020-08-08 16:32:15,346 EPOCH 26
+2020-08-08 16:32:15,390 Epoch  26: total training loss 16.84
+2020-08-08 16:32:15,390 EPOCH 27
+2020-08-08 16:32:15,433 Epoch  27: total training loss 15.76
+2020-08-08 16:32:15,433 EPOCH 28
+2020-08-08 16:32:15,475 Epoch  28: total training loss 12.79
+2020-08-08 16:32:15,475 EPOCH 29
+2020-08-08 16:32:15,518 Epoch  29: total training loss 15.19
+2020-08-08 16:32:15,518 EPOCH 30
+2020-08-08 16:32:15,561 Epoch  30 Step:       30 Batch Loss:    13.848711 Tokens per Sec:       94, Lr: 0.000049
+2020-08-08 16:32:15,561 Epoch  30: total training loss 13.85
+2020-08-08 16:32:15,561 EPOCH 31
+2020-08-08 16:32:15,603 Epoch  31: total training loss 15.75
+2020-08-08 16:32:15,603 EPOCH 32
+2020-08-08 16:32:15,647 Epoch  32: total training loss 14.91
+2020-08-08 16:32:15,647 EPOCH 33
+2020-08-08 16:32:15,689 Epoch  33: total training loss 15.15
+2020-08-08 16:32:15,690 EPOCH 34
+2020-08-08 16:32:15,733 Epoch  34: total training loss 13.07
+2020-08-08 16:32:15,733 EPOCH 35
+2020-08-08 16:32:15,776 Epoch  35: total training loss 16.43
+2020-08-08 16:32:15,776 EPOCH 36
+2020-08-08 16:32:15,819 Epoch  36: total training loss 14.19
+2020-08-08 16:32:15,819 EPOCH 37
+2020-08-08 16:32:15,860 Epoch  37: total training loss 12.61
+2020-08-08 16:32:15,860 EPOCH 38
+2020-08-08 16:32:15,902 Epoch  38: total training loss 13.50
+2020-08-08 16:32:15,902 EPOCH 39
+2020-08-08 16:32:15,944 Epoch  39: total training loss 11.33
+2020-08-08 16:32:15,944 EPOCH 40
+2020-08-08 16:32:15,988 Epoch  40 Step:       40 Batch Loss:    12.738801 Tokens per Sec:       92, Lr: 0.000065
+2020-08-08 16:32:15,988 Epoch  40: total training loss 12.74
+2020-08-08 16:32:15,988 EPOCH 41
+2020-08-08 16:32:16,030 Epoch  41: total training loss 11.28
+2020-08-08 16:32:16,030 EPOCH 42
+2020-08-08 16:32:16,072 Epoch  42: total training loss 13.68
+2020-08-08 16:32:16,072 EPOCH 43
+2020-08-08 16:32:16,116 Epoch  43: total training loss 14.16
+2020-08-08 16:32:16,116 EPOCH 44
+2020-08-08 16:32:16,158 Epoch  44: total training loss 11.21
+2020-08-08 16:32:16,159 EPOCH 45
+2020-08-08 16:32:16,201 Epoch  45: total training loss 13.18
+2020-08-08 16:32:16,201 EPOCH 46
+2020-08-08 16:32:16,244 Epoch  46: total training loss 11.94
+2020-08-08 16:32:16,244 EPOCH 47
+2020-08-08 16:32:16,286 Epoch  47: total training loss 12.13
+2020-08-08 16:32:16,286 EPOCH 48
+2020-08-08 16:32:16,328 Epoch  48: total training loss 10.94
+2020-08-08 16:32:16,328 EPOCH 49
+2020-08-08 16:32:16,371 Epoch  49: total training loss 10.46
+2020-08-08 16:32:16,371 EPOCH 50
+2020-08-08 16:32:16,415 Epoch  50 Step:       50 Batch Loss:    10.581069 Tokens per Sec:       93, Lr: 0.000082
+2020-08-08 16:32:16,415 Epoch  50: total training loss 10.58
+2020-08-08 16:32:16,416 EPOCH 51
+2020-08-08 16:32:16,459 Epoch  51: total training loss 11.06
+2020-08-08 16:32:16,459 EPOCH 52
+2020-08-08 16:32:16,501 Epoch  52: total training loss 10.89
+2020-08-08 16:32:16,501 EPOCH 53
+2020-08-08 16:32:16,544 Epoch  53: total training loss 11.90
+2020-08-08 16:32:16,544 EPOCH 54
+2020-08-08 16:32:16,587 Epoch  54: total training loss 11.93
+2020-08-08 16:32:16,587 EPOCH 55
+2020-08-08 16:32:16,630 Epoch  55: total training loss 9.49
+2020-08-08 16:32:16,630 EPOCH 56
+2020-08-08 16:32:16,674 Epoch  56: total training loss 9.22
+2020-08-08 16:32:16,674 EPOCH 57
+2020-08-08 16:32:16,715 Epoch  57: total training loss 10.85
+2020-08-08 16:32:16,715 EPOCH 58
+2020-08-08 16:32:16,760 Epoch  58: total training loss 9.87
+2020-08-08 16:32:16,760 EPOCH 59
+2020-08-08 16:32:16,804 Epoch  59: total training loss 10.42
+2020-08-08 16:32:16,804 EPOCH 60
+2020-08-08 16:32:16,848 Epoch  60 Step:       60 Batch Loss:     9.680832 Tokens per Sec:       93, Lr: 0.000098
+2020-08-08 16:32:16,848 Epoch  60: total training loss 9.68
+2020-08-08 16:32:16,848 EPOCH 61
+2020-08-08 16:32:16,889 Epoch  61: total training loss 8.79
+2020-08-08 16:32:16,890 EPOCH 62
+2020-08-08 16:32:16,932 Epoch  62: total training loss 9.23
+2020-08-08 16:32:16,933 EPOCH 63
+2020-08-08 16:32:16,976 Epoch  63: total training loss 10.02
+2020-08-08 16:32:16,977 EPOCH 64
+2020-08-08 16:32:17,019 Epoch  64: total training loss 8.55
+2020-08-08 16:32:17,019 EPOCH 65
+2020-08-08 16:32:17,063 Epoch  65: total training loss 9.08
+2020-08-08 16:32:17,063 EPOCH 66
+2020-08-08 16:32:17,106 Epoch  66: total training loss 6.95
+2020-08-08 16:32:17,107 EPOCH 67
+2020-08-08 16:32:17,150 Epoch  67: total training loss 8.15
+2020-08-08 16:32:17,150 EPOCH 68
+2020-08-08 16:32:17,194 Epoch  68: total training loss 7.38
+2020-08-08 16:32:17,195 EPOCH 69
+2020-08-08 16:32:17,237 Epoch  69: total training loss 7.26
+2020-08-08 16:32:17,237 EPOCH 70
+2020-08-08 16:32:17,280 Epoch  70 Step:       70 Batch Loss:     6.588608 Tokens per Sec:       94, Lr: 0.000114
+2020-08-08 16:32:17,280 Epoch  70: total training loss 6.59
+2020-08-08 16:32:17,280 EPOCH 71
+2020-08-08 16:32:17,324 Epoch  71: total training loss 7.35
+2020-08-08 16:32:17,324 EPOCH 72
+2020-08-08 16:32:17,367 Epoch  72: total training loss 7.35
+2020-08-08 16:32:17,367 EPOCH 73
+2020-08-08 16:32:17,413 Epoch  73: total training loss 6.26
+2020-08-08 16:32:17,413 EPOCH 74
+2020-08-08 16:32:17,455 Epoch  74: total training loss 6.29
+2020-08-08 16:32:17,455 EPOCH 75
+2020-08-08 16:32:17,499 Epoch  75: total training loss 6.54
+2020-08-08 16:32:17,499 EPOCH 76
+2020-08-08 16:32:17,542 Epoch  76: total training loss 6.94
+2020-08-08 16:32:17,542 EPOCH 77
+2020-08-08 16:32:17,585 Epoch  77: total training loss 6.31
+2020-08-08 16:32:17,585 EPOCH 78
+2020-08-08 16:32:17,627 Epoch  78: total training loss 6.39
+2020-08-08 16:32:17,627 EPOCH 79
+2020-08-08 16:32:17,671 Epoch  79: total training loss 6.14
+2020-08-08 16:32:17,672 EPOCH 80
+2020-08-08 16:32:17,715 Epoch  80 Step:       80 Batch Loss:     5.737759 Tokens per Sec:       93, Lr: 0.000130
+2020-08-08 16:32:17,715 Epoch  80: total training loss 5.74
+2020-08-08 16:32:17,715 EPOCH 81
+2020-08-08 16:32:17,759 Epoch  81: total training loss 5.72
+2020-08-08 16:32:17,759 EPOCH 82
+2020-08-08 16:32:17,802 Epoch  82: total training loss 5.60
+2020-08-08 16:32:17,802 EPOCH 83
+2020-08-08 16:32:17,845 Epoch  83: total training loss 4.63
+2020-08-08 16:32:17,846 EPOCH 84
+2020-08-08 16:32:17,888 Epoch  84: total training loss 5.08
+2020-08-08 16:32:17,889 EPOCH 85
+2020-08-08 16:32:17,931 Epoch  85: total training loss 4.54
+2020-08-08 16:32:17,931 EPOCH 86
+2020-08-08 16:32:17,973 Epoch  86: total training loss 6.01
+2020-08-08 16:32:17,973 EPOCH 87
+2020-08-08 16:32:18,018 Epoch  87: total training loss 5.24
+2020-08-08 16:32:18,018 EPOCH 88
+2020-08-08 16:32:18,063 Epoch  88: total training loss 6.01
+2020-08-08 16:32:18,063 EPOCH 89
+2020-08-08 16:32:18,107 Epoch  89: total training loss 4.74
+2020-08-08 16:32:18,107 EPOCH 90
+2020-08-08 16:32:18,149 Epoch  90 Step:       90 Batch Loss:     3.776601 Tokens per Sec:       96, Lr: 0.000147
+2020-08-08 16:32:18,149 Epoch  90: total training loss 3.78
+2020-08-08 16:32:18,149 EPOCH 91
+2020-08-08 16:32:18,191 Epoch  91: total training loss 6.80
+2020-08-08 16:32:18,191 EPOCH 92
+2020-08-08 16:32:18,232 Epoch  92: total training loss 4.91
+2020-08-08 16:32:18,233 EPOCH 93
+2020-08-08 16:32:18,275 Epoch  93: total training loss 3.59
+2020-08-08 16:32:18,275 EPOCH 94
+2020-08-08 16:32:18,319 Epoch  94: total training loss 3.90
+2020-08-08 16:32:18,319 EPOCH 95
+2020-08-08 16:32:18,363 Epoch  95: total training loss 3.68
+2020-08-08 16:32:18,363 EPOCH 96
+2020-08-08 16:32:18,406 Epoch  96: total training loss 3.60
+2020-08-08 16:32:18,406 EPOCH 97
+2020-08-08 16:32:18,449 Epoch  97: total training loss 2.94
+2020-08-08 16:32:18,449 EPOCH 98
+2020-08-08 16:32:18,492 Epoch  98: total training loss 2.99
+2020-08-08 16:32:18,492 EPOCH 99
+2020-08-08 16:32:18,535 Epoch  99: total training loss 3.94
+2020-08-08 16:32:18,535 EPOCH 100
+2020-08-08 16:32:18,578 Epoch 100 Step:      100 Batch Loss:     3.491515 Tokens per Sec:       93, Lr: 0.000163

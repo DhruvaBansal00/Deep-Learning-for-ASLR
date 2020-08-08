@@ -213,11 +213,8 @@ class TransformerEncoder(Encoder):
             - hidden_concat: last hidden state with
                 shape (batch_size, directions*hidden)
         """
-        print("Embedded src = " + str(embed_src.size()))
-        print("Sizes = " + str(src_length))
         x = self.pe(embed_src)  # add position encoding to word embeddings
         x = self.emb_dropout(x)
-        print("After Dropout and Positional embedding = " + str(x.size()))
 
         for layer in self.layers:
             x = layer(x, mask)

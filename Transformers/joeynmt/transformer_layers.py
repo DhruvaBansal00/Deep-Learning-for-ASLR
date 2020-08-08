@@ -70,8 +70,6 @@ class MultiHeadedAttention(nn.Module):
         # apply the mask (if we have one)
         # we add a dimension for the heads to it below: [B, 1, 1, M]
         if mask is not None:
-            print("Current Scores = " + str(scores.size()))
-            print("Current Mask = " + str(mask.size()))
             scores = scores.masked_fill(~mask.unsqueeze(1), float('-inf'))
 
         # apply attention dropout and compute context vectors.
