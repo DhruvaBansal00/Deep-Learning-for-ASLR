@@ -58,6 +58,7 @@ class TrainManager:
 
         # model
         self.model = model
+        self.src_pad = self.model.src_pad
         self.pad_index = self.model.pad_index
         self.bos_index = self.model.bos_index
         self._log_parameters_list()
@@ -305,7 +306,7 @@ class TrainManager:
                 # reactivate training
                 self.model.train()
                 # create a Batch object from torchtext batch
-                batch = Batch(batch, self.pad_index, use_cuda=self.use_cuda)
+                batch = Batch(batch, self.src_pad, train_labels[i], self.pad_index, use_cuda=self.use_cuda)
 
                 # only update every batch_multiplier batches
                 # see https://medium.com/@davidlmorton/

@@ -13,7 +13,7 @@ from joeynmt.initialization import initialize_model
 from joeynmt.embeddings import Embeddings
 from joeynmt.encoders import Encoder, RecurrentEncoder, TransformerEncoder
 from joeynmt.decoders import Decoder, RecurrentDecoder, TransformerDecoder
-from joeynmt.constants import PAD_TOKEN, EOS_TOKEN, BOS_TOKEN
+from joeynmt.constants import PAD_TOKEN, EOS_TOKEN, BOS_TOKEN, SRC_PAD_TOKEN
 from joeynmt.search import beam_search, greedy
 from joeynmt.vocabulary import Vocabulary
 from joeynmt.batch import Batch
@@ -45,6 +45,7 @@ class Model(nn.Module):
         self.trg_embed = trg_embed
         self.encoder = encoder
         self.decoder = decoder
+        self.src_pad = SRC_PAD_TOKEN
         self.trg_vocab = trg_vocab
         self.bos_index = self.trg_vocab.stoi[BOS_TOKEN]
         self.pad_index = self.trg_vocab.stoi[PAD_TOKEN]
