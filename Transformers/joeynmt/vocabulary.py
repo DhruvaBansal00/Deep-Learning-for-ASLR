@@ -184,9 +184,10 @@ def build_vocab(field: str, max_size: int, min_freq: int, dataset: object,
         # if min_freq > -1:
         #     counter = filter_min(counter, min_freq)
         # vocab_tokens = sort_and_cut(counter, max_size)
-        assert len(vocab_tokens) <= max_size
+        assert len(vocab_tokens) <= max_size or max_size == -1
         vocab = Vocabulary(tokens=vocab_tokens)
-        assert len(vocab) <= max_size + len(vocab.specials)
+        print(vocab)
+        assert len(vocab) <= max_size + len(vocab.specials) or max_size == -1
         assert vocab.itos[DEFAULT_UNK_ID()] == UNK_TOKEN
 
     # check for all except for UNK token whether they are OOVs
