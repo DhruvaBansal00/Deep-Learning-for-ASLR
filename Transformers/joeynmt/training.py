@@ -273,11 +273,11 @@ class TrainManager:
         :param train_data: training data
         :param valid_data: validation data
         """
-        train_iter = make_data_iter(train_data,
+        train_iter, train_labels = make_data_iter(train_data,
                                     batch_size=self.batch_size,
                                     batch_type=self.batch_type,
                                     train=True, shuffle=self.shuffle)
-
+        
         # For last batch in epoch batch_multiplier needs to be adjusted
         # to fit the number of leftover training examples
         leftover_batch_size = len(
@@ -301,6 +301,7 @@ class TrainManager:
             epoch_loss = 0
 
             for i, batch in enumerate(iter(train_iter)):
+                print(batch)
                 # reactivate training
                 self.model.train()
                 # create a Batch object from torchtext batch
@@ -637,9 +638,9 @@ def train(cfg_file: str) -> None:
     # log all entries of config
     log_cfg(cfg, trainer.logger)
 
-    log_data_info(train_data=train_data, valid_data=dev_data,
-                  test_data=test_data, trg_vocab=trg_vocab,
-                  logging_function=trainer.logger.info)
+    # log_data_info(train_data=train_data, valid_data=dev_data,
+    #               test_data=test_data, trg_vocab=trg_vocab,
+    #               logging_function=trainer.logger.info)
 
     trainer.logger.info(str(model))
 

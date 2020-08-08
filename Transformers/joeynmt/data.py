@@ -13,11 +13,11 @@ import torch
 from torchtext import data
 from torchtext.data import Dataset, Iterator, Field
 
-from joeynmt.constants import UNK_TOKEN, EOS_TOKEN, BOS_TOKEN, PAD_TOKEN
+from joeynmt.constants import UNK_TOKEN, EOS_TOKEN, BOS_TOKEN, PAD_TOKEN, SRC_PAD_TOKEN
 from joeynmt.vocabulary import build_vocab, Vocabulary
 
 
-def get_dataset(file_list: str) -> object:
+def get_dataset(file_list: str, max_src_length: int, max_trg_length: int) -> object:
     curr_dataset_floats = []
     curr_dataset_labels = []
     fileList = open(file_list)
@@ -40,8 +40,16 @@ def get_dataset(file_list: str) -> object:
             if len(features) != 0:
                 content.append(torch.tensor(features, dtype=torch.float).view(1, 1, -1))
         
+        while len(content) < max_src_length:
+            features = [SRC_PAD_TOKEN for i in range(len(content[1]))]
+            content.append(torch.tensor(features, dtype=torch.float).view(1, 1, -1))
+
         curr_dataset_floats.append(content)
-        curr_dataset_labels.append(arkFile.split("/")[-1].split(".")[1].strip("\n").split("_"))
+        curr_label = arkFile.split("/")[-1].split(".")[1].strip("\n").split("_")
+
+        while len(curr_label) < max_trg_length:
+            curr_label.append(PAD_TOKEN)
+        curr_dataset_labels.append(curr_label)
     
     return (curr_dataset_floats, curr_dataset_labels)
 
@@ -53,23 +61,24 @@ def load_data(data_cfg: dict) -> (object, object, Optional[object], Vocabulary):
     test_path = data_cfg.get("test", None)
     level = data_cfg["level"]
     lowercase = data_cfg["lowercase"]
-    max_sent_length = data_cfg["max_sent_length"]
+    max_src_length = data_cfg["max_src_length"]
+    max_trg_length = data_cfg["max_trg_length"]
     tok_fun = lambda s: list(s) if level == "char" else s.split()
 
     trg_max_size = data_cfg.get("trg_voc_limit", sys.maxsize)
     trg_min_freq = data_cfg.get("trg_voc_min_freq", 1)
 
     trg_vocab_file = data_cfg.get("trg_vocab", None)
-    train_data = get_dataset(train_path+"."+src_lang)
+    train_data = get_dataset(train_path+"."+src_lang, max_src_length, max_trg_length)
 
     trg_vocab = build_vocab(field="trg", min_freq=trg_min_freq,
                             max_size=trg_max_size,
                             dataset=train_data, vocab_file=trg_vocab_file)
     
-    dev_data = get_dataset(dev_path+"."+src_lang)
+    dev_data = get_dataset(dev_path+"."+src_lang, max_src_length, max_trg_length)
     test_data = None
     if test_path is not None:
-        test_data = get_dataset(test_path+"."+src_lang)
+        test_data = get_dataset(test_path+"."+src_lang, max_src_length, max_trg_length)
 
     return train_data, dev_data, test_data, trg_vocab
     
@@ -207,23 +216,32 @@ def make_data_iter(dataset: Dataset,
     :return: torchtext iterator
     """
 
-    batch_size_fn = token_batch_size_fn if batch_type == "token" else None
+    # batch_size_fn = token_batch_size_fn if batch_type == "token" else None
 
-    if train:
-        # optionally shuffle and sort during training
-        data_iter = data.BucketIterator(
-            repeat=False, sort=False, dataset=dataset,
-            batch_size=batch_size, batch_size_fn=batch_size_fn,
-            train=True, sort_within_batch=True,
-            sort_key=lambda x: len(x.src), shuffle=shuffle)
-    else:
-        # don't sort/shuffle for validation/inference
-        data_iter = data.BucketIterator(
-            repeat=False, dataset=dataset,
-            batch_size=batch_size, batch_size_fn=batch_size_fn,
-            train=False, sort=False)
+    # if train:
+    #     # optionally shuffle and sort during training
+    #     data_iter = data.BucketIterator(
+    #         repeat=False, sort=False, dataset=dataset,
+    #         batch_size=batch_size, batch_size_fn=batch_size_fn,
+    #         train=True, sort_within_batch=True,
+    #         sort_key=lambda x: len(x.src), shuffle=shuffle)
+    # else:
+    #     # don't sort/shuffle for validation/inference
+    #     data_iter = data.BucketIterator(
+    #         repeat=False, dataset=dataset,
+    #         batch_size=batch_size, batch_size_fn=batch_size_fn,
+    #         train=False, sort=False)
 
-    return data_iter
+    data_iter = []
+    data_labels = []
+
+    for initIndex in range(0, len(dataset[0]), batch_size):
+        curr_batch = [dataset[0][i] for i in range(initIndex, min(len(dataset[0]), initIndex + batch_size))]
+        curr_labels = [dataset[1][i] for i in range(initIndex, min(len(dataset[0]), initIndex + batch_size))]
+        data_iter.append(curr_batch)
+        data_labels.append(curr_labels)
+
+    return data_iter, data_labels
 
 
 class MonoDataset(Dataset):

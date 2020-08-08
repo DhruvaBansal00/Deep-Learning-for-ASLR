@@ -1,0 +1,7 @@
+<unk>
+<pad>
+<s>
+</s>
+alligator
+above
+bed
