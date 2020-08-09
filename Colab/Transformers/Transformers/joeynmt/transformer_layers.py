@@ -269,6 +269,6 @@ class TransformerDecoderLayer(nn.Module):
         h2 = self.src_trg_att(memory, memory, h1_norm, mask=src_mask)
 
         # final position-wise feed-forward layer
-        o = self.feed_forward(torch.add(self.dropout(h2), h1))
+        o = self.feed_forward(self.dropout(h2) + h1)
 
         return o

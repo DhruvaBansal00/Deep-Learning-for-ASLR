@@ -227,7 +227,7 @@ def build_model(cfg: dict = None,
                                      emb_dropout=enc_emb_dropout)
     else:
         encoder = RecurrentEncoder(**cfg["encoder"],
-                                   emb_size=cfg["encoder"]["embeddings"],
+                                   emb_size=cfg["encoder"]["embeddings"]["embedding_dim"],
                                    emb_dropout=enc_emb_dropout)
 
     # build decoder

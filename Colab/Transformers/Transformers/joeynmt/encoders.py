@@ -59,7 +59,7 @@ class RecurrentEncoder(Encoder):
         self.emb_size = emb_size
 
         rnn = nn.GRU if rnn_type == "gru" else nn.LSTM
-
+        
         self.rnn = rnn(
             emb_size, hidden_size, num_layers, batch_first=True,
             bidirectional=bidirectional,
