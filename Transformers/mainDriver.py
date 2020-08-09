@@ -83,7 +83,7 @@ if __name__ == '__main__':
         print(f'Nmber of elements in test_paths = {str(len(test_paths))}')
 
         writeFiles(train_paths, train_labels, test_paths, test_labels)
-        train(args.cfg_file)
+        train(args.config_path)
 
     
     if args.test_type == 'standard':
@@ -96,7 +96,7 @@ if __name__ == '__main__':
         print(f'Nmber of elements in test_paths = {str(len(test_paths))}')
 
         writeFiles(train_paths, train_labels, test_paths, test_labels)
-        train(args.cfg_file)
+        train(args.config_path)
 
     if args.test_type == 'cross_val':
 
@@ -125,7 +125,7 @@ if __name__ == '__main__':
             print(f'Nmber of elements in test_paths = {str(test_paths.shape)}')
 
             writeFiles(train_paths, train_labels, test_paths, test_labels)
-            all_results.append(train(args.cfg_file))
+            all_results.append(train(args.config_path))
         
         print(f'Cross validation results = {str(all_results)}')
 
