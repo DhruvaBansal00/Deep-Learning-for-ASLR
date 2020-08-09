@@ -624,6 +624,8 @@ def train(cfg_file: str) -> None:
     # load the data
     train_data, dev_data, test_data, trg_vocab = load_data(data_cfg=cfg["data"])
 
+    print(f'dev data details = {str(len(dev_data[0]))} and {str(len(dev_data[1]))}')
+
     # build an encoder-decoder model
     model = build_model(cfg["model"], trg_vocab=trg_vocab)
 
