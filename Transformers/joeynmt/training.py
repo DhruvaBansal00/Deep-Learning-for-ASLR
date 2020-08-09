@@ -30,7 +30,7 @@ from joeynmt.data import load_data, make_data_iter
 from joeynmt.builders import build_optimizer, build_scheduler, \
     build_gradient_clipper
 from joeynmt.prediction import test
-
+import tqdm
 
 # pylint: disable=too-many-instance-attributes
 class TrainManager:

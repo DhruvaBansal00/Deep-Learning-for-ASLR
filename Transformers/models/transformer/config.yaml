@@ -36,7 +36,7 @@ training:                           # specify training details here
     #clip_grad_val: 1.0             # for Transformer do not clip (so leave commented out)
     #clip_grad_norm: 1.0            # for Transformer do not clip (so leave commented out)
     weight_decay: 0.                # l2 regularization, default: 0
-    batch_size: 128                # mini-batch size as number of sentences (when batch_type is "sentence"; default) or total number of tokens (when batch_type is "token")
+    batch_size: 64                # mini-batch size as number of sentences (when batch_type is "sentence"; default) or total number of tokens (when batch_type is "token")
     batch_type: "token"             # create batches with sentences ("sentence", default) or tokens ("token")
     batch_multiplier: 1             # increase the effective batch size with values >1 to batch_multiplier*batch_size without increasing memory consumption by making updates only every batch_multiplier batches
     normalization: "batch"          # loss normalization of a mini-batch, default: "batch" (by number of sequences in batch), other options: "tokens" (by number of tokens in batch), "none" (don't normalize, sum up loss)
