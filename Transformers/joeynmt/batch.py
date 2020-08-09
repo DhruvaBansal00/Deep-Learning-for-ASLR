@@ -22,7 +22,7 @@ class Batch:
         :param pad_index:
         :param use_cuda:
         """
-        self.src, self.src_lengths = train_iter, [len(video) for video in train_iter]
+        self.src, self.src_lengths = train_iter, torch.tensor([len(video) for video in train_iter])
         self.src_mask = torch.tensor([[frame[0] != src_pad for frame in video] for video in train_iter]).unsqueeze(1)
         self.nseqs = self.src.size(0)
         self.trg_input = None

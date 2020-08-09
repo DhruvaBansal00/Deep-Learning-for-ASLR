@@ -1,0 +1,129 @@
+2020-08-09 21:59:02,009 Hello! This is Joey-NMT.
+2020-08-09 21:59:03,053 Total params: 83608
+2020-08-09 21:59:03,054 Trainable parameters: ['decoder.att_vector_layer.bias', 'decoder.att_vector_layer.weight', 'decoder.attention.energy_layer.weight', 'decoder.attention.key_layer.weight', 'decoder.attention.query_layer.weight', 'decoder.output_layer.weight', 'decoder.rnn.bias_hh_l0', 'decoder.rnn.bias_hh_l1', 'decoder.rnn.bias_ih_l0', 'decoder.rnn.bias_ih_l1', 'decoder.rnn.weight_hh_l0', 'decoder.rnn.weight_hh_l1', 'decoder.rnn.weight_ih_l0', 'decoder.rnn.weight_ih_l1', 'encoder.rnn.bias_hh_l0', 'encoder.rnn.bias_hh_l0_reverse', 'encoder.rnn.bias_hh_l1', 'encoder.rnn.bias_hh_l1_reverse', 'encoder.rnn.bias_hh_l2', 'encoder.rnn.bias_hh_l2_reverse', 'encoder.rnn.bias_ih_l0', 'encoder.rnn.bias_ih_l0_reverse', 'encoder.rnn.bias_ih_l1', 'encoder.rnn.bias_ih_l1_reverse', 'encoder.rnn.bias_ih_l2', 'encoder.rnn.bias_ih_l2_reverse', 'encoder.rnn.weight_hh_l0', 'encoder.rnn.weight_hh_l0_reverse', 'encoder.rnn.weight_hh_l1', 'encoder.rnn.weight_hh_l1_reverse', 'encoder.rnn.weight_hh_l2', 'encoder.rnn.weight_hh_l2_reverse', 'encoder.rnn.weight_ih_l0', 'encoder.rnn.weight_ih_l0_reverse', 'encoder.rnn.weight_ih_l1', 'encoder.rnn.weight_ih_l1_reverse', 'encoder.rnn.weight_ih_l2', 'encoder.rnn.weight_ih_l2_reverse', 'trg_embed.lut.weight']
+2020-08-09 21:59:03,054 cfg.name                           : my_experiment
+2020-08-09 21:59:03,054 cfg.data.src                       : data
+2020-08-09 21:59:03,054 cfg.data.trg                       : en
+2020-08-09 21:59:03,055 cfg.data.train                     : /home/dhruva/Desktop/CopyCat/Deep-Learning-for-ASLR/data/lists/train
+2020-08-09 21:59:03,055 cfg.data.dev                       : /home/dhruva/Desktop/CopyCat/Deep-Learning-for-ASLR/data/lists/dev
+2020-08-09 21:59:03,055 cfg.data.test                      : /home/dhruva/Desktop/CopyCat/Deep-Learning-for-ASLR/data/lists/test
+2020-08-09 21:59:03,055 cfg.data.level                     : word
+2020-08-09 21:59:03,055 cfg.data.random_train_subset       : -1
+2020-08-09 21:59:03,055 cfg.data.lowercase                 : True
+2020-08-09 21:59:03,055 cfg.data.max_src_length            : 400
+2020-08-09 21:59:03,055 cfg.data.max_trg_length            : 7
+2020-08-09 21:59:03,055 cfg.data.src_voc_min_freq          : 1
+2020-08-09 21:59:03,055 cfg.data.src_voc_limit             : 101
+2020-08-09 21:59:03,055 cfg.data.trg_voc_min_freq          : 1
+2020-08-09 21:59:03,055 cfg.data.trg_voc_limit             : -1
+2020-08-09 21:59:03,055 cfg.testing.beam_size              : 1
+2020-08-09 21:59:03,055 cfg.testing.alpha                  : 1.0
+2020-08-09 21:59:03,055 cfg.testing.postprocess            : True
+2020-08-09 21:59:03,055 cfg.training.reset_best_ckpt       : False
+2020-08-09 21:59:03,055 cfg.training.reset_scheduler       : False
+2020-08-09 21:59:03,055 cfg.training.reset_optimizer       : False
+2020-08-09 21:59:03,055 cfg.training.random_seed           : 42
+2020-08-09 21:59:03,055 cfg.training.optimizer             : adam
+2020-08-09 21:59:03,055 cfg.training.adam_betas            : [0.9, 0.999]
+2020-08-09 21:59:03,055 cfg.training.learning_rate         : 0.005
+2020-08-09 21:59:03,055 cfg.training.learning_rate_min     : 0.0001
+2020-08-09 21:59:03,055 cfg.training.clip_grad_val         : 1.0
+2020-08-09 21:59:03,055 cfg.training.weight_decay          : 0.0
+2020-08-09 21:59:03,056 cfg.training.batch_size            : 10
+2020-08-09 21:59:03,056 cfg.training.batch_type            : sentence
+2020-08-09 21:59:03,056 cfg.training.eval_batch_size       : 10
+2020-08-09 21:59:03,056 cfg.training.eval_batch_type       : sentence
+2020-08-09 21:59:03,056 cfg.training.batch_multiplier      : 1
+2020-08-09 21:59:03,056 cfg.training.normalization         : batch
+2020-08-09 21:59:03,056 cfg.training.scheduling            : plateau
+2020-08-09 21:59:03,056 cfg.training.patience              : 5
+2020-08-09 21:59:03,056 cfg.training.decrease_factor       : 0.5
+2020-08-09 21:59:03,056 cfg.training.epochs                : 1
+2020-08-09 21:59:03,056 cfg.training.validation_freq       : 10
+2020-08-09 21:59:03,056 cfg.training.logging_freq          : 10
+2020-08-09 21:59:03,056 cfg.training.eval_metric           : sequence_accuracy
+2020-08-09 21:59:03,056 cfg.training.early_stopping_metric : loss
+2020-08-09 21:59:03,056 cfg.training.model_dir             : models/small_model
+2020-08-09 21:59:03,056 cfg.training.overwrite             : True
+2020-08-09 21:59:03,056 cfg.training.shuffle               : True
+2020-08-09 21:59:03,056 cfg.training.use_cuda              : False
+2020-08-09 21:59:03,056 cfg.training.max_output_length     : 31
+2020-08-09 21:59:03,056 cfg.training.print_valid_sents     : [0, 1, 2]
+2020-08-09 21:59:03,056 cfg.training.keep_last_ckpts       : 3
+2020-08-09 21:59:03,056 cfg.training.label_smoothing       : 0.0
+2020-08-09 21:59:03,056 cfg.model.initializer              : xavier
+2020-08-09 21:59:03,056 cfg.model.init_weight              : 0.01
+2020-08-09 21:59:03,056 cfg.model.init_gain                : 1.0
+2020-08-09 21:59:03,057 cfg.model.bias_initializer         : zeros
+2020-08-09 21:59:03,057 cfg.model.embed_initializer        : normal
+2020-08-09 21:59:03,057 cfg.model.embed_init_weight        : 0.1
+2020-08-09 21:59:03,057 cfg.model.embed_init_gain          : 1.0
+2020-08-09 21:59:03,057 cfg.model.init_rnn_orthogonal      : False
+2020-08-09 21:59:03,057 cfg.model.lstm_forget_gate         : 1.0
+2020-08-09 21:59:03,057 cfg.model.tied_embeddings          : False
+2020-08-09 21:59:03,057 cfg.model.tied_softmax             : False
+2020-08-09 21:59:03,057 cfg.model.encoder.type             : recurrent
+2020-08-09 21:59:03,057 cfg.model.encoder.rnn_type         : gru
+2020-08-09 21:59:03,057 cfg.model.encoder.embeddings.embedding_dim : 94
+2020-08-09 21:59:03,057 cfg.model.encoder.embeddings.scale : False
+2020-08-09 21:59:03,057 cfg.model.encoder.embeddings.freeze : False
+2020-08-09 21:59:03,057 cfg.model.encoder.hidden_size      : 30
+2020-08-09 21:59:03,057 cfg.model.encoder.bidirectional    : True
+2020-08-09 21:59:03,057 cfg.model.encoder.dropout          : 0.2
+2020-08-09 21:59:03,057 cfg.model.encoder.num_layers       : 3
+2020-08-09 21:59:03,057 cfg.model.encoder.freeze           : False
+2020-08-09 21:59:03,057 cfg.model.decoder.type             : recurrent
+2020-08-09 21:59:03,057 cfg.model.decoder.rnn_type         : gru
+2020-08-09 21:59:03,057 cfg.model.decoder.embeddings.embedding_dim : 94
+2020-08-09 21:59:03,057 cfg.model.decoder.embeddings.scale : False
+2020-08-09 21:59:03,057 cfg.model.decoder.embeddings.freeze : False
+2020-08-09 21:59:03,057 cfg.model.decoder.hidden_size      : 30
+2020-08-09 21:59:03,057 cfg.model.decoder.dropout          : 0.2
+2020-08-09 21:59:03,058 cfg.model.decoder.hidden_dropout   : 0.2
+2020-08-09 21:59:03,058 cfg.model.decoder.num_layers       : 2
+2020-08-09 21:59:03,058 cfg.model.decoder.input_feeding    : True
+2020-08-09 21:59:03,058 cfg.model.decoder.init_hidden      : last
+2020-08-09 21:59:03,058 cfg.model.decoder.attention        : bahdanau
+2020-08-09 21:59:03,058 cfg.model.decoder.freeze           : False
+2020-08-09 21:59:03,058 Model(
+	encoder=RecurrentEncoder(GRU(94, 30, num_layers=3, batch_first=True, dropout=0.2, bidirectional=True)),
+	decoder=RecurrentDecoder(rnn=GRU(124, 30, num_layers=2, batch_first=True, dropout=0.2), attention=BahdanauAttention),
+	trg_embed=Embeddings(embedding_dim=94, vocab_size=22))
+2020-08-09 21:59:03,535 EPOCH 1
+2020-08-09 21:59:15,021 Epoch   1 Step:       10 Batch Loss:    12.775414 Tokens per Sec:       43, Lr: 0.005000
+2020-08-09 21:59:21,794 Hooray! New best validation result [loss]!
+2020-08-09 21:59:21,794 Saving new checkpoint.
+2020-08-09 21:59:21,798 Example #0
+2020-08-09 21:59:21,798 	Raw hypothesis: ['snake', 'alligator']
+2020-08-09 21:59:21,798 	Reference:  black lion above grey bed
+2020-08-09 21:59:21,798 	Hypothesis: snake alligator
+2020-08-09 21:59:21,798 Example #1
+2020-08-09 21:59:21,798 	Raw hypothesis: ['snake', 'alligator']
+2020-08-09 21:59:21,798 	Reference:  lion above box
+2020-08-09 21:59:21,798 	Hypothesis: snake alligator
+2020-08-09 21:59:21,798 Example #2
+2020-08-09 21:59:21,799 	Raw hypothesis: ['snake']
+2020-08-09 21:59:21,799 	Reference:  alligator above wall
+2020-08-09 21:59:21,799 	Hypothesis: snake
+2020-08-09 21:59:21,799 Validation result (greedy) at epoch   1, step       10: sequence_accuracy:   0.00, loss: 3670.2998, ppl:  13.0220, duration: 6.7754s
+2020-08-09 21:59:33,032 Epoch   1 Step:       20 Batch Loss:    11.189498 Tokens per Sec:       44, Lr: 0.005000
+2020-08-09 21:59:39,834 Hooray! New best validation result [loss]!
+2020-08-09 21:59:39,834 Saving new checkpoint.
+2020-08-09 21:59:39,838 Example #0
+2020-08-09 21:59:39,838 	Raw hypothesis: ['alligator', 'above']
+2020-08-09 21:59:39,838 	Reference:  black lion above grey bed
+2020-08-09 21:59:39,838 	Hypothesis: alligator above
+2020-08-09 21:59:39,838 Example #1
+2020-08-09 21:59:39,838 	Raw hypothesis: ['alligator', 'above']
+2020-08-09 21:59:39,838 	Reference:  lion above box
+2020-08-09 21:59:39,839 	Hypothesis: alligator above
+2020-08-09 21:59:39,839 Example #2
+2020-08-09 21:59:39,839 	Raw hypothesis: ['alligator', 'above']
+2020-08-09 21:59:39,839 	Reference:  alligator above wall
+2020-08-09 21:59:39,839 	Hypothesis: alligator above
+2020-08-09 21:59:39,839 Validation result (greedy) at epoch   1, step       20: sequence_accuracy:   0.00, loss: 3331.6538, ppl:  10.2762, duration: 6.8049s
+2020-08-09 21:59:48,366 Epoch   1: total training loss 362.34
+2020-08-09 21:59:48,367 Training ended after   1 epochs.
+2020-08-09 21:59:48,367 Best validation result (greedy) at step       20: 3331.65 loss.
+2020-08-09 21:59:57,165 test sequence_accuracy:   0.00 [Greedy decoding]
+2020-08-09 21:59:57,165 Translations saved to: models/small_model/00000020.hyps.test

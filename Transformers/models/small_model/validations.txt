@@ -1,0 +1,2 @@
+Steps: 10	Loss: 3670.29980	PPL: 13.02204	sequence_accuracy: 0.00000	LR: 0.00500000	*
+Steps: 20	Loss: 3331.65381	PPL: 10.27617	sequence_accuracy: 0.00000	LR: 0.00500000	*

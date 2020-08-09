@@ -435,15 +435,15 @@ class TrainManager:
                     self._store_outputs(valid_hypotheses)
 
                     # store attention plots for selected valid sentences
-                    if valid_attention_scores:
-                        store_attention_plots(
-                            attentions=valid_attention_scores,
-                            targets=valid_hypotheses_raw,
-                            sources=[s for s in valid_data.src],
-                            indices=self.log_valid_sents,
-                            output_prefix="{}/att.{}".format(
-                                self.model_dir, self.steps),
-                            tb_writer=self.tb_writer, steps=self.steps)
+                    # if valid_attention_scores:
+                    #     store_attention_plots(
+                    #         attentions=valid_attention_scores,
+                    #         targets=valid_hypotheses_raw,
+                    #         sources=[s for s in valid_data.src],
+                    #         indices=self.log_valid_sents,
+                    #         output_prefix="{}/att.{}".format(
+                    #             self.model_dir, self.steps),
+                    #         tb_writer=self.tb_writer, steps=self.steps)
 
                 if self.stop:
                     break
