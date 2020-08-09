@@ -94,7 +94,7 @@ def load_data(data_cfg: dict) -> (object, object, Optional[object], Vocabulary):
         test_data = (test_data[0], test_data_labels)
     
     train_data_labels = label_to_int(train_data[1], trg_vocab)
-    dev_data_labels = label_to_int(train_data[1], trg_vocab)
+    dev_data_labels = label_to_int(dev_data[1], trg_vocab)
 
     train_data = (train_data[0], train_data_labels)
     dev_data = (dev_data[0], dev_data_labels)

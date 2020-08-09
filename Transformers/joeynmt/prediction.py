@@ -116,7 +116,6 @@ def validate_on_data(model: Model, data: Dataset,
                 attention_scores
                 if attention_scores is not None else [])
         
-        print(f'all output size = {str(len(all_outputs))} data length = {str(len(data[1]))}')
         assert len(all_outputs) == len(data[1])
 
         if loss_function is not None and total_ntokens > 0:

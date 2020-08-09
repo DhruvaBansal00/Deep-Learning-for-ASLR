@@ -96,6 +96,10 @@ def load_data(data_cfg: dict) -> (object, object, Optional[object], Vocabulary):
     train_data_labels = label_to_int(train_data[1], trg_vocab)
     dev_data_labels = label_to_int(dev_data[1], trg_vocab)
 
+    print(f'Dev data labels = {str(len(dev_data_labels))}')
+
+    sys.exit()
+
     train_data = (train_data[0], train_data_labels)
     dev_data = (dev_data[0], dev_data_labels)
 
