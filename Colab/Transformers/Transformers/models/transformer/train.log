@@ -1,0 +1,504 @@
+2020-08-09 12:48:48,927 Hello! This is Joey-NMT.
+2020-08-09 12:48:50,830 Total params: 472460
+2020-08-09 12:48:50,831 Trainable parameters: ['decoder.layer_norm.bias', 'decoder.layer_norm.weight', 'decoder.layers.0.dec_layer_norm.bias', 'decoder.layers.0.dec_layer_norm.weight', 'decoder.layers.0.feed_forward.layer_norm.bias', 'decoder.layers.0.feed_forward.layer_norm.weight', 'decoder.layers.0.feed_forward.pwff_layer.0.bias', 'decoder.layers.0.feed_forward.pwff_layer.0.weight', 'decoder.layers.0.feed_forward.pwff_layer.3.bias', 'decoder.layers.0.feed_forward.pwff_layer.3.weight', 'decoder.layers.0.src_trg_att.k_layer.bias', 'decoder.layers.0.src_trg_att.k_layer.weight', 'decoder.layers.0.src_trg_att.output_layer.bias', 'decoder.layers.0.src_trg_att.output_layer.weight', 'decoder.layers.0.src_trg_att.q_layer.bias', 'decoder.layers.0.src_trg_att.q_layer.weight', 'decoder.layers.0.src_trg_att.v_layer.bias', 'decoder.layers.0.src_trg_att.v_layer.weight', 'decoder.layers.0.trg_trg_att.k_layer.bias', 'decoder.layers.0.trg_trg_att.k_layer.weight', 'decoder.layers.0.trg_trg_att.output_layer.bias', 'decoder.layers.0.trg_trg_att.output_layer.weight', 'decoder.layers.0.trg_trg_att.q_layer.bias', 'decoder.layers.0.trg_trg_att.q_layer.weight', 'decoder.layers.0.trg_trg_att.v_layer.bias', 'decoder.layers.0.trg_trg_att.v_layer.weight', 'decoder.layers.0.x_layer_norm.bias', 'decoder.layers.0.x_layer_norm.weight', 'decoder.layers.1.dec_layer_norm.bias', 'decoder.layers.1.dec_layer_norm.weight', 'decoder.layers.1.feed_forward.layer_norm.bias', 'decoder.layers.1.feed_forward.layer_norm.weight', 'decoder.layers.1.feed_forward.pwff_layer.0.bias', 'decoder.layers.1.feed_forward.pwff_layer.0.weight', 'decoder.layers.1.feed_forward.pwff_layer.3.bias', 'decoder.layers.1.feed_forward.pwff_layer.3.weight', 'decoder.layers.1.src_trg_att.k_layer.bias', 'decoder.layers.1.src_trg_att.k_layer.weight', 'decoder.layers.1.src_trg_att.output_layer.bias', 'decoder.layers.1.src_trg_att.output_layer.weight', 'decoder.layers.1.src_trg_att.q_layer.bias', 'decoder.layers.1.src_trg_att.q_layer.weight', 'decoder.layers.1.src_trg_att.v_layer.bias', 'decoder.layers.1.src_trg_att.v_layer.weight', 'decoder.layers.1.trg_trg_att.k_layer.bias', 'decoder.layers.1.trg_trg_att.k_layer.weight', 'decoder.layers.1.trg_trg_att.output_layer.bias', 'decoder.layers.1.trg_trg_att.output_layer.weight', 'decoder.layers.1.trg_trg_att.q_layer.bias', 'decoder.layers.1.trg_trg_att.q_layer.weight', 'decoder.layers.1.trg_trg_att.v_layer.bias', 'decoder.layers.1.trg_trg_att.v_layer.weight', 'decoder.layers.1.x_layer_norm.bias', 'decoder.layers.1.x_layer_norm.weight', 'decoder.layers.2.dec_layer_norm.bias', 'decoder.layers.2.dec_layer_norm.weight', 'decoder.layers.2.feed_forward.layer_norm.bias', 'decoder.layers.2.feed_forward.layer_norm.weight', 'decoder.layers.2.feed_forward.pwff_layer.0.bias', 'decoder.layers.2.feed_forward.pwff_layer.0.weight', 'decoder.layers.2.feed_forward.pwff_layer.3.bias', 'decoder.layers.2.feed_forward.pwff_layer.3.weight', 'decoder.layers.2.src_trg_att.k_layer.bias', 'decoder.layers.2.src_trg_att.k_layer.weight', 'decoder.layers.2.src_trg_att.output_layer.bias', 'decoder.layers.2.src_trg_att.output_layer.weight', 'decoder.layers.2.src_trg_att.q_layer.bias', 'decoder.layers.2.src_trg_att.q_layer.weight', 'decoder.layers.2.src_trg_att.v_layer.bias', 'decoder.layers.2.src_trg_att.v_layer.weight', 'decoder.layers.2.trg_trg_att.k_layer.bias', 'decoder.layers.2.trg_trg_att.k_layer.weight', 'decoder.layers.2.trg_trg_att.output_layer.bias', 'decoder.layers.2.trg_trg_att.output_layer.weight', 'decoder.layers.2.trg_trg_att.q_layer.bias', 'decoder.layers.2.trg_trg_att.q_layer.weight', 'decoder.layers.2.trg_trg_att.v_layer.bias', 'decoder.layers.2.trg_trg_att.v_layer.weight', 'decoder.layers.2.x_layer_norm.bias', 'decoder.layers.2.x_layer_norm.weight', 'encoder.layer_norm.bias', 'encoder.layer_norm.weight', 'encoder.layers.0.feed_forward.layer_norm.bias', 'encoder.layers.0.feed_forward.layer_norm.weight', 'encoder.layers.0.feed_forward.pwff_layer.0.bias', 'encoder.layers.0.feed_forward.pwff_layer.0.weight', 'encoder.layers.0.feed_forward.pwff_layer.3.bias', 'encoder.layers.0.feed_forward.pwff_layer.3.weight', 'encoder.layers.0.layer_norm.bias', 'encoder.layers.0.layer_norm.weight', 'encoder.layers.0.src_src_att.k_layer.bias', 'encoder.layers.0.src_src_att.k_layer.weight', 'encoder.layers.0.src_src_att.output_layer.bias', 'encoder.layers.0.src_src_att.output_layer.weight', 'encoder.layers.0.src_src_att.q_layer.bias', 'encoder.layers.0.src_src_att.q_layer.weight', 'encoder.layers.0.src_src_att.v_layer.bias', 'encoder.layers.0.src_src_att.v_layer.weight', 'encoder.layers.1.feed_forward.layer_norm.bias', 'encoder.layers.1.feed_forward.layer_norm.weight', 'encoder.layers.1.feed_forward.pwff_layer.0.bias', 'encoder.layers.1.feed_forward.pwff_layer.0.weight', 'encoder.layers.1.feed_forward.pwff_layer.3.bias', 'encoder.layers.1.feed_forward.pwff_layer.3.weight', 'encoder.layers.1.layer_norm.bias', 'encoder.layers.1.layer_norm.weight', 'encoder.layers.1.src_src_att.k_layer.bias', 'encoder.layers.1.src_src_att.k_layer.weight', 'encoder.layers.1.src_src_att.output_layer.bias', 'encoder.layers.1.src_src_att.output_layer.weight', 'encoder.layers.1.src_src_att.q_layer.bias', 'encoder.layers.1.src_src_att.q_layer.weight', 'encoder.layers.1.src_src_att.v_layer.bias', 'encoder.layers.1.src_src_att.v_layer.weight', 'encoder.layers.2.feed_forward.layer_norm.bias', 'encoder.layers.2.feed_forward.layer_norm.weight', 'encoder.layers.2.feed_forward.pwff_layer.0.bias', 'encoder.layers.2.feed_forward.pwff_layer.0.weight', 'encoder.layers.2.feed_forward.pwff_layer.3.bias', 'encoder.layers.2.feed_forward.pwff_layer.3.weight', 'encoder.layers.2.layer_norm.bias', 'encoder.layers.2.layer_norm.weight', 'encoder.layers.2.src_src_att.k_layer.bias', 'encoder.layers.2.src_src_att.k_layer.weight', 'encoder.layers.2.src_src_att.output_layer.bias', 'encoder.layers.2.src_src_att.output_layer.weight', 'encoder.layers.2.src_src_att.q_layer.bias', 'encoder.layers.2.src_src_att.q_layer.weight', 'encoder.layers.2.src_src_att.v_layer.bias', 'encoder.layers.2.src_src_att.v_layer.weight', 'trg_embed.lut.weight']
+2020-08-09 12:48:53,660 cfg.name                           : my_experiment
+2020-08-09 12:48:53,661 cfg.data.src                       : data
+2020-08-09 12:48:53,661 cfg.data.trg                       : en
+2020-08-09 12:48:53,661 cfg.data.train                     : /content/drive/My Drive/Deep-Learning-for-ASLR/data/lists/train
+2020-08-09 12:48:53,661 cfg.data.dev                       : /content/drive/My Drive/Deep-Learning-for-ASLR/data/lists/dev
+2020-08-09 12:48:53,662 cfg.data.test                      : /content/drive/My Drive/Deep-Learning-for-ASLR/data/lists/test
+2020-08-09 12:48:53,663 cfg.data.level                     : word
+2020-08-09 12:48:53,663 cfg.data.lowercase                 : True
+2020-08-09 12:48:53,663 cfg.data.max_src_length            : 400
+2020-08-09 12:48:53,663 cfg.data.max_trg_length            : 7
+2020-08-09 12:48:53,664 cfg.data.src_voc_min_freq          : 1
+2020-08-09 12:48:53,664 cfg.data.src_voc_limit             : 101
+2020-08-09 12:48:53,664 cfg.data.trg_voc_min_freq          : 1
+2020-08-09 12:48:53,664 cfg.data.trg_voc_limit             : -1
+2020-08-09 12:48:53,665 cfg.testing.beam_size              : 2
+2020-08-09 12:48:53,665 cfg.testing.alpha                  : 1.0
+2020-08-09 12:48:53,665 cfg.training.reset_best_ckpt       : False
+2020-08-09 12:48:53,665 cfg.training.reset_scheduler       : False
+2020-08-09 12:48:53,666 cfg.training.reset_optimizer       : False
+2020-08-09 12:48:53,666 cfg.training.random_seed           : 42
+2020-08-09 12:48:53,666 cfg.training.optimizer             : adam
+2020-08-09 12:48:53,666 cfg.training.adam_betas            : [0.9, 0.98]
+2020-08-09 12:48:53,666 cfg.training.learning_rate         : 0.001
+2020-08-09 12:48:53,667 cfg.training.learning_rate_min     : 1e-06
+2020-08-09 12:48:53,667 cfg.training.learning_rate_factor  : 0.5
+2020-08-09 12:48:53,667 cfg.training.learning_rate_warmup  : 1000
+2020-08-09 12:48:53,667 cfg.training.weight_decay          : 0.0
+2020-08-09 12:48:53,668 cfg.training.batch_size            : 32
+2020-08-09 12:48:53,668 cfg.training.batch_type            : token
+2020-08-09 12:48:53,668 cfg.training.batch_multiplier      : 1
+2020-08-09 12:48:53,668 cfg.training.normalization         : batch
+2020-08-09 12:48:53,668 cfg.training.scheduling            : noam
+2020-08-09 12:48:53,669 cfg.training.epochs                : 100
+2020-08-09 12:48:53,669 cfg.training.validation_freq       : 100
+2020-08-09 12:48:53,669 cfg.training.logging_freq          : 10
+2020-08-09 12:48:53,669 cfg.training.eval_metric           : sequence_accuracy
+2020-08-09 12:48:53,670 cfg.training.early_stopping_metric : loss
+2020-08-09 12:48:53,670 cfg.training.model_dir             : models/transformer
+2020-08-09 12:48:53,670 cfg.training.overwrite             : True
+2020-08-09 12:48:53,670 cfg.training.shuffle               : True
+2020-08-09 12:48:53,670 cfg.training.use_cuda              : True
+2020-08-09 12:48:53,671 cfg.training.max_output_length     : 31
+2020-08-09 12:48:53,671 cfg.training.print_valid_sents     : [0, 1, 2]
+2020-08-09 12:48:53,671 cfg.training.keep_last_ckpts       : 3
+2020-08-09 12:48:53,671 cfg.training.label_smoothing       : 0.0
+2020-08-09 12:48:53,672 cfg.model.initializer              : xavier
+2020-08-09 12:48:53,672 cfg.model.init_gain                : 1.0
+2020-08-09 12:48:53,672 cfg.model.bias_initializer         : zeros
+2020-08-09 12:48:53,672 cfg.model.embed_initializer        : xavier
+2020-08-09 12:48:53,673 cfg.model.embed_init_gain          : 1.0
+2020-08-09 12:48:53,673 cfg.model.tied_embeddings          : False
+2020-08-09 12:48:53,673 cfg.model.tied_softmax             : True
+2020-08-09 12:48:53,673 cfg.model.encoder.type             : transformer
+2020-08-09 12:48:53,673 cfg.model.encoder.num_layers       : 3
+2020-08-09 12:48:53,674 cfg.model.encoder.num_heads        : 2
+2020-08-09 12:48:53,674 cfg.model.encoder.embeddings.embedding_dim : 94
+2020-08-09 12:48:53,674 cfg.model.encoder.embeddings.scale : True
+2020-08-09 12:48:53,674 cfg.model.encoder.embeddings.freeze : False
+2020-08-09 12:48:53,675 cfg.model.encoder.hidden_size      : 94
+2020-08-09 12:48:53,675 cfg.model.encoder.ff_size          : 128
+2020-08-09 12:48:53,675 cfg.model.encoder.dropout          : 0.1
+2020-08-09 12:48:53,675 cfg.model.encoder.freeze           : False
+2020-08-09 12:48:53,675 cfg.model.decoder.type             : transformer
+2020-08-09 12:48:53,676 cfg.model.decoder.num_layers       : 3
+2020-08-09 12:48:53,676 cfg.model.decoder.num_heads        : 2
+2020-08-09 12:48:53,676 cfg.model.decoder.embeddings.embedding_dim : 94
+2020-08-09 12:48:53,676 cfg.model.decoder.embeddings.scale : True
+2020-08-09 12:48:53,677 cfg.model.decoder.embeddings.freeze : False
+2020-08-09 12:48:53,677 cfg.model.decoder.hidden_size      : 94
+2020-08-09 12:48:53,677 cfg.model.decoder.ff_size          : 128
+2020-08-09 12:48:53,677 cfg.model.decoder.dropout          : 0.1
+2020-08-09 12:48:53,677 cfg.model.decoder.freeze           : False
+2020-08-09 12:48:53,678 Model(
+	encoder=TransformerEncoder(num_layers=3, num_heads=2),
+	decoder=TransformerDecoder(num_layers=3, num_heads=2),
+	trg_embed=Embeddings(embedding_dim=94, vocab_size=22))
+2020-08-09 12:48:54,344 EPOCH 1
+2020-08-09 12:48:57,396 Epoch   1: total training loss 197.40
+2020-08-09 12:48:57,397 EPOCH 2
+2020-08-09 12:48:57,685 Epoch   2 Step:       10 Batch Loss:    20.617065 Tokens per Sec:      549, Lr: 0.000016
+2020-08-09 12:49:00,033 Epoch   2: total training loss 185.43
+2020-08-09 12:49:00,033 EPOCH 3
+2020-08-09 12:49:00,937 Epoch   3 Step:       20 Batch Loss:    18.310154 Tokens per Sec:      338, Lr: 0.000033
+2020-08-09 12:49:02,996 Epoch   3: total training loss 177.67
+2020-08-09 12:49:02,996 EPOCH 4
+2020-08-09 12:49:03,857 Epoch   4 Step:       30 Batch Loss:    18.943121 Tokens per Sec:      538, Lr: 0.000049
+2020-08-09 12:49:05,599 Epoch   4: total training loss 168.30
+2020-08-09 12:49:05,599 EPOCH 5
+2020-08-09 12:49:07,086 Epoch   5 Step:       40 Batch Loss:    17.487152 Tokens per Sec:      418, Lr: 0.000065
+2020-08-09 12:49:08,539 Epoch   5: total training loss 157.63
+2020-08-09 12:49:08,539 EPOCH 6
+2020-08-09 12:49:09,969 Epoch   6 Step:       50 Batch Loss:    16.087387 Tokens per Sec:      544, Lr: 0.000082
+2020-08-09 12:49:11,127 Epoch   6: total training loss 147.31
+2020-08-09 12:49:11,127 EPOCH 7
+2020-08-09 12:49:13,205 Epoch   7 Step:       60 Batch Loss:    15.796301 Tokens per Sec:      453, Lr: 0.000098
+2020-08-09 12:49:14,063 Epoch   7: total training loss 139.01
+2020-08-09 12:49:14,064 EPOCH 8
+2020-08-09 12:49:16,124 Epoch   8 Step:       70 Batch Loss:    14.656012 Tokens per Sec:      535, Lr: 0.000114
+2020-08-09 12:49:16,721 Epoch   8: total training loss 133.23
+2020-08-09 12:49:16,721 EPOCH 9
+2020-08-09 12:49:19,372 Epoch   9 Step:       80 Batch Loss:    13.565669 Tokens per Sec:      476, Lr: 0.000130
+2020-08-09 12:49:19,660 Epoch   9: total training loss 127.09
+2020-08-09 12:49:19,661 EPOCH 10
+2020-08-09 12:49:22,268 Epoch  10 Step:       90 Batch Loss:    14.673629 Tokens per Sec:      549, Lr: 0.000147
+2020-08-09 12:49:22,269 Epoch  10: total training loss 122.10
+2020-08-09 12:49:22,269 EPOCH 11
+2020-08-09 12:49:25,236 Epoch  11: total training loss 117.40
+2020-08-09 12:49:25,236 EPOCH 12
+2020-08-09 12:49:25,538 Epoch  12 Step:      100 Batch Loss:    12.837664 Tokens per Sec:      526, Lr: 0.000163
+2020-08-09 12:49:30,044 Hooray! New best validation result [loss]!
+2020-08-09 12:49:30,045 Saving new checkpoint.
+2020-08-09 12:49:30,225 Example #0
+2020-08-09 12:49:30,226 	Raw hypothesis: ['below', 'below', 'below', 'below', 'below', 'below', 'below']
+2020-08-09 12:49:30,226 	Reference:  alligator in wagon
+2020-08-09 12:49:30,226 	Hypothesis: below below below below below below below
+2020-08-09 12:49:30,227 Example #1
+2020-08-09 12:49:30,227 	Raw hypothesis: ['below', 'below', 'below', 'below', 'below', 'below', 'below', 'below', 'below']
+2020-08-09 12:49:30,227 	Reference:  alligator above blue wagon
+2020-08-09 12:49:30,227 	Hypothesis: below below below below below below below below below
+2020-08-09 12:49:30,227 Example #2
+2020-08-09 12:49:30,228 	Raw hypothesis: ['monkey', 'monkey', 'monkey', 'monkey']
+2020-08-09 12:49:30,228 	Reference:  blue alligator above grey wall
+2020-08-09 12:49:30,228 	Hypothesis: monkey monkey monkey monkey
+2020-08-09 12:49:30,228 Validation result (greedy) at epoch  12, step      100: sequence_accuracy:   0.00, loss: 3566.4548, ppl:  12.1099, duration: 4.6899s
+2020-08-09 12:49:32,876 Epoch  12: total training loss 113.50
+2020-08-09 12:49:32,876 EPOCH 13
+2020-08-09 12:49:33,445 Epoch  13 Step:      110 Batch Loss:    10.925140 Tokens per Sec:      538, Lr: 0.000179
+2020-08-09 12:49:35,467 Epoch  13: total training loss 108.80
+2020-08-09 12:49:35,467 EPOCH 14
+2020-08-09 12:49:36,648 Epoch  14 Step:      120 Batch Loss:    11.500690 Tokens per Sec:      393, Lr: 0.000196
+2020-08-09 12:49:38,376 Epoch  14: total training loss 104.62
+2020-08-09 12:49:38,377 EPOCH 15
+2020-08-09 12:49:39,524 Epoch  15 Step:      130 Batch Loss:    10.864690 Tokens per Sec:      542, Lr: 0.000212
+2020-08-09 12:49:41,026 Epoch  15: total training loss 98.15
+2020-08-09 12:49:41,027 EPOCH 16
+2020-08-09 12:49:42,763 Epoch  16 Step:      140 Batch Loss:    10.101192 Tokens per Sec:      448, Lr: 0.000228
+2020-08-09 12:49:43,923 Epoch  16: total training loss 92.77
+2020-08-09 12:49:43,923 EPOCH 17
+2020-08-09 12:49:45,642 Epoch  17 Step:      150 Batch Loss:    10.078554 Tokens per Sec:      549, Lr: 0.000245
+2020-08-09 12:49:46,507 Epoch  17: total training loss 87.68
+2020-08-09 12:49:46,507 EPOCH 18
+2020-08-09 12:49:48,797 Epoch  18 Step:      160 Batch Loss:     9.259922 Tokens per Sec:      481, Lr: 0.000261
+2020-08-09 12:49:49,361 Epoch  18: total training loss 81.54
+2020-08-09 12:49:49,362 EPOCH 19
+2020-08-09 12:49:51,664 Epoch  19 Step:      170 Batch Loss:     8.509638 Tokens per Sec:      547, Lr: 0.000277
+2020-08-09 12:49:51,958 Epoch  19: total training loss 76.31
+2020-08-09 12:49:51,959 EPOCH 20
+2020-08-09 12:49:54,871 Epoch  20 Step:      180 Batch Loss:     8.538463 Tokens per Sec:      491, Lr: 0.000294
+2020-08-09 12:49:54,871 Epoch  20: total training loss 70.58
+2020-08-09 12:49:54,871 EPOCH 21
+2020-08-09 12:49:57,478 Epoch  21: total training loss 66.00
+2020-08-09 12:49:57,479 EPOCH 22
+2020-08-09 12:49:57,769 Epoch  22 Step:      190 Batch Loss:     7.441330 Tokens per Sec:      547, Lr: 0.000310
+2020-08-09 12:50:00,402 Epoch  22: total training loss 61.21
+2020-08-09 12:50:00,403 EPOCH 23
+2020-08-09 12:50:00,967 Epoch  23 Step:      200 Batch Loss:     5.789001 Tokens per Sec:      542, Lr: 0.000326
+2020-08-09 12:50:04,086 Hooray! New best validation result [loss]!
+2020-08-09 12:50:04,086 Saving new checkpoint.
+2020-08-09 12:50:04,286 Example #0
+2020-08-09 12:50:04,287 	Raw hypothesis: ['alligator', 'in', 'wagon']
+2020-08-09 12:50:04,288 	Reference:  alligator in wagon
+2020-08-09 12:50:04,288 	Hypothesis: alligator in wagon
+2020-08-09 12:50:04,288 Example #1
+2020-08-09 12:50:04,288 	Raw hypothesis: ['alligator', 'in', 'blue']
+2020-08-09 12:50:04,288 	Reference:  alligator above blue wagon
+2020-08-09 12:50:04,289 	Hypothesis: alligator in blue
+2020-08-09 12:50:04,289 Example #2
+2020-08-09 12:50:04,289 	Raw hypothesis: ['lion', 'above', 'wall']
+2020-08-09 12:50:04,290 	Reference:  blue alligator above grey wall
+2020-08-09 12:50:04,290 	Hypothesis: lion above wall
+2020-08-09 12:50:04,290 Validation result (greedy) at epoch  23, step      200: sequence_accuracy:   2.08, loss: 1755.1259, ppl:   3.4122, duration: 3.3229s
+2020-08-09 12:50:06,725 Epoch  23: total training loss 58.94
+2020-08-09 12:50:06,725 EPOCH 24
+2020-08-09 12:50:07,615 Epoch  24 Step:      210 Batch Loss:     6.303698 Tokens per Sec:      521, Lr: 0.000342
+2020-08-09 12:50:09,374 Epoch  24: total training loss 56.08
+2020-08-09 12:50:09,374 EPOCH 25
+2020-08-09 12:50:10,882 Epoch  25 Step:      220 Batch Loss:     6.150590 Tokens per Sec:      412, Lr: 0.000359
+2020-08-09 12:50:12,367 Epoch  25: total training loss 53.96
+2020-08-09 12:50:12,368 EPOCH 26
+2020-08-09 12:50:13,820 Epoch  26 Step:      230 Batch Loss:     5.370414 Tokens per Sec:      535, Lr: 0.000375
+2020-08-09 12:50:14,980 Epoch  26: total training loss 51.06
+2020-08-09 12:50:14,982 EPOCH 27
+2020-08-09 12:50:17,059 Epoch  27 Step:      240 Batch Loss:     5.764791 Tokens per Sec:      453, Lr: 0.000391
+2020-08-09 12:50:17,937 Epoch  27: total training loss 50.12
+2020-08-09 12:50:17,937 EPOCH 28
+2020-08-09 12:50:20,018 Epoch  28 Step:      250 Batch Loss:     5.231731 Tokens per Sec:      530, Lr: 0.000408
+2020-08-09 12:50:20,602 Epoch  28: total training loss 49.17
+2020-08-09 12:50:20,603 EPOCH 29
+2020-08-09 12:50:23,271 Epoch  29 Step:      260 Batch Loss:     5.223027 Tokens per Sec:      472, Lr: 0.000424
+2020-08-09 12:50:23,562 Epoch  29: total training loss 47.60
+2020-08-09 12:50:23,563 EPOCH 30
+2020-08-09 12:50:26,220 Epoch  30 Step:      270 Batch Loss:     5.444782 Tokens per Sec:      538, Lr: 0.000440
+2020-08-09 12:50:26,220 Epoch  30: total training loss 46.47
+2020-08-09 12:50:26,220 EPOCH 31
+2020-08-09 12:50:29,173 Epoch  31: total training loss 44.57
+2020-08-09 12:50:29,173 EPOCH 32
+2020-08-09 12:50:29,465 Epoch  32 Step:      280 Batch Loss:     5.141525 Tokens per Sec:      544, Lr: 0.000457
+2020-08-09 12:50:31,810 Epoch  32: total training loss 44.06
+2020-08-09 12:50:31,811 EPOCH 33
+2020-08-09 12:50:32,405 Epoch  33 Step:      290 Batch Loss:     3.886616 Tokens per Sec:      514, Lr: 0.000473
+2020-08-09 12:50:34,803 Epoch  33: total training loss 42.60
+2020-08-09 12:50:34,803 EPOCH 34
+2020-08-09 12:50:35,713 Epoch  34 Step:      300 Batch Loss:     4.406704 Tokens per Sec:      509, Lr: 0.000489
+2020-08-09 12:50:39,247 Hooray! New best validation result [loss]!
+2020-08-09 12:50:39,247 Saving new checkpoint.
+2020-08-09 12:50:39,428 Example #0
+2020-08-09 12:50:39,429 	Raw hypothesis: ['alligator', 'in', 'wagon']
+2020-08-09 12:50:39,429 	Reference:  alligator in wagon
+2020-08-09 12:50:39,429 	Hypothesis: alligator in wagon
+2020-08-09 12:50:39,429 Example #1
+2020-08-09 12:50:39,430 	Raw hypothesis: ['alligator', 'in', 'wagon']
+2020-08-09 12:50:39,430 	Reference:  alligator above blue wagon
+2020-08-09 12:50:39,430 	Hypothesis: alligator in wagon
+2020-08-09 12:50:39,430 Example #2
+2020-08-09 12:50:39,431 	Raw hypothesis: ['lion', 'below', 'chair']
+2020-08-09 12:50:39,431 	Reference:  blue alligator above grey wall
+2020-08-09 12:50:39,431 	Hypothesis: lion below chair
+2020-08-09 12:50:39,432 Validation result (greedy) at epoch  34, step      300: sequence_accuracy:  10.76, loss: 1258.1570, ppl:   2.4105, duration: 3.7177s
+2020-08-09 12:50:41,194 Epoch  34: total training loss 41.65
+2020-08-09 12:50:41,195 EPOCH 35
+2020-08-09 12:50:42,374 Epoch  35 Step:      310 Batch Loss:     4.644113 Tokens per Sec:      527, Lr: 0.000506
+2020-08-09 12:50:43,848 Epoch  35: total training loss 40.13
+2020-08-09 12:50:43,848 EPOCH 36
+2020-08-09 12:50:45,700 Epoch  36 Step:      320 Batch Loss:     4.266047 Tokens per Sec:      420, Lr: 0.000522
+2020-08-09 12:50:46,888 Epoch  36: total training loss 39.03
+2020-08-09 12:50:46,889 EPOCH 37
+2020-08-09 12:50:48,725 Epoch  37 Step:      330 Batch Loss:     4.301184 Tokens per Sec:      513, Lr: 0.000538
+2020-08-09 12:50:49,627 Epoch  37: total training loss 38.26
+2020-08-09 12:50:49,628 EPOCH 38
+2020-08-09 12:50:52,011 Epoch  38 Step:      340 Batch Loss:     4.184913 Tokens per Sec:      463, Lr: 0.000554
+2020-08-09 12:50:52,594 Epoch  38: total training loss 37.57
+2020-08-09 12:50:52,594 EPOCH 39
+2020-08-09 12:50:54,960 Epoch  39 Step:      350 Batch Loss:     4.277084 Tokens per Sec:      533, Lr: 0.000571
+2020-08-09 12:50:55,253 Epoch  39: total training loss 36.87
+2020-08-09 12:50:55,254 EPOCH 40
+2020-08-09 12:50:58,254 Epoch  40 Step:      360 Batch Loss:     4.320957 Tokens per Sec:      477, Lr: 0.000587
+2020-08-09 12:50:58,255 Epoch  40: total training loss 35.70
+2020-08-09 12:50:58,255 EPOCH 41
+2020-08-09 12:51:00,892 Epoch  41: total training loss 34.56
+2020-08-09 12:51:00,892 EPOCH 42
+2020-08-09 12:51:01,199 Epoch  42 Step:      370 Batch Loss:     4.196239 Tokens per Sec:      517, Lr: 0.000603
+2020-08-09 12:51:03,844 Epoch  42: total training loss 35.01
+2020-08-09 12:51:03,845 EPOCH 43
+2020-08-09 12:51:04,440 Epoch  43 Step:      380 Batch Loss:     3.260306 Tokens per Sec:      513, Lr: 0.000620
+2020-08-09 12:51:06,514 Epoch  43: total training loss 33.77
+2020-08-09 12:51:06,515 EPOCH 44
+2020-08-09 12:51:07,401 Epoch  44 Step:      390 Batch Loss:     3.660187 Tokens per Sec:      523, Lr: 0.000636
+2020-08-09 12:51:09,473 Epoch  44: total training loss 32.84
+2020-08-09 12:51:09,474 EPOCH 45
+2020-08-09 12:51:10,673 Epoch  45 Step:      400 Batch Loss:     3.308228 Tokens per Sec:      518, Lr: 0.000652
+2020-08-09 12:51:14,104 Hooray! New best validation result [loss]!
+2020-08-09 12:51:14,105 Saving new checkpoint.
+2020-08-09 12:51:14,287 Example #0
+2020-08-09 12:51:14,288 	Raw hypothesis: ['alligator', 'in', 'wagon']
+2020-08-09 12:51:14,289 	Reference:  alligator in wagon
+2020-08-09 12:51:14,289 	Hypothesis: alligator in wagon
+2020-08-09 12:51:14,289 Example #1
+2020-08-09 12:51:14,289 	Raw hypothesis: ['alligator', 'in', 'orange', 'flowers']
+2020-08-09 12:51:14,289 	Reference:  alligator above blue wagon
+2020-08-09 12:51:14,290 	Hypothesis: alligator in orange flowers
+2020-08-09 12:51:14,290 Example #2
+2020-08-09 12:51:14,290 	Raw hypothesis: ['alligator', 'above', 'wall']
+2020-08-09 12:51:14,290 	Reference:  blue alligator above grey wall
+2020-08-09 12:51:14,290 	Hypothesis: alligator above wall
+2020-08-09 12:51:14,291 Validation result (greedy) at epoch  45, step      400: sequence_accuracy:  18.40, loss: 991.0001, ppl:   1.9997, duration: 3.6171s
+2020-08-09 12:51:15,787 Epoch  45: total training loss 31.03
+2020-08-09 12:51:15,788 EPOCH 46
+2020-08-09 12:51:17,261 Epoch  46 Step:      410 Batch Loss:     3.505445 Tokens per Sec:      528, Lr: 0.000669
+2020-08-09 12:51:18,411 Epoch  46: total training loss 31.77
+2020-08-09 12:51:18,411 EPOCH 47
+2020-08-09 12:51:20,526 Epoch  47 Step:      420 Batch Loss:     3.197811 Tokens per Sec:      445, Lr: 0.000685
+2020-08-09 12:51:21,411 Epoch  47: total training loss 29.74
+2020-08-09 12:51:21,411 EPOCH 48
+2020-08-09 12:51:23,517 Epoch  48 Step:      430 Batch Loss:     2.854980 Tokens per Sec:      524, Lr: 0.000701
+2020-08-09 12:51:24,104 Epoch  48: total training loss 29.66
+2020-08-09 12:51:24,104 EPOCH 49
+2020-08-09 12:51:26,803 Epoch  49 Step:      440 Batch Loss:     3.102022 Tokens per Sec:      467, Lr: 0.000718
+2020-08-09 12:51:27,092 Epoch  49: total training loss 28.90
+2020-08-09 12:51:27,093 EPOCH 50
+2020-08-09 12:51:29,708 Epoch  50 Step:      450 Batch Loss:     3.544913 Tokens per Sec:      547, Lr: 0.000734
+2020-08-09 12:51:29,708 Epoch  50: total training loss 28.29
+2020-08-09 12:51:29,709 EPOCH 51
+2020-08-09 12:51:32,741 Epoch  51: total training loss 27.89
+2020-08-09 12:51:32,741 EPOCH 52
+2020-08-09 12:51:33,041 Epoch  52 Step:      460 Batch Loss:     3.074738 Tokens per Sec:      529, Lr: 0.000750
+2020-08-09 12:51:35,377 Epoch  52: total training loss 26.23
+2020-08-09 12:51:35,377 EPOCH 53
+2020-08-09 12:51:35,984 Epoch  53 Step:      470 Batch Loss:     2.893945 Tokens per Sec:      504, Lr: 0.000766
+2020-08-09 12:51:38,349 Epoch  53: total training loss 26.98
+2020-08-09 12:51:38,349 EPOCH 54
+2020-08-09 12:51:39,202 Epoch  54 Step:      480 Batch Loss:     2.923453 Tokens per Sec:      544, Lr: 0.000783
+2020-08-09 12:51:40,990 Epoch  54: total training loss 26.11
+2020-08-09 12:51:40,990 EPOCH 55
+2020-08-09 12:51:42,207 Epoch  55 Step:      490 Batch Loss:     2.820447 Tokens per Sec:      511, Lr: 0.000799
+2020-08-09 12:51:44,006 Epoch  55: total training loss 25.61
+2020-08-09 12:51:44,007 EPOCH 56
+2020-08-09 12:51:45,467 Epoch  56 Step:      500 Batch Loss:     3.064651 Tokens per Sec:      532, Lr: 0.000815
+2020-08-09 12:51:48,969 Hooray! New best validation result [loss]!
+2020-08-09 12:51:48,969 Saving new checkpoint.
+2020-08-09 12:51:49,155 Example #0
+2020-08-09 12:51:49,156 	Raw hypothesis: ['alligator', 'above', 'bed']
+2020-08-09 12:51:49,156 	Reference:  alligator in wagon
+2020-08-09 12:51:49,156 	Hypothesis: alligator above bed
+2020-08-09 12:51:49,157 Example #1
+2020-08-09 12:51:49,157 	Raw hypothesis: ['alligator', 'above', 'blue', 'wagon']
+2020-08-09 12:51:49,157 	Reference:  alligator above blue wagon
+2020-08-09 12:51:49,157 	Hypothesis: alligator above blue wagon
+2020-08-09 12:51:49,157 Example #2
+2020-08-09 12:51:49,158 	Raw hypothesis: ['alligator', 'above', 'blue', 'wall']
+2020-08-09 12:51:49,158 	Reference:  blue alligator above grey wall
+2020-08-09 12:51:49,158 	Hypothesis: alligator above blue wall
+2020-08-09 12:51:49,158 Validation result (greedy) at epoch  56, step      500: sequence_accuracy:  22.57, loss: 852.4590, ppl:   1.8151, duration: 3.6906s
+2020-08-09 12:51:50,340 Epoch  56: total training loss 26.20
+2020-08-09 12:51:50,340 EPOCH 57
+2020-08-09 12:51:52,102 Epoch  57 Step:      510 Batch Loss:     2.645258 Tokens per Sec:      535, Lr: 0.000832
+2020-08-09 12:51:52,972 Epoch  57: total training loss 25.45
+2020-08-09 12:51:52,972 EPOCH 58
+2020-08-09 12:51:55,358 Epoch  58 Step:      520 Batch Loss:     2.829657 Tokens per Sec:      462, Lr: 0.000848
+2020-08-09 12:51:55,935 Epoch  58: total training loss 24.58
+2020-08-09 12:51:55,936 EPOCH 59
+2020-08-09 12:51:58,345 Epoch  59 Step:      530 Batch Loss:     2.621305 Tokens per Sec:      523, Lr: 0.000864
+2020-08-09 12:51:58,629 Epoch  59: total training loss 23.61
+2020-08-09 12:51:58,629 EPOCH 60
+2020-08-09 12:52:01,589 Epoch  60 Step:      540 Batch Loss:     3.243398 Tokens per Sec:      483, Lr: 0.000881
+2020-08-09 12:52:01,590 Epoch  60: total training loss 23.64
+2020-08-09 12:52:01,590 EPOCH 61
+2020-08-09 12:52:04,206 Epoch  61: total training loss 22.75
+2020-08-09 12:52:04,207 EPOCH 62
+2020-08-09 12:52:04,517 Epoch  62 Step:      550 Batch Loss:     2.243378 Tokens per Sec:      510, Lr: 0.000897
+2020-08-09 12:52:07,193 Epoch  62: total training loss 22.50
+2020-08-09 12:52:07,194 EPOCH 63
+2020-08-09 12:52:07,783 Epoch  63 Step:      560 Batch Loss:     2.118047 Tokens per Sec:      518, Lr: 0.000913
+2020-08-09 12:52:09,827 Epoch  63: total training loss 22.66
+2020-08-09 12:52:09,828 EPOCH 64
+2020-08-09 12:52:10,691 Epoch  64 Step:      570 Batch Loss:     2.906835 Tokens per Sec:      537, Lr: 0.000930
+2020-08-09 12:52:12,746 Epoch  64: total training loss 22.02
+2020-08-09 12:52:12,746 EPOCH 65
+2020-08-09 12:52:13,921 Epoch  65 Step:      580 Batch Loss:     2.567560 Tokens per Sec:      529, Lr: 0.000946
+2020-08-09 12:52:15,355 Epoch  65: total training loss 22.25
+2020-08-09 12:52:15,355 EPOCH 66
+2020-08-09 12:52:17,131 Epoch  66 Step:      590 Batch Loss:     2.365748 Tokens per Sec:      438, Lr: 0.000962
+2020-08-09 12:52:18,294 Epoch  66: total training loss 22.17
+2020-08-09 12:52:18,295 EPOCH 67
+2020-08-09 12:52:20,067 Epoch  67 Step:      600 Batch Loss:     2.307044 Tokens per Sec:      531, Lr: 0.000978
+2020-08-09 12:52:23,563 Hooray! New best validation result [loss]!
+2020-08-09 12:52:23,563 Saving new checkpoint.
+2020-08-09 12:52:23,776 Example #0
+2020-08-09 12:52:23,777 	Raw hypothesis: ['alligator', 'above', 'bed']
+2020-08-09 12:52:23,777 	Reference:  alligator in wagon
+2020-08-09 12:52:23,778 	Hypothesis: alligator above bed
+2020-08-09 12:52:23,778 Example #1
+2020-08-09 12:52:23,778 	Raw hypothesis: ['alligator', 'above', 'blue', 'wall']
+2020-08-09 12:52:23,778 	Reference:  alligator above blue wagon
+2020-08-09 12:52:23,779 	Hypothesis: alligator above blue wall
+2020-08-09 12:52:23,779 Example #2
+2020-08-09 12:52:23,779 	Raw hypothesis: ['lion', 'above', 'wall']
+2020-08-09 12:52:23,779 	Reference:  blue alligator above grey wall
+2020-08-09 12:52:23,780 	Hypothesis: lion above wall
+2020-08-09 12:52:23,780 Validation result (greedy) at epoch  67, step      600: sequence_accuracy:  28.47, loss: 808.7354, ppl:   1.7604, duration: 3.7126s
+2020-08-09 12:52:24,674 Epoch  67: total training loss 21.90
+2020-08-09 12:52:24,676 EPOCH 68
+2020-08-09 12:52:26,749 Epoch  68 Step:      610 Batch Loss:     2.220609 Tokens per Sec:      532, Lr: 0.000995
+2020-08-09 12:52:27,328 Epoch  68: total training loss 20.52
+2020-08-09 12:52:27,328 EPOCH 69
+2020-08-09 12:52:29,992 Epoch  69 Step:      620 Batch Loss:     2.313707 Tokens per Sec:      473, Lr: 0.001011
+2020-08-09 12:52:30,287 Epoch  69: total training loss 19.96
+2020-08-09 12:52:30,287 EPOCH 70
+2020-08-09 12:52:32,959 Epoch  70 Step:      630 Batch Loss:     2.583690 Tokens per Sec:      536, Lr: 0.001027
+2020-08-09 12:52:32,959 Epoch  70: total training loss 20.92
+2020-08-09 12:52:32,959 EPOCH 71
+2020-08-09 12:52:35,900 Epoch  71: total training loss 20.74
+2020-08-09 12:52:35,901 EPOCH 72
+2020-08-09 12:52:36,205 Epoch  72 Step:      640 Batch Loss:     2.101124 Tokens per Sec:      522, Lr: 0.001044
+2020-08-09 12:52:38,535 Epoch  72: total training loss 20.00
+2020-08-09 12:52:38,535 EPOCH 73
+2020-08-09 12:52:39,124 Epoch  73 Step:      650 Batch Loss:     1.842934 Tokens per Sec:      519, Lr: 0.001060
+2020-08-09 12:52:41,500 Epoch  73: total training loss 19.04
+2020-08-09 12:52:41,500 EPOCH 74
+2020-08-09 12:52:42,379 Epoch  74 Step:      660 Batch Loss:     2.445637 Tokens per Sec:      527, Lr: 0.001076
+2020-08-09 12:52:44,102 Epoch  74: total training loss 19.98
+2020-08-09 12:52:44,102 EPOCH 75
+2020-08-09 12:52:45,282 Epoch  75 Step:      670 Batch Loss:     2.109117 Tokens per Sec:      527, Lr: 0.001093
+2020-08-09 12:52:47,070 Epoch  75: total training loss 20.27
+2020-08-09 12:52:47,070 EPOCH 76
+2020-08-09 12:52:48,537 Epoch  76 Step:      680 Batch Loss:     1.990324 Tokens per Sec:      530, Lr: 0.001109
+2020-08-09 12:52:49,696 Epoch  76: total training loss 19.07
+2020-08-09 12:52:49,696 EPOCH 77
+2020-08-09 12:52:51,767 Epoch  77 Step:      690 Batch Loss:     2.334342 Tokens per Sec:      455, Lr: 0.001125
+2020-08-09 12:52:52,657 Epoch  77: total training loss 19.70
+2020-08-09 12:52:52,658 EPOCH 78
+2020-08-09 12:52:54,697 Epoch  78 Step:      700 Batch Loss:     2.226073 Tokens per Sec:      541, Lr: 0.001142
+2020-08-09 12:52:58,243 Example #0
+2020-08-09 12:52:58,244 	Raw hypothesis: ['alligator', 'above', 'bed']
+2020-08-09 12:52:58,244 	Reference:  alligator in wagon
+2020-08-09 12:52:58,245 	Hypothesis: alligator above bed
+2020-08-09 12:52:58,245 Example #1
+2020-08-09 12:52:58,245 	Raw hypothesis: ['lion', 'above', 'flowers']
+2020-08-09 12:52:58,245 	Reference:  alligator above blue wagon
+2020-08-09 12:52:58,246 	Hypothesis: lion above flowers
+2020-08-09 12:52:58,246 Example #2
+2020-08-09 12:52:58,246 	Raw hypothesis: ['blue', 'alligator', 'above', 'grey', 'wall']
+2020-08-09 12:52:58,246 	Reference:  blue alligator above grey wall
+2020-08-09 12:52:58,247 	Hypothesis: blue alligator above grey wall
+2020-08-09 12:52:58,247 Validation result (greedy) at epoch  78, step      700: sequence_accuracy:  27.43, loss: 843.4086, ppl:   1.8036, duration: 3.5493s
+2020-08-09 12:52:58,843 Epoch  78: total training loss 18.63
+2020-08-09 12:52:58,843 EPOCH 79
+2020-08-09 12:53:01,173 Epoch  79 Step:      710 Batch Loss:     2.408016 Tokens per Sec:      541, Lr: 0.001158
+2020-08-09 12:53:01,469 Epoch  79: total training loss 19.46
+2020-08-09 12:53:01,469 EPOCH 80
+2020-08-09 12:53:04,431 Epoch  80 Step:      720 Batch Loss:     2.719382 Tokens per Sec:      483, Lr: 0.001174
+2020-08-09 12:53:04,432 Epoch  80: total training loss 20.33
+2020-08-09 12:53:04,432 EPOCH 81
+2020-08-09 12:53:07,434 Epoch  81: total training loss 18.30
+2020-08-09 12:53:07,435 EPOCH 82
+2020-08-09 12:53:07,749 Epoch  82 Step:      730 Batch Loss:     2.369966 Tokens per Sec:      505, Lr: 0.001190
+2020-08-09 12:53:10,094 Epoch  82: total training loss 18.36
+2020-08-09 12:53:10,094 EPOCH 83
+2020-08-09 12:53:10,673 Epoch  83 Step:      740 Batch Loss:     1.740059 Tokens per Sec:      528, Lr: 0.001207
+2020-08-09 12:53:12,735 Epoch  83: total training loss 16.56
+2020-08-09 12:53:12,736 EPOCH 84
+2020-08-09 12:53:13,913 Epoch  84 Step:      750 Batch Loss:     2.295362 Tokens per Sec:      394, Lr: 0.001223
+2020-08-09 12:53:15,674 Epoch  84: total training loss 19.07
+2020-08-09 12:53:15,675 EPOCH 85
+2020-08-09 12:53:16,834 Epoch  85 Step:      760 Batch Loss:     1.892798 Tokens per Sec:      536, Lr: 0.001239
+2020-08-09 12:53:18,309 Epoch  85: total training loss 17.14
+2020-08-09 12:53:18,309 EPOCH 86
+2020-08-09 12:53:20,069 Epoch  86 Step:      770 Batch Loss:     1.707917 Tokens per Sec:      442, Lr: 0.001256
+2020-08-09 12:53:21,244 Epoch  86: total training loss 16.97
+2020-08-09 12:53:21,244 EPOCH 87
+2020-08-09 12:53:23,006 Epoch  87 Step:      780 Batch Loss:     1.728318 Tokens per Sec:      534, Lr: 0.001272
+2020-08-09 12:53:23,895 Epoch  87: total training loss 16.81
+2020-08-09 12:53:23,895 EPOCH 88
+2020-08-09 12:53:26,272 Epoch  88 Step:      790 Batch Loss:     1.511190 Tokens per Sec:      464, Lr: 0.001288
+2020-08-09 12:53:26,860 Epoch  88: total training loss 16.88
+2020-08-09 12:53:26,861 EPOCH 89
+2020-08-09 12:53:29,254 Epoch  89 Step:      800 Batch Loss:     1.958507 Tokens per Sec:      527, Lr: 0.001305
+2020-08-09 12:53:33,526 Hooray! New best validation result [loss]!
+2020-08-09 12:53:33,527 Saving new checkpoint.
+2020-08-09 12:53:33,790 Example #0
+2020-08-09 12:53:33,791 	Raw hypothesis: ['alligator', 'above', 'bed']
+2020-08-09 12:53:33,792 	Reference:  alligator in wagon
+2020-08-09 12:53:33,792 	Hypothesis: alligator above bed
+2020-08-09 12:53:33,792 Example #1
+2020-08-09 12:53:33,793 	Raw hypothesis: ['alligator', 'above', 'blue', 'wagon']
+2020-08-09 12:53:33,793 	Reference:  alligator above blue wagon
+2020-08-09 12:53:33,794 	Hypothesis: alligator above blue wagon
+2020-08-09 12:53:33,794 Example #2
+2020-08-09 12:53:33,794 	Raw hypothesis: ['blue', 'alligator', 'above', 'grey', 'wall']
+2020-08-09 12:53:33,795 	Reference:  blue alligator above grey wall
+2020-08-09 12:53:33,795 	Hypothesis: blue alligator above grey wall
+2020-08-09 12:53:33,795 Validation result (greedy) at epoch  89, step      800: sequence_accuracy:  46.18, loss: 568.8898, ppl:   1.4886, duration: 4.5402s
+2020-08-09 12:53:34,103 Epoch  89: total training loss 16.78
+2020-08-09 12:53:34,104 EPOCH 90
+2020-08-09 12:53:36,754 Epoch  90 Step:      810 Batch Loss:     1.881030 Tokens per Sec:      540, Lr: 0.001321
+2020-08-09 12:53:36,755 Epoch  90: total training loss 17.27
+2020-08-09 12:53:36,755 EPOCH 91
+2020-08-09 12:53:39,684 Epoch  91: total training loss 17.22
+2020-08-09 12:53:39,685 EPOCH 92
+2020-08-09 12:53:39,990 Epoch  92 Step:      820 Batch Loss:     1.771008 Tokens per Sec:      519, Lr: 0.001337
+2020-08-09 12:53:42,740 Epoch  92: total training loss 16.73
+2020-08-09 12:53:42,741 EPOCH 93
+2020-08-09 12:53:43,329 Epoch  93 Step:      830 Batch Loss:     1.954693 Tokens per Sec:      519, Lr: 0.001354
+2020-08-09 12:53:45,350 Epoch  93: total training loss 16.11
+2020-08-09 12:53:45,352 EPOCH 94
+2020-08-09 12:53:46,236 Epoch  94 Step:      840 Batch Loss:     2.133033 Tokens per Sec:      524, Lr: 0.001370
+2020-08-09 12:53:47,959 Epoch  94: total training loss 15.84
+2020-08-09 12:53:47,959 EPOCH 95
+2020-08-09 12:53:49,431 Epoch  95 Step:      850 Batch Loss:     1.479679 Tokens per Sec:      422, Lr: 0.001386
+2020-08-09 12:53:50,903 Epoch  95: total training loss 15.02
+2020-08-09 12:53:50,903 EPOCH 96
+2020-08-09 12:53:52,364 Epoch  96 Step:      860 Batch Loss:     1.696404 Tokens per Sec:      532, Lr: 0.001403
+2020-08-09 12:53:53,507 Epoch  96: total training loss 15.39
+2020-08-09 12:53:53,507 EPOCH 97
+2020-08-09 12:53:55,586 Epoch  97 Step:      870 Batch Loss:     2.014413 Tokens per Sec:      453, Lr: 0.001419
+2020-08-09 12:53:56,454 Epoch  97: total training loss 15.53
+2020-08-09 12:53:56,454 EPOCH 98
+2020-08-09 12:53:58,480 Epoch  98 Step:      880 Batch Loss:     1.747787 Tokens per Sec:      544, Lr: 0.001435
+2020-08-09 12:53:59,068 Epoch  98: total training loss 15.42
+2020-08-09 12:53:59,068 EPOCH 99
+2020-08-09 12:54:01,731 Epoch  99 Step:      890 Batch Loss:     1.952254 Tokens per Sec:      473, Lr: 0.001451
+2020-08-09 12:54:02,010 Epoch  99: total training loss 16.15
+2020-08-09 12:54:02,011 EPOCH 100
+2020-08-09 12:54:04,602 Epoch 100 Step:      900 Batch Loss:     1.839517 Tokens per Sec:      552, Lr: 0.001468
+2020-08-09 12:54:08,753 Example #0
+2020-08-09 12:54:08,754 	Raw hypothesis: ['alligator', 'alligator', 'wagon']
+2020-08-09 12:54:08,754 	Reference:  alligator in wagon
+2020-08-09 12:54:08,755 	Hypothesis: alligator alligator wagon
+2020-08-09 12:54:08,755 Example #1
+2020-08-09 12:54:08,755 	Raw hypothesis: ['lion', 'above', 'bed']
+2020-08-09 12:54:08,755 	Reference:  alligator above blue wagon
+2020-08-09 12:54:08,755 	Hypothesis: lion above bed
+2020-08-09 12:54:08,756 Example #2
+2020-08-09 12:54:08,756 	Raw hypothesis: ['blue', 'alligator', 'above', 'grey', 'wall']
+2020-08-09 12:54:08,756 	Reference:  blue alligator above grey wall
+2020-08-09 12:54:08,756 	Hypothesis: blue alligator above grey wall
+2020-08-09 12:54:08,757 Validation result (greedy) at epoch 100, step      900: sequence_accuracy:  37.85, loss: 700.0971, ppl:   1.6316, duration: 4.1543s
+2020-08-09 12:54:08,761 Epoch 100: total training loss 15.89
+2020-08-09 12:54:08,761 Training ended after 100 epochs.
+2020-08-09 12:54:08,762 Best validation result (greedy) at step      800: 568.89 loss.
+2020-08-09 12:54:21,683 test sequence_accuracy:  46.18 [Greedy decoding]
+2020-08-09 12:54:21,687 Translations saved to: models/transformer/00000800.hyps.test

@@ -1,0 +1,9 @@
+Steps: 100	Loss: 3566.45483	PPL: 12.10991	sequence_accuracy: 0.00000	LR: 0.00016308	*
+Steps: 200	Loss: 1755.12585	PPL: 3.41221	sequence_accuracy: 2.08333	LR: 0.00032616	*
+Steps: 300	Loss: 1258.15698	PPL: 2.41049	sequence_accuracy: 10.76389	LR: 0.00048925	*
+Steps: 400	Loss: 991.00012	PPL: 1.99972	sequence_accuracy: 18.40278	LR: 0.00065233	*
+Steps: 500	Loss: 852.45898	PPL: 1.81507	sequence_accuracy: 22.56944	LR: 0.00081541	*
+Steps: 600	Loss: 808.73535	PPL: 1.76041	sequence_accuracy: 28.47222	LR: 0.00097849	*
+Steps: 700	Loss: 843.40857	PPL: 1.80362	sequence_accuracy: 27.43056	LR: 0.00114157	
+Steps: 800	Loss: 568.88983	PPL: 1.48858	sequence_accuracy: 46.18056	LR: 0.00130466	*
+Steps: 900	Loss: 700.09711	PPL: 1.63163	sequence_accuracy: 37.84722	LR: 0.00146774	
