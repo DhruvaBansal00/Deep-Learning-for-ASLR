@@ -151,6 +151,7 @@ def validate_on_data(model: Model, data: Dataset,
                                 v in valid_hypotheses]
 
         # if references are given, evaluate against them
+        word_sentence_acc = []
         if valid_references:
             assert len(valid_hypotheses) == len(valid_references)
 
@@ -166,12 +167,15 @@ def validate_on_data(model: Model, data: Dataset,
             elif eval_metric.lower() == 'sequence_accuracy':
                 current_valid_score = sequence_accuracy(
                     valid_hypotheses, valid_references)
+            
+            word_sentence_acc = [token_accuracy(valid_hypotheses, valid_references, level=level), 
+                                sequence_accuracy(valid_hypotheses, valid_references)]
         else:
             current_valid_score = -1
-
+        
     return current_valid_score, valid_loss, valid_ppl, valid_sources, \
         valid_iter, valid_references, valid_hypotheses, \
-        decoded_valid, valid_attention_scores
+        decoded_valid, word_sentence_acc
 
 
 # pylint: disable-msg=logging-too-many-args
@@ -250,7 +254,7 @@ def test(cfg_file,
 
         #pylint: disable=unused-variable
         score, loss, ppl, sources, sources_raw, references, hypotheses, \
-        hypotheses_raw, attention_scores = validate_on_data(
+        hypotheses_raw, word_sentence_acc = validate_on_data(
             model, data=data_set, batch_size=batch_size,
             batch_type=batch_type, level=level,
             max_output_length=max_output_length, eval_metric=eval_metric,
@@ -267,7 +271,8 @@ def test(cfg_file,
         else:
             logger.info("No references given for %s -> no evaluation.",
                         data_set_name)
-
+        
+        attention_scores = None
         if save_attention:
             if attention_scores:
                 attention_name = "{}.{}.att".format(data_set_name, step)
@@ -291,6 +296,8 @@ def test(cfg_file,
                 for hyp in hypotheses:
                     out_file.write(hyp + "\n")
             logger.info("Translations saved to: %s", output_path_set)
+    
+    return word_sentence_acc
 
 
 def translate(cfg_file, ckpt: str, output_path: str = None) -> None:

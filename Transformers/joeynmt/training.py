@@ -363,7 +363,7 @@ class TrainManager:
 
                     valid_score, valid_loss, valid_ppl, valid_sources, \
                         valid_sources_raw, valid_references, valid_hypotheses, \
-                        valid_hypotheses_raw, valid_attention_scores = \
+                        valid_hypotheses_raw, word_sentence_acc = \
                         validate_on_data(
                             logger=self.logger,
                             batch_size=self.eval_batch_size,

@@ -1,5 +1,0 @@
-Steps: 100	Loss: 3415.81299	PPL: 10.89910	sequence_accuracy: 0.00000	LR: 0.00016308	*
-Steps: 200	Loss: 1519.71899	PPL: 2.89429	sequence_accuracy: 7.29167	LR: 0.00032616	*
-Steps: 300	Loss: 1132.76062	PPL: 2.20812	sequence_accuracy: 18.75000	LR: 0.00048925	*
-Steps: 400	Loss: 778.37006	PPL: 1.72343	sequence_accuracy: 27.43056	LR: 0.00065233	*
-Steps: 500	Loss: 730.94629	PPL: 1.66721	sequence_accuracy: 35.06944	LR: 0.00081541	*
