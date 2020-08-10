@@ -130,7 +130,8 @@ if __name__ == '__main__':
             all_results.append(train(args.config_path))
         
         all_results = np.array(all_results)
-        average_results = np.mean(all_results, axis=1)
+        print(f'All results = {str(all_results)}')
+        average_results = np.mean(all_results, axis=0)
         print(f'Cross validation results = {str(average_results)}')
 
 
