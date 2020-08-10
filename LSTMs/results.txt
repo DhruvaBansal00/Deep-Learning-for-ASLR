@@ -1,0 +1,181 @@
+Predicted Sentence:  sil0 monkey in blue box sil1
+True Sentence:  sil0 monkey in blue box sil1
+Result:  CORRECT
+Predicted Sentence:  sil0 monkey below blue chair sil1
+True Sentence:  sil0 monkey in blue box sil1
+Result:  INCORRECT
+Predicted Sentence:  sil0 black lion in blue wagon sil1
+True Sentence:  sil0 lion above flowers sil1
+Result:  INCORRECT
+Predicted Sentence:  sil0 black lion in blue wagon sil1
+True Sentence:  sil0 lion above flowers sil1
+Result:  INCORRECT
+Predicted Sentence:  sil0 grey snake below blue chair sil1
+True Sentence:  sil0 monkey below wagon sil1
+Result:  INCORRECT
+Predicted Sentence:  sil0 grey snake below blue chair sil1
+True Sentence:  sil0 monkey below wagon sil1
+Result:  INCORRECT
+Predicted Sentence:  sil0 snake in wagon sil1
+True Sentence:  sil0 snake in grey wagon sil1
+Result:  INCORRECT
+Predicted Sentence:  sil0 snake in grey wagon sil1
+True Sentence:  sil0 snake in grey wagon sil1
+Result:  CORRECT
+Predicted Sentence:  sil0 white alligator above blue wall sil1
+True Sentence:  sil0 white alligator above blue wall sil1
+Result:  CORRECT
+Predicted Sentence:  sil0 white alligator above blue wall sil1
+True Sentence:  sil0 white alligator above blue wall sil1
+Result:  CORRECT
+Predicted Sentence:  sil0 monkey in orange flowers sil1
+True Sentence:  sil0 monkey in orange flowers sil1
+Result:  CORRECT
+Predicted Sentence:  sil0 monkey in orange flowers sil1
+True Sentence:  sil0 monkey in orange flowers sil1
+Result:  CORRECT
+Predicted Sentence:  sil0 snake below blue flowers sil1
+True Sentence:  sil0 orange snake below blue flowers sil1
+Result:  INCORRECT
+Predicted Sentence:  sil0 snake below blue flowers sil1
+True Sentence:  sil0 orange snake below blue flowers sil1
+Result:  INCORRECT
+Predicted Sentence:  sil0 black monkey in white flowers sil1
+True Sentence:  sil0 black monkey in white flowers sil1
+Result:  CORRECT
+Predicted Sentence:  sil0 black monkey in white flowers sil1
+True Sentence:  sil0 black monkey in white flowers sil1
+Result:  CORRECT
+Predicted Sentence:  sil0 monkey in blue box sil1
+True Sentence:  sil0 grey monkey below orange chair sil1
+Result:  INCORRECT
+Predicted Sentence:  sil0 grey snake below blue chair sil1
+True Sentence:  sil0 grey monkey below orange chair sil1
+Result:  INCORRECT
+Predicted Sentence:  sil0 alligator above blue wagon sil1
+True Sentence:  sil0 alligator in orange flowers sil1
+Result:  INCORRECT
+Predicted Sentence:  sil0 alligator above blue wagon sil1
+True Sentence:  sil0 alligator in orange flowers sil1
+Result:  INCORRECT
+Predicted Sentence:  sil0 black lion above grey bed sil1
+True Sentence:  sil0 black lion above grey bed sil1
+Result:  CORRECT
+Predicted Sentence:  sil0 black lion above grey bed sil1
+True Sentence:  sil0 black lion above grey bed sil1
+Result:  CORRECT
+Predicted Sentence:  sil0 alligator above chair sil1
+True Sentence:  sil0 alligator above chair sil1
+Result:  CORRECT
+Predicted Sentence:  sil0 alligator above chair sil1
+True Sentence:  sil0 alligator above chair sil1
+Result:  CORRECT
+Predicted Sentence:  sil0 lion above wall sil1
+True Sentence:  sil0 lion above wall sil1
+Result:  CORRECT
+Predicted Sentence:  sil0 lion above wall sil1
+True Sentence:  sil0 lion above wall sil1
+Result:  CORRECT
+Predicted Sentence:  sil0 monkey below chair sil1
+True Sentence:  sil0 monkey below bed sil1
+Result:  INCORRECT
+Predicted Sentence:  sil0 monkey below wagon sil1
+True Sentence:  sil0 monkey below bed sil1
+Result:  INCORRECT
+Predicted Sentence:  sil0 alligator below grey bed sil1
+True Sentence:  sil0 monkey above white wall sil1
+Result:  INCORRECT
+Predicted Sentence:  sil0 alligator below grey bed sil1
+True Sentence:  sil0 monkey above white wall sil1
+Result:  INCORRECT
+Predicted Sentence:  sil0 alligator above chair sil1
+True Sentence:  sil0 alligator in box sil1
+Result:  INCORRECT
+Predicted Sentence:  sil0 alligator above chair sil1
+True Sentence:  sil0 alligator in box sil1
+Result:  INCORRECT
+Predicted Sentence:  sil0 lion above box sil1
+True Sentence:  sil0 lion above box sil1
+Result:  CORRECT
+Predicted Sentence:  sil0 lion above box sil1
+True Sentence:  sil0 lion above box sil1
+Result:  CORRECT
+Predicted Sentence:  sil0 monkey in box sil1
+True Sentence:  sil0 monkey in box sil1
+Result:  CORRECT
+Predicted Sentence:  sil0 monkey in box sil1
+True Sentence:  sil0 monkey in box sil1
+Result:  CORRECT
+Predicted Sentence:  sil0 monkey below blue chair sil1
+True Sentence:  sil0 monkey below blue chair sil1
+Result:  CORRECT
+Predicted Sentence:  sil0 monkey below blue chair sil1
+True Sentence:  sil0 monkey below blue chair sil1
+Result:  CORRECT
+Predicted Sentence:  sil0 alligator above black wall sil1
+True Sentence:  sil0 alligator above black wall sil1
+Result:  CORRECT
+Predicted Sentence:  sil0 alligator above black wall sil1
+True Sentence:  sil0 alligator above black wall sil1
+Result:  CORRECT
+Predicted Sentence:  sil0 monkey in orange flowers sil1
+True Sentence:  sil0 snake in flowers sil1
+Result:  INCORRECT
+Predicted Sentence:  sil0 snake in flowers sil1
+True Sentence:  sil0 snake in flowers sil1
+Result:  CORRECT
+Predicted Sentence:  sil0 monkey in grey box sil1
+True Sentence:  sil0 monkey in grey box sil1
+Result:  CORRECT
+Predicted Sentence:  sil0 monkey in grey box sil1
+True Sentence:  sil0 monkey in grey box sil1
+Result:  CORRECT
+Predicted Sentence:  sil0 snake below chair sil1
+True Sentence:  sil0 snake below chair sil1
+Result:  CORRECT
+Predicted Sentence:  sil0 snake below chair sil1
+True Sentence:  sil0 snake below chair sil1
+Result:  CORRECT
+Predicted Sentence:  sil0 snake in flowers sil1
+True Sentence:  sil0 snake below blue flowers sil1
+Result:  INCORRECT
+Predicted Sentence:  sil0 monkey in orange flowers sil1
+True Sentence:  sil0 snake below blue flowers sil1
+Result:  INCORRECT
+Predicted Sentence:  sil0 black alligator above orange wagon sil1
+True Sentence:  sil0 black alligator above orange wagon sil1
+Result:  CORRECT
+Predicted Sentence:  sil0 black alligator above orange wagon sil1
+True Sentence:  sil0 black alligator above orange wagon sil1
+Result:  CORRECT
+Predicted Sentence:  sil0 monkey below orange chair sil1
+True Sentence:  sil0 monkey above chair sil1
+Result:  INCORRECT
+Predicted Sentence:  sil0 monkey in grey box sil1
+True Sentence:  sil0 monkey above chair sil1
+Result:  INCORRECT
+Predicted Sentence:  sil0 black lion in blue wagon sil1
+True Sentence:  sil0 black lion in blue wagon sil1
+Result:  CORRECT
+Predicted Sentence:  sil0 black lion in blue wagon sil1
+True Sentence:  sil0 black lion in blue wagon sil1
+Result:  CORRECT
+Predicted Sentence:  sil0 alligator above black wall sil1
+True Sentence:  sil0 white lion in grey box sil1
+Result:  INCORRECT
+Predicted Sentence:  sil0 alligator above black wagon sil1
+True Sentence:  sil0 white lion in grey box sil1
+Result:  INCORRECT
+Predicted Sentence:  sil0 lion above orange wall sil1
+True Sentence:  sil0 white lion above orange wall sil1
+Result:  INCORRECT
+Predicted Sentence:  sil0 lion above orange wall sil1
+True Sentence:  sil0 white lion above orange wall sil1
+Result:  INCORRECT
+Predicted Sentence:  sil0 lion below blue bed sil1
+True Sentence:  sil0 lion below blue bed sil1
+Result:  CORRECT
+Predicted Sentence:  sil0 lion above orange bed sil1
+True Sentence:  sil0 lion below blue bed sil1
+Result:  INCORRECT
+Recognition Total:  0.5333333333333333

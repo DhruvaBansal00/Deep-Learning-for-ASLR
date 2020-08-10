@@ -1,0 +1,285 @@
+Reading data from files...
+Generating folds...
+Fold generation done...
+Starting training on fold 1. 112 elements in curr_fold[0] and 13 in curr_fold[1]
+/usr/local/lib/python3.6/dist-packages/sklearn/model_selection/_split.py:667: UserWarning: The least populated class in y has only 5 members, which is less than n_splits=10.
+  % (min_groups, self.n_splits)), UserWarning)
+0m 15s (- 6m 21s) (1 4%) train loss: 1.7277 test loss: 1.3028 test acc: 0.0000
+0m 31s (- 6m 7s) (2 8%) train loss: 1.0892 test loss: 1.0154 test acc: 0.0000
+0m 47s (- 5m 51s) (3 12%) train loss: 0.9116 test loss: 0.9087 test acc: 0.0769
+1m 4s (- 5m 36s) (4 16%) train loss: 0.7881 test loss: 0.7759 test acc: 0.0769
+1m 20s (- 5m 20s) (5 20%) train loss: 0.7040 test loss: 0.7516 test acc: 0.0769
+1m 36s (- 5m 4s) (6 24%) train loss: 0.6343 test loss: 0.7189 test acc: 0.2308
+1m 52s (- 4m 49s) (7 28%) train loss: 0.5546 test loss: 0.6028 test acc: 0.2308
+2m 8s (- 4m 33s) (8 32%) train loss: 0.4914 test loss: 0.5704 test acc: 0.2308
+2m 24s (- 4m 17s) (9 36%) train loss: 0.4273 test loss: 0.5668 test acc: 0.1538
+2m 40s (- 4m 1s) (10 40%) train loss: 0.3657 test loss: 0.4884 test acc: 0.2308
+2m 56s (- 3m 45s) (11 44%) train loss: 0.3182 test loss: 0.4360 test acc: 0.3846
+3m 12s (- 3m 29s) (12 48%) train loss: 0.2772 test loss: 0.4153 test acc: 0.3846
+3m 29s (- 3m 12s) (13 52%) train loss: 0.2089 test loss: 0.3996 test acc: 0.3077
+3m 44s (- 2m 56s) (14 56%) train loss: 0.1732 test loss: 0.3432 test acc: 0.4615
+4m 0s (- 2m 40s) (15 60%) train loss: 0.1528 test loss: 0.3667 test acc: 0.3077
+4m 16s (- 2m 24s) (16 64%) train loss: 0.0864 test loss: 0.2657 test acc: 0.5385
+4m 32s (- 2m 8s) (17 68%) train loss: 0.0625 test loss: 0.3165 test acc: 0.4615
+4m 48s (- 1m 52s) (18 72%) train loss: 0.0497 test loss: 0.2151 test acc: 0.7692
+5m 4s (- 1m 36s) (19 76%) train loss: 0.0275 test loss: 0.1998 test acc: 0.6923
+5m 20s (- 1m 20s) (20 80%) train loss: 0.0188 test loss: 0.2144 test acc: 0.7692
+5m 36s (- 1m 4s) (21 84%) train loss: 0.0099 test loss: 0.2311 test acc: 0.8462
+5m 52s (- 0m 48s) (22 88%) train loss: 0.0057 test loss: 0.2480 test acc: 0.8462
+6m 8s (- 0m 32s) (23 92%) train loss: 0.0039 test loss: 0.2563 test acc: 0.8462
+6m 24s (- 0m 16s) (24 96%) train loss: 0.0029 test loss: 0.2576 test acc: 0.8462
+6m 40s (- 0m 0s) (25 100%) train loss: 0.0022 test loss: 0.2597 test acc: 0.8462
+Training done. Saving predictions to file...
+Saving Models
+Starting training on fold 2. 112 elements in curr_fold[0] and 13 in curr_fold[1]
+0m 15s (- 6m 23s) (1 4%) train loss: 1.6856 test loss: 1.2369 test acc: 0.0000
+0m 31s (- 6m 7s) (2 8%) train loss: 1.0947 test loss: 0.8960 test acc: 0.0769
+0m 47s (- 5m 50s) (3 12%) train loss: 0.9321 test loss: 0.8326 test acc: 0.0769
+1m 3s (- 5m 34s) (4 16%) train loss: 0.8295 test loss: 0.7125 test acc: 0.1538
+1m 19s (- 5m 17s) (5 20%) train loss: 0.7087 test loss: 0.6472 test acc: 0.3077
+1m 35s (- 5m 1s) (6 24%) train loss: 0.6257 test loss: 0.6075 test acc: 0.4615
+1m 51s (- 4m 45s) (7 28%) train loss: 0.5742 test loss: 0.5728 test acc: 0.3846
+2m 6s (- 4m 29s) (8 32%) train loss: 0.4881 test loss: 0.5192 test acc: 0.4615
+2m 22s (- 4m 13s) (9 36%) train loss: 0.4408 test loss: 0.4671 test acc: 0.3846
+2m 38s (- 3m 57s) (10 40%) train loss: 0.3741 test loss: 0.4375 test acc: 0.6154
+2m 54s (- 3m 41s) (11 44%) train loss: 0.3190 test loss: 0.3980 test acc: 0.5385
+3m 10s (- 3m 26s) (12 48%) train loss: 0.2628 test loss: 0.3010 test acc: 0.6923
+3m 26s (- 3m 10s) (13 52%) train loss: 0.2140 test loss: 0.2771 test acc: 0.6923
+3m 41s (- 2m 54s) (14 56%) train loss: 0.1621 test loss: 0.2672 test acc: 0.7692
+3m 57s (- 2m 38s) (15 60%) train loss: 0.1282 test loss: 0.2557 test acc: 0.6923
+4m 13s (- 2m 22s) (16 64%) train loss: 0.0932 test loss: 0.2518 test acc: 0.7692
+4m 29s (- 2m 6s) (17 68%) train loss: 0.0628 test loss: 0.1648 test acc: 0.8462
+4m 45s (- 1m 50s) (18 72%) train loss: 0.0357 test loss: 0.2628 test acc: 0.6923
+5m 0s (- 1m 35s) (19 76%) train loss: 0.0303 test loss: 0.3414 test acc: 0.6154
+5m 16s (- 1m 19s) (20 80%) train loss: 0.0366 test loss: 0.2242 test acc: 0.7692
+5m 32s (- 1m 3s) (21 84%) train loss: 0.0185 test loss: 0.2106 test acc: 0.7692
+5m 48s (- 0m 47s) (22 88%) train loss: 0.0167 test loss: 0.1645 test acc: 0.7692
+6m 4s (- 0m 31s) (23 92%) train loss: 0.0077 test loss: 0.0985 test acc: 0.8462
+6m 19s (- 0m 15s) (24 96%) train loss: 0.0154 test loss: 0.1511 test acc: 0.8462
+6m 35s (- 0m 0s) (25 100%) train loss: 0.0367 test loss: 0.2733 test acc: 0.6154
+Training done. Saving predictions to file...
+Saving Models
+Starting training on fold 3. 112 elements in curr_fold[0] and 13 in curr_fold[1]
+0m 15s (- 6m 18s) (1 4%) train loss: 1.6887 test loss: 1.2269 test acc: 0.0000
+0m 31s (- 6m 2s) (2 8%) train loss: 1.1041 test loss: 0.9665 test acc: 0.0000
+0m 47s (- 5m 47s) (3 12%) train loss: 0.9532 test loss: 0.8944 test acc: 0.0000
+1m 3s (- 5m 31s) (4 16%) train loss: 0.8619 test loss: 0.8027 test acc: 0.1538
+1m 18s (- 5m 15s) (5 20%) train loss: 0.7517 test loss: 0.6940 test acc: 0.3846
+1m 34s (- 4m 59s) (6 24%) train loss: 0.6802 test loss: 0.6327 test acc: 0.3846
+1m 50s (- 4m 44s) (7 28%) train loss: 0.6022 test loss: 0.5884 test acc: 0.3846
+2m 6s (- 4m 28s) (8 32%) train loss: 0.5278 test loss: 0.5424 test acc: 0.3846
+2m 22s (- 4m 12s) (9 36%) train loss: 0.5036 test loss: 0.5052 test acc: 0.5385
+2m 37s (- 3m 56s) (10 40%) train loss: 0.4257 test loss: 0.4616 test acc: 0.6154
+2m 53s (- 3m 41s) (11 44%) train loss: 0.3794 test loss: 0.4163 test acc: 0.6154
+3m 9s (- 3m 25s) (12 48%) train loss: 0.3099 test loss: 0.3942 test acc: 0.6154
+3m 25s (- 3m 9s) (13 52%) train loss: 0.2611 test loss: 0.3355 test acc: 0.6923
+3m 41s (- 2m 53s) (14 56%) train loss: 0.2023 test loss: 0.3212 test acc: 0.6154
+3m 56s (- 2m 37s) (15 60%) train loss: 0.1764 test loss: 0.2633 test acc: 0.7692
+4m 12s (- 2m 22s) (16 64%) train loss: 0.1027 test loss: 0.2521 test acc: 0.7692
+4m 28s (- 2m 6s) (17 68%) train loss: 0.0762 test loss: 0.2064 test acc: 0.7692
+4m 44s (- 1m 50s) (18 72%) train loss: 0.0477 test loss: 0.2243 test acc: 0.7692
+5m 0s (- 1m 34s) (19 76%) train loss: 0.0295 test loss: 0.2168 test acc: 0.7692
+5m 16s (- 1m 19s) (20 80%) train loss: 0.0170 test loss: 0.1803 test acc: 0.7692
+5m 32s (- 1m 3s) (21 84%) train loss: 0.0101 test loss: 0.1823 test acc: 0.7692
+5m 48s (- 0m 47s) (22 88%) train loss: 0.0064 test loss: 0.1631 test acc: 0.9231
+6m 4s (- 0m 31s) (23 92%) train loss: 0.0040 test loss: 0.1511 test acc: 0.9231
+6m 20s (- 0m 15s) (24 96%) train loss: 0.0028 test loss: 0.1490 test acc: 0.9231
+6m 36s (- 0m 0s) (25 100%) train loss: 0.0020 test loss: 0.1492 test acc: 0.9231
+Training done. Saving predictions to file...
+Saving Models
+Starting training on fold 4. 112 elements in curr_fold[0] and 13 in curr_fold[1]
+0m 16s (- 6m 26s) (1 4%) train loss: 1.7017 test loss: 1.2722 test acc: 0.0000
+0m 32s (- 6m 9s) (2 8%) train loss: 1.0866 test loss: 1.0092 test acc: 0.0769
+0m 48s (- 5m 53s) (3 12%) train loss: 0.9201 test loss: 0.8862 test acc: 0.0769
+1m 4s (- 5m 37s) (4 16%) train loss: 0.8094 test loss: 0.8426 test acc: 0.0769
+1m 20s (- 5m 21s) (5 20%) train loss: 0.7328 test loss: 0.7334 test acc: 0.2308
+1m 36s (- 5m 5s) (6 24%) train loss: 0.6440 test loss: 0.6806 test acc: 0.3077
+1m 52s (- 4m 49s) (7 28%) train loss: 0.5691 test loss: 0.6235 test acc: 0.3077
+2m 8s (- 4m 33s) (8 32%) train loss: 0.5108 test loss: 0.5665 test acc: 0.4615
+2m 24s (- 4m 17s) (9 36%) train loss: 0.4535 test loss: 0.5473 test acc: 0.5385
+2m 40s (- 4m 0s) (10 40%) train loss: 0.3927 test loss: 0.4866 test acc: 0.5385
+2m 56s (- 3m 44s) (11 44%) train loss: 0.3408 test loss: 0.4644 test acc: 0.5385
+3m 12s (- 3m 28s) (12 48%) train loss: 0.2812 test loss: 0.4269 test acc: 0.5385
+3m 28s (- 3m 12s) (13 52%) train loss: 0.2377 test loss: 0.4240 test acc: 0.4615
+3m 44s (- 2m 56s) (14 56%) train loss: 0.2059 test loss: 0.3696 test acc: 0.6923
+4m 0s (- 2m 40s) (15 60%) train loss: 0.1740 test loss: 0.3592 test acc: 0.6154
+4m 16s (- 2m 24s) (16 64%) train loss: 0.1068 test loss: 0.3271 test acc: 0.6923
+4m 32s (- 2m 8s) (17 68%) train loss: 0.0784 test loss: 0.3068 test acc: 0.5385
+4m 47s (- 1m 51s) (18 72%) train loss: 0.0529 test loss: 0.2825 test acc: 0.6923
+5m 3s (- 1m 35s) (19 76%) train loss: 0.0379 test loss: 0.2168 test acc: 0.6923
+5m 19s (- 1m 19s) (20 80%) train loss: 0.0243 test loss: 0.1908 test acc: 0.6923
+5m 35s (- 1m 3s) (21 84%) train loss: 0.0173 test loss: 0.1419 test acc: 0.7692
+5m 51s (- 0m 47s) (22 88%) train loss: 0.0103 test loss: 0.0915 test acc: 0.8462
+6m 7s (- 0m 31s) (23 92%) train loss: 0.0064 test loss: 0.0699 test acc: 0.9231
+6m 23s (- 0m 15s) (24 96%) train loss: 0.0041 test loss: 0.0558 test acc: 0.9231
+6m 38s (- 0m 0s) (25 100%) train loss: 0.0028 test loss: 0.0520 test acc: 0.9231
+Training done. Saving predictions to file...
+Saving Models
+Starting training on fold 5. 112 elements in curr_fold[0] and 13 in curr_fold[1]
+0m 15s (- 6m 19s) (1 4%) train loss: 1.6708 test loss: 1.3687 test acc: 0.0000
+0m 31s (- 6m 3s) (2 8%) train loss: 1.0773 test loss: 1.0865 test acc: 0.0000
+0m 47s (- 5m 47s) (3 12%) train loss: 0.8721 test loss: 1.0376 test acc: 0.0000
+1m 3s (- 5m 32s) (4 16%) train loss: 0.7765 test loss: 0.9055 test acc: 0.0000
+1m 19s (- 5m 16s) (5 20%) train loss: 0.6878 test loss: 0.8789 test acc: 0.0000
+1m 34s (- 5m 0s) (6 24%) train loss: 0.5826 test loss: 0.8367 test acc: 0.0769
+1m 50s (- 4m 44s) (7 28%) train loss: 0.5271 test loss: 0.8033 test acc: 0.0769
+2m 6s (- 4m 28s) (8 32%) train loss: 0.4393 test loss: 0.7425 test acc: 0.0769
+2m 22s (- 4m 12s) (9 36%) train loss: 0.3865 test loss: 0.6801 test acc: 0.2308
+2m 38s (- 3m 57s) (10 40%) train loss: 0.3205 test loss: 0.6201 test acc: 0.2308
+2m 53s (- 3m 41s) (11 44%) train loss: 0.2655 test loss: 0.5314 test acc: 0.3077
+3m 9s (- 3m 25s) (12 48%) train loss: 0.2013 test loss: 0.4636 test acc: 0.4615
+3m 25s (- 3m 9s) (13 52%) train loss: 0.1729 test loss: 0.4472 test acc: 0.3846
+3m 41s (- 2m 53s) (14 56%) train loss: 0.1154 test loss: 0.4697 test acc: 0.3846
+3m 57s (- 2m 38s) (15 60%) train loss: 0.0892 test loss: 0.3607 test acc: 0.6923
+4m 12s (- 2m 22s) (16 64%) train loss: 0.0551 test loss: 0.3866 test acc: 0.6154
+4m 28s (- 2m 6s) (17 68%) train loss: 0.0419 test loss: 0.4078 test acc: 0.4615
+4m 44s (- 1m 50s) (18 72%) train loss: 0.0259 test loss: 0.3305 test acc: 0.5385
+5m 0s (- 1m 34s) (19 76%) train loss: 0.0135 test loss: 0.2701 test acc: 0.8462
+5m 15s (- 1m 18s) (20 80%) train loss: 0.0077 test loss: 0.2705 test acc: 0.8462
+5m 31s (- 1m 3s) (21 84%) train loss: 0.0045 test loss: 0.2961 test acc: 0.7692
+5m 47s (- 0m 47s) (22 88%) train loss: 0.0031 test loss: 0.3012 test acc: 0.8462
+6m 3s (- 0m 31s) (23 92%) train loss: 0.0023 test loss: 0.2994 test acc: 0.8462
+6m 19s (- 0m 15s) (24 96%) train loss: 0.0017 test loss: 0.3044 test acc: 0.8462
+6m 34s (- 0m 0s) (25 100%) train loss: 0.0014 test loss: 0.3047 test acc: 0.8462
+Training done. Saving predictions to file...
+Saving Models
+Starting training on fold 6. 113 elements in curr_fold[0] and 12 in curr_fold[1]
+0m 16s (- 6m 25s) (1 4%) train loss: 1.7317 test loss: 1.1933 test acc: 0.0833
+0m 31s (- 6m 7s) (2 8%) train loss: 1.0855 test loss: 0.9211 test acc: 0.0833
+0m 47s (- 5m 50s) (3 12%) train loss: 0.9036 test loss: 0.8205 test acc: 0.0000
+1m 3s (- 5m 34s) (4 16%) train loss: 0.7773 test loss: 0.7471 test acc: 0.0000
+1m 19s (- 5m 17s) (5 20%) train loss: 0.6969 test loss: 0.6977 test acc: 0.0833
+1m 35s (- 5m 1s) (6 24%) train loss: 0.6134 test loss: 0.6475 test acc: 0.0000
+1m 51s (- 4m 45s) (7 28%) train loss: 0.5379 test loss: 0.5756 test acc: 0.2500
+2m 6s (- 4m 29s) (8 32%) train loss: 0.4665 test loss: 0.5340 test acc: 0.1667
+2m 22s (- 4m 13s) (9 36%) train loss: 0.4042 test loss: 0.4682 test acc: 0.2500
+2m 38s (- 3m 57s) (10 40%) train loss: 0.3407 test loss: 0.3729 test acc: 0.5000
+2m 53s (- 3m 41s) (11 44%) train loss: 0.2759 test loss: 0.2877 test acc: 0.5000
+3m 9s (- 3m 25s) (12 48%) train loss: 0.2204 test loss: 0.2772 test acc: 0.6667
+3m 25s (- 3m 9s) (13 52%) train loss: 0.1664 test loss: 0.2259 test acc: 0.7500
+3m 41s (- 2m 53s) (14 56%) train loss: 0.1175 test loss: 0.2092 test acc: 0.7500
+3m 56s (- 2m 37s) (15 60%) train loss: 0.1010 test loss: 0.2257 test acc: 0.5000
+4m 12s (- 2m 22s) (16 64%) train loss: 0.0582 test loss: 0.1644 test acc: 0.7500
+4m 28s (- 2m 6s) (17 68%) train loss: 0.0415 test loss: 0.1753 test acc: 0.7500
+4m 44s (- 1m 50s) (18 72%) train loss: 0.0237 test loss: 0.1219 test acc: 0.8333
+4m 59s (- 1m 34s) (19 76%) train loss: 0.0136 test loss: 0.1825 test acc: 0.7500
+5m 15s (- 1m 18s) (20 80%) train loss: 0.0086 test loss: 0.1426 test acc: 0.7500
+5m 31s (- 1m 3s) (21 84%) train loss: 0.0057 test loss: 0.1103 test acc: 0.8333
+5m 46s (- 0m 47s) (22 88%) train loss: 0.0038 test loss: 0.1124 test acc: 0.8333
+6m 2s (- 0m 31s) (23 92%) train loss: 0.0026 test loss: 0.1089 test acc: 0.8333
+6m 18s (- 0m 15s) (24 96%) train loss: 0.0019 test loss: 0.1126 test acc: 0.8333
+6m 33s (- 0m 0s) (25 100%) train loss: 0.0015 test loss: 0.1112 test acc: 0.8333
+Training done. Saving predictions to file...
+Saving Models
+Starting training on fold 7. 113 elements in curr_fold[0] and 12 in curr_fold[1]
+0m 15s (- 6m 17s) (1 4%) train loss: 1.7303 test loss: 1.1252 test acc: 0.0000
+0m 31s (- 6m 1s) (2 8%) train loss: 1.0538 test loss: 0.8730 test acc: 0.0000
+0m 47s (- 5m 46s) (3 12%) train loss: 0.8955 test loss: 0.7555 test acc: 0.0833
+1m 2s (- 5m 30s) (4 16%) train loss: 0.7656 test loss: 0.7459 test acc: 0.1667
+1m 18s (- 5m 14s) (5 20%) train loss: 0.6813 test loss: 0.6324 test acc: 0.4167
+1m 34s (- 4m 58s) (6 24%) train loss: 0.5888 test loss: 0.5690 test acc: 0.4167
+1m 50s (- 4m 42s) (7 28%) train loss: 0.5111 test loss: 0.5049 test acc: 0.4167
+2m 5s (- 4m 27s) (8 32%) train loss: 0.4377 test loss: 0.4618 test acc: 0.5000
+2m 21s (- 4m 11s) (9 36%) train loss: 0.3920 test loss: 0.4249 test acc: 0.5000
+2m 37s (- 3m 55s) (10 40%) train loss: 0.2940 test loss: 0.3508 test acc: 0.5833
+2m 52s (- 3m 39s) (11 44%) train loss: 0.2212 test loss: 0.3498 test acc: 0.5000
+3m 8s (- 3m 24s) (12 48%) train loss: 0.1724 test loss: 0.3003 test acc: 0.5833
+3m 24s (- 3m 8s) (13 52%) train loss: 0.1189 test loss: 0.2762 test acc: 0.6667
+3m 39s (- 2m 52s) (14 56%) train loss: 0.0812 test loss: 0.2600 test acc: 0.6667
+3m 55s (- 2m 37s) (15 60%) train loss: 0.0800 test loss: 0.2965 test acc: 0.6667
+4m 11s (- 2m 21s) (16 64%) train loss: 0.0357 test loss: 0.3856 test acc: 0.4167
+4m 26s (- 2m 5s) (17 68%) train loss: 0.0337 test loss: 0.2419 test acc: 0.7500
+4m 42s (- 1m 49s) (18 72%) train loss: 0.0169 test loss: 0.2354 test acc: 0.7500
+4m 58s (- 1m 34s) (19 76%) train loss: 0.0084 test loss: 0.2206 test acc: 0.7500
+5m 14s (- 1m 18s) (20 80%) train loss: 0.0047 test loss: 0.2328 test acc: 0.7500
+5m 29s (- 1m 2s) (21 84%) train loss: 0.0032 test loss: 0.2397 test acc: 0.7500
+5m 45s (- 0m 47s) (22 88%) train loss: 0.0024 test loss: 0.2508 test acc: 0.7500
+6m 1s (- 0m 31s) (23 92%) train loss: 0.0019 test loss: 0.2569 test acc: 0.7500
+6m 16s (- 0m 15s) (24 96%) train loss: 0.0016 test loss: 0.2608 test acc: 0.7500
+6m 32s (- 0m 0s) (25 100%) train loss: 0.0013 test loss: 0.2641 test acc: 0.7500
+Training done. Saving predictions to file...
+Saving Models
+Starting training on fold 8. 113 elements in curr_fold[0] and 12 in curr_fold[1]
+0m 15s (- 6m 18s) (1 4%) train loss: 1.6816 test loss: 1.1389 test acc: 0.0000
+0m 31s (- 6m 2s) (2 8%) train loss: 1.0715 test loss: 0.8851 test acc: 0.0000
+0m 47s (- 5m 46s) (3 12%) train loss: 0.8722 test loss: 0.8046 test acc: 0.1667
+1m 2s (- 5m 30s) (4 16%) train loss: 0.8090 test loss: 0.7332 test acc: 0.1667
+1m 18s (- 5m 14s) (5 20%) train loss: 0.6923 test loss: 0.5816 test acc: 0.2500
+1m 34s (- 4m 59s) (6 24%) train loss: 0.5935 test loss: 0.6228 test acc: 0.1667
+1m 50s (- 4m 43s) (7 28%) train loss: 0.5201 test loss: 0.4945 test acc: 0.4167
+2m 6s (- 4m 28s) (8 32%) train loss: 0.4506 test loss: 0.4202 test acc: 0.5833
+2m 22s (- 4m 12s) (9 36%) train loss: 0.3824 test loss: 0.3631 test acc: 0.5833
+2m 38s (- 3m 57s) (10 40%) train loss: 0.3092 test loss: 0.3112 test acc: 0.5000
+2m 53s (- 3m 41s) (11 44%) train loss: 0.2664 test loss: 0.2839 test acc: 0.6667
+3m 9s (- 3m 25s) (12 48%) train loss: 0.2117 test loss: 0.2454 test acc: 0.5833
+3m 25s (- 3m 9s) (13 52%) train loss: 0.1568 test loss: 0.1745 test acc: 0.8333
+3m 41s (- 2m 54s) (14 56%) train loss: 0.1228 test loss: 0.1592 test acc: 0.8333
+3m 57s (- 2m 38s) (15 60%) train loss: 0.0964 test loss: 0.1311 test acc: 0.8333
+4m 13s (- 2m 22s) (16 64%) train loss: 0.0592 test loss: 0.1219 test acc: 0.9167
+4m 29s (- 2m 6s) (17 68%) train loss: 0.0373 test loss: 0.1007 test acc: 0.9167
+4m 45s (- 1m 50s) (18 72%) train loss: 0.0236 test loss: 0.1302 test acc: 0.8333
+5m 0s (- 1m 35s) (19 76%) train loss: 0.0325 test loss: 0.1510 test acc: 0.7500
+5m 16s (- 1m 19s) (20 80%) train loss: 0.0390 test loss: 0.1634 test acc: 0.7500
+5m 32s (- 1m 3s) (21 84%) train loss: 0.0213 test loss: 0.0919 test acc: 0.8333
+5m 48s (- 0m 47s) (22 88%) train loss: 0.0156 test loss: 0.0386 test acc: 1.0000
+6m 4s (- 0m 31s) (23 92%) train loss: 0.0068 test loss: 0.0378 test acc: 0.9167
+6m 19s (- 0m 15s) (24 96%) train loss: 0.0034 test loss: 0.0321 test acc: 1.0000
+6m 35s (- 0m 0s) (25 100%) train loss: 0.0022 test loss: 0.0290 test acc: 1.0000
+Training done. Saving predictions to file...
+Saving Models
+Starting training on fold 9. 113 elements in curr_fold[0] and 12 in curr_fold[1]
+0m 15s (- 6m 15s) (1 4%) train loss: 1.7180 test loss: 1.1674 test acc: 0.0833
+0m 31s (- 5m 59s) (2 8%) train loss: 1.0767 test loss: 0.8662 test acc: 0.0000
+0m 46s (- 5m 43s) (3 12%) train loss: 0.9056 test loss: 0.8067 test acc: 0.1667
+1m 2s (- 5m 28s) (4 16%) train loss: 0.7883 test loss: 0.7287 test acc: 0.3333
+1m 18s (- 5m 12s) (5 20%) train loss: 0.6840 test loss: 0.6393 test acc: 0.1667
+1m 33s (- 4m 57s) (6 24%) train loss: 0.5998 test loss: 0.5787 test acc: 0.2500
+1m 49s (- 4m 41s) (7 28%) train loss: 0.5286 test loss: 0.5303 test acc: 0.5833
+2m 5s (- 4m 26s) (8 32%) train loss: 0.4749 test loss: 0.4737 test acc: 0.5833
+2m 20s (- 4m 10s) (9 36%) train loss: 0.4145 test loss: 0.4396 test acc: 0.5833
+2m 36s (- 3m 54s) (10 40%) train loss: 0.3526 test loss: 0.3674 test acc: 0.7500
+2m 52s (- 3m 38s) (11 44%) train loss: 0.3149 test loss: 0.3247 test acc: 0.6667
+3m 7s (- 3m 23s) (12 48%) train loss: 0.2369 test loss: 0.3194 test acc: 0.6667
+3m 23s (- 3m 7s) (13 52%) train loss: 0.1864 test loss: 0.2804 test acc: 0.5833
+3m 38s (- 2m 51s) (14 56%) train loss: 0.1402 test loss: 0.2035 test acc: 0.6667
+3m 54s (- 2m 36s) (15 60%) train loss: 0.1034 test loss: 0.1543 test acc: 0.7500
+4m 10s (- 2m 20s) (16 64%) train loss: 0.0613 test loss: 0.1299 test acc: 0.7500
+4m 25s (- 2m 5s) (17 68%) train loss: 0.0484 test loss: 0.1211 test acc: 0.8333
+4m 41s (- 1m 49s) (18 72%) train loss: 0.0278 test loss: 0.1330 test acc: 0.7500
+4m 56s (- 1m 33s) (19 76%) train loss: 0.0196 test loss: 0.0731 test acc: 0.8333
+5m 12s (- 1m 18s) (20 80%) train loss: 0.0109 test loss: 0.0408 test acc: 1.0000
+5m 28s (- 1m 2s) (21 84%) train loss: 0.0066 test loss: 0.0585 test acc: 0.9167
+5m 43s (- 0m 46s) (22 88%) train loss: 0.0044 test loss: 0.0705 test acc: 0.8333
+5m 59s (- 0m 31s) (23 92%) train loss: 0.0028 test loss: 0.0616 test acc: 0.9167
+6m 15s (- 0m 15s) (24 96%) train loss: 0.0019 test loss: 0.0550 test acc: 0.9167
+6m 30s (- 0m 0s) (25 100%) train loss: 0.0014 test loss: 0.0531 test acc: 0.9167
+Training done. Saving predictions to file...
+Saving Models
+Starting training on fold 10. 113 elements in curr_fold[0] and 12 in curr_fold[1]
+0m 15s (- 6m 18s) (1 4%) train loss: 1.7049 test loss: 1.1815 test acc: 0.0833
+0m 31s (- 6m 1s) (2 8%) train loss: 1.0857 test loss: 0.9048 test acc: 0.0833
+0m 47s (- 5m 46s) (3 12%) train loss: 0.9197 test loss: 0.7762 test acc: 0.0000
+1m 2s (- 5m 29s) (4 16%) train loss: 0.7852 test loss: 0.7569 test acc: 0.0833
+1m 18s (- 5m 14s) (5 20%) train loss: 0.6937 test loss: 0.6665 test acc: 0.3333
+1m 34s (- 4m 58s) (6 24%) train loss: 0.5851 test loss: 0.5726 test acc: 0.4167
+1m 49s (- 4m 42s) (7 28%) train loss: 0.5177 test loss: 0.5477 test acc: 0.2500
+2m 5s (- 4m 26s) (8 32%) train loss: 0.4593 test loss: 0.4980 test acc: 0.5000
+2m 21s (- 4m 10s) (9 36%) train loss: 0.3811 test loss: 0.4428 test acc: 0.5000
+2m 36s (- 3m 55s) (10 40%) train loss: 0.3356 test loss: 0.4190 test acc: 0.5000
+2m 52s (- 3m 39s) (11 44%) train loss: 0.2741 test loss: 0.3572 test acc: 0.5000
+3m 8s (- 3m 23s) (12 48%) train loss: 0.2121 test loss: 0.3158 test acc: 0.5833
+3m 23s (- 3m 8s) (13 52%) train loss: 0.1687 test loss: 0.2937 test acc: 0.5833
+3m 39s (- 2m 52s) (14 56%) train loss: 0.1298 test loss: 0.2608 test acc: 0.5833
+3m 55s (- 2m 36s) (15 60%) train loss: 0.1075 test loss: 0.2250 test acc: 0.5833
+4m 10s (- 2m 21s) (16 64%) train loss: 0.0666 test loss: 0.2702 test acc: 0.5833
+4m 26s (- 2m 5s) (17 68%) train loss: 0.0444 test loss: 0.2695 test acc: 0.5833
+4m 42s (- 1m 49s) (18 72%) train loss: 0.0304 test loss: 0.2923 test acc: 0.5000
+4m 57s (- 1m 34s) (19 76%) train loss: 0.0198 test loss: 0.2544 test acc: 0.5833
+5m 13s (- 1m 18s) (20 80%) train loss: 0.0131 test loss: 0.1934 test acc: 0.7500
+5m 29s (- 1m 2s) (21 84%) train loss: 0.0064 test loss: 0.1806 test acc: 0.7500
+5m 44s (- 0m 47s) (22 88%) train loss: 0.0039 test loss: 0.1728 test acc: 0.7500
+6m 0s (- 0m 31s) (23 92%) train loss: 0.0026 test loss: 0.1671 test acc: 0.8333
+6m 16s (- 0m 15s) (24 96%) train loss: 0.0018 test loss: 0.1695 test acc: 0.8333
+6m 31s (- 0m 0s) (25 100%) train loss: 0.0014 test loss: 0.1640 test acc: 0.8333
+Training done. Saving predictions to file...
+Saving Models

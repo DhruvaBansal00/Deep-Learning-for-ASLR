@@ -1,0 +1,490 @@
+Predicted Sentence:  Snake in flowers sil1
+True Sentence:  Snake in flowers sil1
+CORRECT
+Predicted Sentence:  Alligator behind chair sil1
+True Sentence:  Alligator behind chair sil1
+CORRECT
+Predicted Sentence:  Snake under bed sil1
+True Sentence:  Snake under bed sil1
+CORRECT
+Predicted Sentence:  Blue Alligator on green wall sil1
+True Sentence:  Blue Alligator on green wall sil1
+CORRECT
+Predicted Sentence:  Snake under blue chair sil1
+True Sentence:  Snake under blue chair sil1
+CORRECT
+Predicted Sentence:  Spider in box sil1
+True Sentence:  Cat on wall sil1
+INCORRECT
+Predicted Sentence:  Spider in blue box sil1
+True Sentence:  Spider in blue box sil1
+CORRECT
+Predicted Sentence:  Orange Snake under blue flowers sil1
+True Sentence:  Orange Snake under blue flowers sil1
+CORRECT
+Predicted Sentence:  White cat in green box sil1
+True Sentence:  White cat in green box sil1
+CORRECT
+Predicted Sentence:  Snake under blue flowers sil1
+True Sentence:  Snake under blue flowers sil1
+CORRECT
+Predicted Sentence:  Spider on on blue wall sil1
+True Sentence:  Cat under chair sil1
+INCORRECT
+Predicted Sentence:  Cat on wall sil1
+True Sentence:  Cat on wall sil1
+CORRECT
+Predicted Sentence:  Black Spider in white flowers sil1
+True Sentence:  Black Spider in white flowers sil1
+CORRECT
+Predicted Sentence:  Alligator on bed sil1
+True Sentence:  Alligator on bed sil1
+CORRECT
+Predicted Sentence:  Orange Snake under blue flowers sil1
+True Sentence:  Orange Snake under blue flowers sil1
+CORRECT
+Predicted Sentence:  Blue Spider on green box sil1
+True Sentence:  Blue Spider on green box sil1
+CORRECT
+Predicted Sentence:  Alligator under green bed sil1
+True Sentence:  Alligator under green bed sil1
+CORRECT
+Predicted Sentence:  Alligator on blue wall sil1
+True Sentence:  Alligator on blue wall sil1
+CORRECT
+Predicted Sentence:  Snake under black chair sil1
+True Sentence:  Snake under black chair sil1
+CORRECT
+Predicted Sentence:  Spider under blue chair sil1
+True Sentence:  Spider under blue chair sil1
+CORRECT
+Predicted Sentence:  Snake under black chair sil1
+True Sentence:  Snake under black chair sil1
+CORRECT
+Predicted Sentence:  Snake on wall sil1
+True Sentence:  Snake behind wall sil1
+INCORRECT
+Predicted Sentence:  Cat on blue bed sil1
+True Sentence:  Cat on blue bed sil1
+CORRECT
+Predicted Sentence:  Snake in green wagon sil1
+True Sentence:  Snake in green wagon sil1
+CORRECT
+Predicted Sentence:  Cat under chair sil1
+True Sentence:  Cat under chair sil1
+CORRECT
+Predicted Sentence:  Spider on chair sil1
+True Sentence:  Spider on chair sil1
+CORRECT
+Predicted Sentence:  Blue Spider on green box sil1
+True Sentence:  Blue Spider on green box sil1
+CORRECT
+Predicted Sentence:  Snake under blue flowers sil1
+True Sentence:  Snake under blue flowers sil1
+CORRECT
+Predicted Sentence:  Snake in green wagon sil1
+True Sentence:  Snake in green wagon sil1
+CORRECT
+Predicted Sentence:  Alligator under green bed sil1
+True Sentence:  Alligator under green bed sil1
+CORRECT
+Predicted Sentence:  Spider in green box sil1
+True Sentence:  Spider in green box sil1
+CORRECT
+Predicted Sentence:  Black cat in blue wagon sil1
+True Sentence:  Black cat in blue wagon sil1
+CORRECT
+Predicted Sentence:  Snake in flowers sil1
+True Sentence:  Snake in flowers sil1
+CORRECT
+Predicted Sentence:  Snake under bed sil1
+True Sentence:  Snake under bed sil1
+CORRECT
+Predicted Sentence:  Spider on wall sil1
+True Sentence:  Spider on wall sil1
+CORRECT
+Predicted Sentence:  Cat on wall sil1
+True Sentence:  Cat on wall sil1
+CORRECT
+Predicted Sentence:  Black Spider in white flowers sil1
+True Sentence:  Black Spider in white flowers sil1
+CORRECT
+Predicted Sentence:  Orange spider under green flowers sil1
+True Sentence:  Orange spider under green flowers sil1
+CORRECT
+Predicted Sentence:  Orange Alligator in green flowers sil1
+True Sentence:  Orange Alligator in green flowers sil1
+CORRECT
+Predicted Sentence:  Snake behind wall sil1
+True Sentence:  Snake behind wall sil1
+CORRECT
+Predicted Sentence:  Black cat behind green bed sil1
+True Sentence:  Black cat behind green bed sil1
+CORRECT
+Predicted Sentence:  Cat behind bed sil1
+True Sentence:  Cat behind bed sil1
+CORRECT
+Predicted Sentence:  Spider in green box sil1
+True Sentence:  Spider in green box sil1
+CORRECT
+Predicted Sentence:  Green Alligator under blue flowers sil1
+True Sentence:  Green Alligator under blue flowers sil1
+CORRECT
+Predicted Sentence:  Spider under wagon sil1
+True Sentence:  Spider under wagon sil1
+CORRECT
+Predicted Sentence:  Alligator in orange wagon sil1
+True Sentence:  Alligator in wagon sil1
+INCORRECT
+Predicted Sentence:  Alligator behind black wall sil1
+True Sentence:  Alligator behind black wall sil1
+CORRECT
+Predicted Sentence:  Alligator on blue wall sil1
+True Sentence:  Alligator on blue wall sil1
+CORRECT
+Predicted Sentence:  cat behind orange bed sil1
+True Sentence:  cat behind orange bed sil1
+CORRECT
+Predicted Sentence:  Green snake under blue chair sil1
+True Sentence:  Green snake under blue chair sil1
+CORRECT
+Predicted Sentence:  Alligator on blue wall sil1
+True Sentence:  Alligator on blue wall sil1
+CORRECT
+Predicted Sentence:  Alligator behind wall sil1
+True Sentence:  Alligator behind wall sil1
+CORRECT
+Predicted Sentence:  Alligator on bed sil1
+True Sentence:  Alligator on bed sil1
+CORRECT
+Predicted Sentence:  Snake on box sil1
+True Sentence:  Snake on box sil1
+CORRECT
+Predicted Sentence:  Spider in box sil1
+True Sentence:  Orange Spider in green box sil1
+INCORRECT
+Predicted Sentence:  Snake on box sil1
+True Sentence:  Snake on box sil1
+CORRECT
+Predicted Sentence:  Snake under chair sil1
+True Sentence:  Snake under chair sil1
+CORRECT
+Predicted Sentence:  Cat under blue bed sil1
+True Sentence:  Cat under blue bed sil1
+CORRECT
+Predicted Sentence:  Green Spider under orange chair sil1
+True Sentence:  Green Spider under orange chair sil1
+CORRECT
+Predicted Sentence:  Black cat on green bed sil1
+True Sentence:  Black cat on green bed sil1
+CORRECT
+Predicted Sentence:  Cat behind flowers sil1
+True Sentence:  Cat behind flowers sil1
+CORRECT
+Predicted Sentence:  Black cat behind green bed sil1
+True Sentence:  Black cat behind green bed sil1
+CORRECT
+Predicted Sentence:  Cat under blue bed sil1
+True Sentence:  Cat under blue bed sil1
+CORRECT
+Predicted Sentence:  Spider in green box sil1
+True Sentence:  Spider in green box sil1
+CORRECT
+Predicted Sentence:  Alligator behind wall sil1
+True Sentence:  Alligator behind wall sil1
+CORRECT
+Predicted Sentence:  Spider in box sil1
+True Sentence:  Alligator behind chair sil1
+INCORRECT
+Predicted Sentence:  Alligator on bed sil1
+True Sentence:  Alligator on bed sil1
+CORRECT
+Predicted Sentence:  Snake under blue chair sil1
+True Sentence:  Snake under blue chair sil1
+CORRECT
+Predicted Sentence:  Snake under blue chair sil1
+True Sentence:  Snake under blue chair sil1
+CORRECT
+Predicted Sentence:  Spider in box sil1
+True Sentence:  Spider in box sil1
+CORRECT
+Predicted Sentence:  Spider under bed sil1
+True Sentence:  Spider under bed sil1
+CORRECT
+Predicted Sentence:  Cat under chair sil1
+True Sentence:  Cat under chair sil1
+CORRECT
+Predicted Sentence:  Alligator in box sil1
+True Sentence:  Alligator in box sil1
+CORRECT
+Predicted Sentence:  Snake behind wall sil1
+True Sentence:  Snake behind wall sil1
+CORRECT
+Predicted Sentence:  Spider in box sil1
+True Sentence:  Alligator behind wall sil1
+INCORRECT
+Predicted Sentence:  Black Spider in white flowers sil1
+True Sentence:  Alligator behind orange wagon sil1
+INCORRECT
+Predicted Sentence:  Alligator in box sil1
+True Sentence:  Alligator in box sil1
+CORRECT
+Predicted Sentence:  Spider under bed sil1
+True Sentence:  Spider under bed sil1
+CORRECT
+Predicted Sentence:  Spider in blue box sil1
+True Sentence:  Spider in blue box sil1
+CORRECT
+Predicted Sentence:  Spider on chair sil1
+True Sentence:  Spider on chair sil1
+CORRECT
+Predicted Sentence:  Snake in green wagon sil1
+True Sentence:  Snake in green wagon sil1
+CORRECT
+Predicted Sentence:  Spider in box sil1
+True Sentence:  Cat behind box sil1
+INCORRECT
+Predicted Sentence:  Cat on blue bed sil1
+True Sentence:  Cat on blue bed sil1
+CORRECT
+Predicted Sentence:  Black cat in blue wagon sil1
+True Sentence:  Black cat in blue wagon sil1
+CORRECT
+Predicted Sentence:  cat behind orange bed sil1
+True Sentence:  cat behind orange bed sil1
+CORRECT
+Predicted Sentence:  Cat on blue bed sil1
+True Sentence:  Cat on blue bed sil1
+CORRECT
+Predicted Sentence:  Alligator behind chair sil1
+True Sentence:  Alligator behind chair sil1
+CORRECT
+Predicted Sentence:  cat behind orange bed sil1
+True Sentence:  cat behind orange bed sil1
+CORRECT
+Predicted Sentence:  White cat on orange wall sil1
+True Sentence:  White cat on orange wall sil1
+CORRECT
+Predicted Sentence:  Alligator under green bed sil1
+True Sentence:  Alligator under green bed sil1
+CORRECT
+Predicted Sentence:  Cat behind flowers sil1
+True Sentence:  Cat behind flowers sil1
+CORRECT
+Predicted Sentence:  Black Alligator behind orange wagon sil1
+True Sentence:  Black Alligator behind orange wagon sil1
+CORRECT
+Predicted Sentence:  Spider on white wall sil1
+True Sentence:  Spider on white wall sil1
+CORRECT
+Predicted Sentence:  White cat in green box sil1
+True Sentence:  White cat in green box sil1
+CORRECT
+Predicted Sentence:  Snake under bed sil1
+True Sentence:  Snake under bed sil1
+CORRECT
+Predicted Sentence:  Alligator behind blue wagon sil1
+True Sentence:  Alligator behind blue wagon sil1
+CORRECT
+Predicted Sentence:  Alligator behind black wall sil1
+True Sentence:  Alligator behind black wall sil1
+CORRECT
+Predicted Sentence:  Orange Spider in green box sil1
+True Sentence:  Orange Spider in green box sil1
+CORRECT
+Predicted Sentence:  Orange Alligator in green flowers sil1
+True Sentence:  Orange Alligator in green flowers sil1
+CORRECT
+Predicted Sentence:  Snake on box sil1
+True Sentence:  Snake on box sil1
+CORRECT
+Predicted Sentence:  Green snake under blue chair sil1
+True Sentence:  Green snake under blue chair sil1
+CORRECT
+Predicted Sentence:  Black cat in blue wagon sil1
+True Sentence:  Black cat in blue wagon sil1
+CORRECT
+Predicted Sentence:  Spider in box sil1
+True Sentence:  Spider in box sil1
+CORRECT
+Predicted Sentence:  Orange Alligator in green flowers sil1
+True Sentence:  Orange Alligator in green flowers sil1
+CORRECT
+Predicted Sentence:  Spider under blue chair sil1
+True Sentence:  Spider under blue chair sil1
+CORRECT
+Predicted Sentence:  Cat behind bed sil1
+True Sentence:  Cat behind bed sil1
+CORRECT
+Predicted Sentence:  Spider in orange flowers sil1
+True Sentence:  Spider in orange flowers sil1
+CORRECT
+Predicted Sentence:  Alligator in wagon sil1
+True Sentence:  Alligator in wagon sil1
+CORRECT
+Predicted Sentence:  Black cat behind green bed sil1
+True Sentence:  Black cat behind green bed sil1
+CORRECT
+Predicted Sentence:  Snake under chair sil1
+True Sentence:  Snake under chair sil1
+CORRECT
+Predicted Sentence:  Black cat on green bed sil1
+True Sentence:  Black cat on green bed sil1
+CORRECT
+Predicted Sentence:  Blue Alligator on green wall sil1
+True Sentence:  Blue Alligator on green wall sil1
+CORRECT
+Predicted Sentence:  Spider under orange flowers sil1
+True Sentence:  Spider in orange flowers sil1
+INCORRECT
+Predicted Sentence:  Spider on wall sil1
+True Sentence:  Spider on wall sil1
+CORRECT
+Predicted Sentence:  Cat behind box sil1
+True Sentence:  Cat behind box sil1
+CORRECT
+Predicted Sentence:  Spider on white wall sil1
+True Sentence:  Spider on white wall sil1
+CORRECT
+Predicted Sentence:  Green Alligator under blue flowers sil1
+True Sentence:  Green Alligator under blue flowers sil1
+CORRECT
+Predicted Sentence:  cat under orange chair sil1
+True Sentence:  cat under orange chair sil1
+CORRECT
+Predicted Sentence:  Spider in box sil1
+True Sentence:  Spider in box sil1
+CORRECT
+Predicted Sentence:  Alligator behind blue wagon sil1
+True Sentence:  Alligator behind blue wagon sil1
+CORRECT
+Predicted Sentence:  Alligator behind blue wagon sil1
+True Sentence:  Alligator behind blue wagon sil1
+CORRECT
+Predicted Sentence:  Black Alligator behind orange wagon sil1
+True Sentence:  Black Alligator behind orange wagon sil1
+CORRECT
+Predicted Sentence:  White Alligator on blue wall sil1
+True Sentence:  White Alligator on blue wall sil1
+CORRECT
+Predicted Sentence:  Orange Spider in green box sil1
+True Sentence:  Orange Spider in green box sil1
+CORRECT
+Predicted Sentence:  Spider on on blue wall sil1
+True Sentence:  White Alligator on blue wall sil1
+INCORRECT
+Predicted Sentence:  Alligator behind black wall sil1
+True Sentence:  Alligator behind black wall sil1
+CORRECT
+Predicted Sentence:  cat under orange chair sil1
+True Sentence:  cat under orange chair sil1
+CORRECT
+Predicted Sentence:  Black Snake under blue chair sil1
+True Sentence:  Black Snake under blue chair sil1
+CORRECT
+Predicted Sentence:  White snake in blue flowers sil1
+True Sentence:  White snake in blue flowers sil1
+CORRECT
+Predicted Sentence:  Snake on box sil1
+True Sentence:  Alligator in box sil1
+INCORRECT
+Predicted Sentence:  Spider on on blue wall sil1
+True Sentence:  Spider on chair sil1
+INCORRECT
+Predicted Sentence:  Cat on green wall sil1
+True Sentence:  Cat on green wall sil1
+CORRECT
+Predicted Sentence:  Spider in orange flowers sil1
+True Sentence:  Spider in orange flowers sil1
+CORRECT
+Predicted Sentence:  White cat on orange wall sil1
+True Sentence:  White cat on orange wall sil1
+CORRECT
+Predicted Sentence:  Cat under blue bed sil1
+True Sentence:  Cat under blue bed sil1
+CORRECT
+Predicted Sentence:  Green Spider under orange chair sil1
+True Sentence:  Green Spider under orange chair sil1
+CORRECT
+Predicted Sentence:  Green Alligator under blue flowers sil1
+True Sentence:  Green Alligator under blue flowers sil1
+CORRECT
+Predicted Sentence:  Black Spider in white flowers sil1
+True Sentence:  Black Spider in white flowers sil1
+CORRECT
+Predicted Sentence:  Black Snake under blue chair sil1
+True Sentence:  Black Snake under blue chair sil1
+CORRECT
+Predicted Sentence:  Snake under chair sil1
+True Sentence:  Snake under chair sil1
+CORRECT
+Predicted Sentence:  Cat behind bed sil1
+True Sentence:  Cat behind bed sil1
+CORRECT
+Predicted Sentence:  Black Alligator behind orange wagon sil1
+True Sentence:  Black Alligator behind orange wagon sil1
+CORRECT
+Predicted Sentence:  White snake in blue flowers sil1
+True Sentence:  White snake in blue flowers sil1
+CORRECT
+Predicted Sentence:  Alligator in orange flowers sil1
+True Sentence:  Alligator in orange flowers sil1
+CORRECT
+Predicted Sentence:  Spider under wagon sil1
+True Sentence:  Spider under wagon sil1
+CORRECT
+Predicted Sentence:  Cat on green wall sil1
+True Sentence:  Cat on green wall sil1
+CORRECT
+Predicted Sentence:  Snake under black chair sil1
+True Sentence:  Snake under black chair sil1
+CORRECT
+Predicted Sentence:  Green Snake under blue chair sil1
+True Sentence:  Green Snake under blue chair sil1
+CORRECT
+Predicted Sentence:  Alligator in orange flowers sil1
+True Sentence:  Alligator in orange flowers sil1
+CORRECT
+Predicted Sentence:  Snake under blue flowers sil1
+True Sentence:  Snake under blue flowers sil1
+CORRECT
+Predicted Sentence:  Snake under chair sil1
+True Sentence:  Snake in flowers sil1
+INCORRECT
+Predicted Sentence:  Orange spider under green flowers sil1
+True Sentence:  Orange spider under green flowers sil1
+CORRECT
+Predicted Sentence:  Cat behind box sil1
+True Sentence:  Cat behind box sil1
+CORRECT
+Predicted Sentence:  Alligator in orange flowers sil1
+True Sentence:  Alligator in orange flowers sil1
+CORRECT
+Predicted Sentence:  cat under orange chair sil1
+True Sentence:  cat under orange chair sil1
+CORRECT
+Predicted Sentence:  Blue Spider on green box sil1
+True Sentence:  Blue Spider on green box sil1
+CORRECT
+Predicted Sentence:  Alligator in wagon sil1
+True Sentence:  Alligator in wagon sil1
+CORRECT
+Predicted Sentence:  Black cat on green bed sil1
+True Sentence:  Black cat on green bed sil1
+CORRECT
+Predicted Sentence:  Black Snake under blue chair sil1
+True Sentence:  Black Snake under blue chair sil1
+CORRECT
+Predicted Sentence:  Snake under bed sil1
+True Sentence:  Alligator behind orange wagon sil1
+INCORRECT
+Predicted Sentence:  Cat on green wall sil1
+True Sentence:  Cat on green wall sil1
+CORRECT
+Predicted Sentence:  Cat behind flowers sil1
+True Sentence:  Cat behind flowers sil1
+CORRECT
+Predicted Sentence:  Spider in blue box sil1
+True Sentence:  Spider in blue box sil1
+CORRECT
+Recognition Total:  0.9079754601226994

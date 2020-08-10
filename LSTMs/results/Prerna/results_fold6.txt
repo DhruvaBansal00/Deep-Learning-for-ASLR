@@ -1,0 +1,37 @@
+Predicted Sentence:  sil0 snake in flowers sil1
+True Sentence:  sil0 snake in flowers sil1
+Result:  CORRECT
+Predicted Sentence:  sil0 lion below chair sil1
+True Sentence:  sil0 lion below chair sil1
+Result:  CORRECT
+Predicted Sentence:  sil0 alligator in wagon sil1
+True Sentence:  sil0 alligator in wagon sil1
+Result:  CORRECT
+Predicted Sentence:  sil0 lion above bed sil1
+True Sentence:  sil0 lion above wall sil1
+Result:  INCORRECT
+Predicted Sentence:  sil0 alligator above chair sil1
+True Sentence:  sil0 alligator above chair sil1
+Result:  CORRECT
+Predicted Sentence:  sil0 monkey below wagon sil1
+True Sentence:  sil0 monkey below wagon sil1
+Result:  CORRECT
+Predicted Sentence:  sil0 monkey below wagon sil1
+True Sentence:  sil0 monkey below wagon sil1
+Result:  CORRECT
+Predicted Sentence:  sil0 snake above box sil1
+True Sentence:  sil0 snake above box sil1
+Result:  CORRECT
+Predicted Sentence:  sil0 lion above bed sil1
+True Sentence:  sil0 lion above flowers sil1
+Result:  INCORRECT
+Predicted Sentence:  sil0 alligator above wall sil1
+True Sentence:  sil0 alligator above wall sil1
+Result:  CORRECT
+Predicted Sentence:  sil0 alligator above bed sil1
+True Sentence:  sil0 alligator above bed sil1
+Result:  CORRECT
+Predicted Sentence:  sil0 snake below bed sil1
+True Sentence:  sil0 snake below bed sil1
+Result:  CORRECT
+Recognition Total:  0.8333333333333334
