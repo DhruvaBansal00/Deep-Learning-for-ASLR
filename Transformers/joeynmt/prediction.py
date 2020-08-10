@@ -169,7 +169,7 @@ def validate_on_data(model: Model, data: Dataset,
                     valid_hypotheses, valid_references)
             
             word_sentence_acc = [word_error_allignment(valid_hypotheses, valid_references)]
-            word_sentence_acc.append(current_valid_score = sequence_accuracy(valid_hypotheses, valid_references))
+            word_sentence_acc.append(sequence_accuracy(valid_hypotheses, valid_references))
         else:
             current_valid_score = -1
         
