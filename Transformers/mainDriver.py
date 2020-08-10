@@ -129,7 +129,9 @@ if __name__ == '__main__':
             writeFiles(train_paths, train_labels, test_paths, test_labels)
             all_results.append(train(args.config_path))
         
-        print(f'Cross validation results = {str(all_results)}')
+        all_results = np.array(all_results)
+        average_results = np.mean(all_results, dim=1)
+        print(f'Cross validation results = {str(average_results)}')
 
 
 

@@ -13,7 +13,7 @@ from torchtext.data import Dataset, Field
 
 from joeynmt.helpers import bpe_postprocess, load_config, make_logger,\
     get_latest_checkpoint, load_checkpoint, store_attention_plots
-from joeynmt.metrics import bleu, chrf, token_accuracy, sequence_accuracy
+from joeynmt.metrics import bleu, chrf, token_accuracy, sequence_accuracy, word_error_allignment
 from joeynmt.model import build_model, Model
 from joeynmt.batch import Batch
 from joeynmt.data import load_data, make_data_iter, MonoDataset
@@ -168,8 +168,8 @@ def validate_on_data(model: Model, data: Dataset,
                 current_valid_score = sequence_accuracy(
                     valid_hypotheses, valid_references)
             
-            word_sentence_acc = [token_accuracy(valid_hypotheses, valid_references, level=level), 
-                                sequence_accuracy(valid_hypotheses, valid_references)]
+            word_sentence_acc = [word_error_allignment(valid_hypotheses, valid_references)]
+            word_sentence_acc.append(current_valid_score = sequence_accuracy(valid_hypotheses, valid_references))
         else:
             current_valid_score = -1
         

@@ -90,7 +90,7 @@ def load_data(data_cfg: dict) -> (object, object, Optional[object], Vocabulary):
     test_data = None
     if test_path is not None:
         test_data = get_dataset(test_path+"."+src_lang, max_src_length, max_trg_length)
-        test_data_labels = label_to_int(train_data[1], trg_vocab)
+        test_data_labels = label_to_int(test_data[1], trg_vocab)
         test_data = (test_data[0], test_data_labels)
     
     train_data_labels = label_to_int(train_data[1], trg_vocab)
