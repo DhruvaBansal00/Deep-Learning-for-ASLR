@@ -37,6 +37,10 @@ def getLabels(ark_paths: list):
     labels = [" ".join(i.split("/")[-1].split(".")[1].split("_"))+"\n" for i in ark_paths]
     return labels
 
+def getUsers(ark_paths: list):
+    users = [filepath.split('/')[-1].split('.')[0].split('_')[1] for filepath in ark_paths]
+    return users
+
 if __name__ == '__main__':
     
     parser = argparse.ArgumentParser("SignJoey")
@@ -49,7 +53,8 @@ if __name__ == '__main__':
     parser.add_argument('--cross_val_method', required='cross_val' in sys.argv,
                         default='kfold', choices=['kfold',
                                                   'leave_one_phrase_out',
-                                                  'stratified'])
+                                                  'stratified',
+                                                  'leave_one_user_out'])
     parser.add_argument('--n_splits', required='cross_val' in sys.argv,
                         type=int, default=10)
     parser.add_argument('--cv_parallel', action='store_true')
@@ -61,8 +66,10 @@ if __name__ == '__main__':
     print("Version 0.0.1")
 
     cross_val_methods = {'kfold': (KFold, False),
-                         'leave_one_phrase_out': (LeaveOneGroupOut, True),
-                         'stratified': (StratifiedKFold, True)}
+                         'leave_one_phrase_out': (LeaveOneGroupOut(), True),
+                         'stratified': (StratifiedKFold, True),
+                         'leave_one_user_out': (LeaveOneGroupOut(), True)
+    }
     cross_val_method, use_groups = cross_val_methods[args.cross_val_method]
 
     if len(args.users) == 0:
@@ -73,6 +80,7 @@ if __name__ == '__main__':
             ark_filepaths.extend(glob.glob(os.path.join("../data/ark", '*{}*.ark'.format(user))))
     
     ark_labels = getLabels(ark_filepaths)
+    dataset_users = getUsers(ark_filepaths)
 
     if args.test_type == 'test_on_train':
         
@@ -102,10 +110,17 @@ if __name__ == '__main__':
 
     if args.test_type == 'cross_val':
 
-        unique_phrases = set(ark_labels)
-        group_map = {phrase: i for i, phrase in enumerate(unique_phrases)}
-        groups = [group_map[label] for label in ark_labels]
-        cross_val = cross_val_method(n_splits=args.n_splits)
+        if args.cross_val_method == 'leave_one_user_out':
+            unique_users = set(dataset_users)
+            group_map = {user: i for i, user in enumerate(unique_users)}
+            groups = [group_map[user] for user in dataset_users]            
+            cross_val = cross_val_method
+        else:
+            unique_phrases = set(ark_labels)
+            group_map = {phrase: i for i, phrase in enumerate(unique_phrases)}
+            groups = [group_map[label] for label in ark_labels]
+            cross_val = cross_val_method(n_splits=args.n_splits)
+            
 
         if use_groups:
             splits = list(cross_val.split(ark_filepaths, ark_labels, groups))
