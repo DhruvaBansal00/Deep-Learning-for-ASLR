@@ -157,4 +157,4 @@ def word_error_allignment(hypotheses, references):
             else:
                 S += 1.0
     
-    return [H/N, D/N, S/N, I/N, H/N - S/N - I/N]
+    return [100 * (H/N), 100 * (D/N), 100 * (S/N), 100*(I/N), 100*(H/N - I/N)]
