@@ -128,6 +128,7 @@ if __name__ == '__main__':
             splits = list(cross_val.split(ark_filepaths, ark_labels))
         
         all_results = []
+        user_order = []
         
         for i, (train_index, test_index) in enumerate(splits):
 
@@ -137,9 +138,12 @@ if __name__ == '__main__':
             train_labels = np.array(ark_labels)[train_index]
             test_paths = np.array(ark_filepaths)[test_index]
             test_labels = np.array(ark_labels)[test_index]
+            curr_user = getUsers(test_paths)[0]
+            user_order.append(curr_user)
 
             print(f'Nmber of elements in train_paths = {str(train_paths.shape)}')
             print(f'Nmber of elements in test_paths = {str(test_paths.shape)}')
+            print(f'Current user = {curr_user}')
 
             writeFiles(train_paths, train_labels, test_paths, test_labels)
             all_results.append(train(args.config_path))
@@ -148,6 +152,7 @@ if __name__ == '__main__':
         print(f'All results = {str(all_results)}')
         average_results = np.mean(all_results, axis=0)
         print(f'Cross validation results = {str(average_results)}')
+        print(f'User order = {str(user_order)}')
 
 
 
