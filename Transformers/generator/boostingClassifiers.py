@@ -5,12 +5,17 @@ import sys
 from sklearn.utils import shuffle
 from joblib import Parallel, delayed
 
-from src.prepare_data.ark_reader import read_ark_files
 import glob
 import numpy as np
 from tqdm import tqdm
 from sklearn.metrics import accuracy_score
 
+def read_ark_files(ark_file):
+    with open(ark_file,'r') as ark_file:
+        fileAsString = ark_file.read()
+    contentString = fileAsString.split("[ ")[1].split("\n]")[0].split("\n")
+    content = [[float(i) for i in frame.split()] for frame in contentString]
+    return np.array(content)
     
 #structure -> word.name -> index -> state.name -> class
 #supposed to create a map between word, index and the class number
@@ -62,7 +67,7 @@ def getClassTree(phrases: list, include_state: bool, include_index: bool) -> dic
 
 def dataSetReader(classLabels: dict, phrases: list, arkFileLoc: str, include_state: bool, include_index: bool) -> dict:
     dataset = {}  ##Class to frames
-    for phrase in phrases:
+    for phrase in tqdm(phrases):
         currPhraseArk = arkFileLoc+phrase.name+".ark"
         content = read_ark_files(currPhraseArk)
         timeToFrame = content.shape[0]/phrase.end  ##aka frame rate

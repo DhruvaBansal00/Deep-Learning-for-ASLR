@@ -1,5 +1,5 @@
-from .classes import State, Word, Phrase
-from .boostingClassifiers import ClassifierTransformer
+from generator.classes import State, Word, Phrase
+from generator.boostingClassifiers import ClassifierTransformer
 
 #get phrase assumes that the readline will return the path to the current phrase
 def getPhrase(res_file: str) -> Phrase:

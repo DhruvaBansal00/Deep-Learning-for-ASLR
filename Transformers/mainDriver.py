@@ -10,6 +10,7 @@ from sklearn.model_selection import (
     KFold, StratifiedKFold, LeaveOneGroupOut, train_test_split)
 from statistics import mean
 import joeynmt
+import generator
 from joeynmt.training import train
 from generator.generateNewFeatures import generateFeatures
 
@@ -150,9 +151,9 @@ if __name__ == '__main__':
 
             print(f'Starting feature generation')
 
-            generator = generateFeatures(curr_alignment_file, "../data/ark", classifier=args.classifier, include_state=args.include_state, 
+            generator = generateFeatures(curr_alignment_file, "../data/ark/", classifier=args.classifier, include_state=args.include_state, 
                         include_index=args.include_index, n_jobs=args.n_jobs, parallel=args.parallel, trainMultipleClassifiers=args.multiple_classifiers,
-                        knn_neighbors=int(args.knn_neighbors), generated_features_folder=f'../data/transformed/{curr_user}', pca_components=args.pca_components,
+                        knn_neighbors=int(args.knn_neighbors), generated_features_folder=f'../data/transformed/{curr_user}/', pca_components=args.pca_components,
                         no_pca=args.no_pca)
 
 

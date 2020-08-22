@@ -1,8 +1,9 @@
-from . import getClassifierFromStateAlignment
+from generator.classifierFromState import getClassifierFromStateAlignment
 import glob
 import tqdm
 import pandas as pd
 import numpy as np
+import os
 from sklearn.decomposition import PCA
 
 def read_ark_files(ark_file):
@@ -27,7 +28,10 @@ def _create_ark_file(df: pd.DataFrame, ark_filepath: str, title: str) -> None:
         Title containing label needed as header of .ark file.
     """
 
-    with open(ark_filepath, 'w') as out:
+    if not os.path.exists(os.path.dirname(ark_filepath)):
+        os.makedirs(os.path.dirname(ark_filepath))
+
+    with open(ark_filepath, 'w+') as out:
         out.write('{} [ '.format(title))
         
     df.to_csv(ark_filepath, mode='a', header=False, index=False, sep=' ')
