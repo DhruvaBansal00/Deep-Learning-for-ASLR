@@ -11,6 +11,8 @@ from sklearn.model_selection import (
 from statistics import mean
 import joeynmt
 from joeynmt.training import train
+from generator.generateNewFeatures import generateFeatures
+
 
 def writeFiles(trainPaths, trainLabels, testPaths, testLabels):
     trainFiles = "\n".join(trainPaths)
@@ -60,6 +62,16 @@ if __name__ == '__main__':
     parser.add_argument('--cv_parallel', action='store_true')
     parser.add_argument('--test_size', type=float, default=0.1)
     parser.add_argument("--config_path", type=str, help="path to YAML config file")
+    parser.add_argument('--classifier', type=str, default='knn',
+                        choices=['knn', 'adaboost'])
+    parser.add_argument('--include_state', action='store_true')
+    parser.add_argument('--include_index', action='store_true')
+    parser.add_argument('--n_jobs', default=1, type=int)
+    parser.add_argument('--parallel', action='store_true')
+    parser.add_argument('--multiple_classifiers', action='store_true')
+    parser.add_argument('--knn_neighbors', default=50)
+    parser.add_argument('--pca_components', default=92)
+    parser.add_argument('--no_pca', action='store_true')
     args = parser.parse_args()
     ###################################################################
 
@@ -134,7 +146,14 @@ if __name__ == '__main__':
             print(f'Number of elements in test_paths = {str(test_paths.shape)}')
             print(f'Current user = {curr_user}')
 
-            curr_alignment_file = open(glob.glob(f'../data/alignment/{curr_user}/*.mlf')[-1])
+            curr_alignment_file = glob.glob(f'../data/alignment/{curr_user}/*.mlf')[-1]
+
+            print(f'Starting feature generation')
+
+            generator = generateFeatures(curr_alignment_file, "../data/ark", classifier=args.classifier, include_state=args.include_state, 
+                        include_index=args.include_index, n_jobs=args.n_jobs, parallel=args.parallel, trainMultipleClassifiers=args.multiple_classifiers,
+                        knn_neighbors=int(args.knn_neighbors), generated_features_folder=f'../data/transformed/{curr_user}', pca_components=args.pca_components,
+                        no_pca=args.no_pca)
 
 
     if args.test_type == 'cross_val':
