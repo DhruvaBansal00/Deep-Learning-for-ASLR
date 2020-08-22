@@ -1,4 +1,3 @@
-
 #CV = python3 mainDriver.py --test_type cross_val --cross_val_method stratified --n_splits 10
 
 import sys
@@ -57,6 +56,7 @@ if __name__ == '__main__':
                                                   'leave_one_user_out'])
     parser.add_argument('--n_splits', required='cross_val' in sys.argv,
                         type=int, default=10)
+    parser.add_argument('--transform_files', action='store_true')
     parser.add_argument('--cv_parallel', action='store_true')
     parser.add_argument('--test_size', type=float, default=0.1)
     parser.add_argument("--config_path", type=str, help="path to YAML config file")
@@ -107,6 +107,35 @@ if __name__ == '__main__':
 
         writeFiles(train_paths, train_labels, test_paths, test_labels)
         train(args.config_path)
+    
+    if args.test_type == 'cross_val' and args.transform_files:
+
+        unique_users = set(dataset_users)
+        group_map = {user: i for i, user in enumerate(unique_users)}
+        groups = [group_map[user] for user in dataset_users]            
+        cross_val = cross_val_method
+        splits = list(cross_val.split(ark_filepaths, ark_labels, groups))
+        
+        all_results = []
+        user_order = []
+        
+        for i, (train_index, test_index) in enumerate(splits):
+
+            print(f'Current split = {i}')
+            
+            train_paths = np.array(ark_filepaths)[train_index]
+            train_labels = np.array(ark_labels)[train_index]
+            test_paths = np.array(ark_filepaths)[test_index]
+            test_labels = np.array(ark_labels)[test_index]
+            curr_user = getUsers(test_paths)[0]
+            user_order.append(curr_user)
+
+            print(f'Number of elements in train_paths = {str(train_paths.shape)}')
+            print(f'Number of elements in test_paths = {str(test_paths.shape)}')
+            print(f'Current user = {curr_user}')
+
+            curr_alignment_file = open(glob.glob(f'../data/alignment/{curr_user}/*.mlf')[-1])
+
 
     if args.test_type == 'cross_val':
 
