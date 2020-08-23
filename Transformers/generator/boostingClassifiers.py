@@ -81,9 +81,9 @@ def dataSetReader(classLabels: dict, phrases: list, arkFileLoc: str, include_sta
                     currClass = classLabels[word.name][state.name] if include_state else classLabels[word.name]
 
                 if currClass in dataset:
-                    dataset[currClass] = np.concatenate((dataset[currClass], content[int(state.start * timeToFrame) : int(state.end * timeToFrame)]))
+                    dataset[currClass] = np.concatenate((dataset[currClass], np.array(content[int(state.start * timeToFrame) : int(state.end * timeToFrame)])))
                 else:
-                    dataset[currClass] = content[int(state.start * timeToFrame) : int(state.end * timeToFrame)]
+                    dataset[currClass] = np.array(content[int(state.start * timeToFrame) : int(state.end * timeToFrame)])
         
     return dataset
 
@@ -133,6 +133,7 @@ def calculateClassifierAcc(classifier: object, dataset: dict, trainMultipleClass
 def getTrainedClassifier(phrases: list, arkFileLoc: str, include_state: bool, include_index: bool, n_jobs: int, 
                         parallel: bool, knn_neighbors: int, classifierAlgo: str, trainMultipleClassifiers: bool = True, 
                         random_state: int = 42) -> object:
+    print("Creating class tree")
     classLabels = getClassTree(phrases, include_state, include_index)
     dataset = dataSetReader(classLabels, phrases, arkFileLoc, include_state, include_index)
 
@@ -167,6 +168,7 @@ def getTrainedClassifier(phrases: list, arkFileLoc: str, include_state: bool, in
         if 'knn' in classifierAlgo:
             print("Training Master KNN Classifier")
             classifier = KNeighborsClassifier(n_neighbors=knn_neighbors)
+            print(f"Initialized Master KNN Classifier with neighbors = {knn_neighbors}")
         else:
             print("Training Master AdaBoost Classifier")
             classifier = AdaBoostClassifier(n_estimators=75, random_state=random_state)
