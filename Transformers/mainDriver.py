@@ -77,7 +77,7 @@ if __name__ == '__main__':
     args = parser.parse_args()
     ###################################################################
 
-    print("Version 0.0.1")
+    print("Version 0.0.2")
 
     cross_val_methods = {'kfold': (KFold, False),
                          'leave_one_phrase_out': (LeaveOneGroupOut(), True),
@@ -163,7 +163,7 @@ if __name__ == '__main__':
             test_paths = []
             test_labels = []
             for filePath in transformedFiles:
-                if curr_user in filePath:
+                if curr_user in filePath.split("/")[-1]:
                     test_paths.append(filePath)
                     test_labels.append(getLabels([filePath])[0])
                 else:
