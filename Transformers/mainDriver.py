@@ -60,6 +60,7 @@ if __name__ == '__main__':
     parser.add_argument('--n_splits', required='cross_val' in sys.argv,
                         type=int, default=10)
     parser.add_argument('--transform_files', action='store_true')
+    parser.add_argument('--create_transform_files', action='store_true')
     parser.add_argument('--cv_parallel', action='store_true')
     parser.add_argument('--test_size', type=float, default=0.1)
     parser.add_argument("--config_path", type=str, help="path to YAML config file")
@@ -143,21 +144,40 @@ if __name__ == '__main__':
             curr_user = getUsers(test_paths)[0]
             user_order.append(curr_user)
 
-            print(f'Number of elements in train_paths = {str(train_paths.shape)}')
-            print(f'Number of elements in test_paths = {str(test_paths.shape)}')
             print(f'Current user = {curr_user}')
 
             curr_alignment_file = glob.glob(f'../data/alignment/{curr_user}/*.mlf')[-1]
 
-            print(f'Starting feature generation')
+            if args.create_transform_files:
 
-            generator = generateFeatures(curr_alignment_file, "../data/ark/", classifier=args.classifier, include_state=args.include_state, 
-                        include_index=args.include_index, n_jobs=args.n_jobs, parallel=args.parallel, trainMultipleClassifiers=args.multiple_classifiers,
-                        knn_neighbors=int(args.knn_neighbors), generated_features_folder=f'../data/transformed/{curr_user}/', pca_components=args.pca_components,
-                        no_pca=args.no_pca)
+                print(f'Starting feature generation')
 
+                generator = generateFeatures(curr_alignment_file, "../data/ark/", classifier=args.classifier, include_state=args.include_state, 
+                            include_index=args.include_index, n_jobs=args.n_jobs, parallel=args.parallel, trainMultipleClassifiers=args.multiple_classifiers,
+                            knn_neighbors=int(args.knn_neighbors), generated_features_folder=f'../data/transformed/{curr_user}/', pca_components=args.pca_components,
+                            no_pca=args.no_pca)
+            
+            transformedFiles = glob.glob(f'../data/transformed/{curr_user}/*.ark')
+            train_paths = []
+            train_labels = []
+            test_paths = []
+            test_labels = []
+            for filePath in transformedFiles:
+                if curr_user in filePath:
+                    test_paths.append(filePath)
+                    test_labels.append(getLabels([filePath])[0])
+                else:
+                    train_paths.append(filePath)
+                    train_labels.append(getLabels([filePath])[0])
+            
+            print(f'Number of elements in train_paths = {str(len(train_paths))}')
+            print(f'Number of elements in test_paths = {str(len(test_paths))}')
+            
+            writeFiles(train_paths, train_labels, test_paths, test_labels)
+            all_results.append(train(args.config_path))    
+            
 
-    if args.test_type == 'cross_val':
+    elif args.test_type == 'cross_val':
 
         if args.cross_val_method == 'leave_one_user_out':
             unique_users = set(dataset_users)

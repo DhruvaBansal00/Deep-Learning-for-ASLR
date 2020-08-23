@@ -68,5 +68,5 @@ def generateFeatures(resultFile: str, arkFolder: str, classifier: str, include_s
 
     print(f'Writing .ark files to {generated_features_folder}')
     
-    for arkFile in tqdm.tqdm_notebook(arkFiles):
+    for arkFile in tqdm.tqdm(arkFiles):
         num_features = createNewArkFile(arkFile, trainedClassifier, pca_components, no_pca, generated_features_folder, parallel, n_jobs)
