@@ -40,21 +40,14 @@ def _create_ark_file(df: pd.DataFrame, ark_filepath: str, title: str) -> None:
         out.write(']')
 
 
-def createNewArkFile(arkFile: str, trainedClassifier: object, pca_components: int, no_pca: bool, 
-                    arkFileSave: str, parallel: bool, n_jobs: int):
-    content = read_ark_files(arkFile)
-    newContent = trainedClassifier.getTransformedFeatures(content, parallel, n_jobs)
-    
-    if not no_pca:
-        pca = PCA(n_components=pca_components)
-        newContent = pca.fit_transform(newContent)
+def createNewArkFiles(reduced_all_data_frames: list, arkFileData: dict, arkFileSave: str):
 
-    num_features = newContent.shape[1]
-    arkFileName = arkFile.split("/")[-1]
-    arkFileSavePath = arkFileSave + arkFileName
+    for arkFile in tqdm.tqdm(arkFileData):
 
-    _create_ark_file(pd.DataFrame(data=newContent), arkFileSavePath, arkFileName.replace(".ark", ""))
-    return num_features
+        arkFileName = arkFile.split("/")[-1]
+        arkFileSavePath = arkFileSave + arkFileName
+        newContent = reduced_all_data_frames[arkFileData[arkFile][0]:arkFileData[arkFile][1]]
+        _create_ark_file(pd.DataFrame(data=newContent), arkFileSavePath, arkFileName.replace(".ark", ""))
 
 def generateFeatures(resultFile: str, arkFolder: str, classifier: str, include_state: bool, include_index: bool,
 								 n_jobs: int, parallel: bool, trainMultipleClassifiers: bool, knn_neighbors: float,
@@ -66,7 +59,23 @@ def generateFeatures(resultFile: str, arkFolder: str, classifier: str, include_s
     
     arkFiles = glob.glob(arkFolder+"/*")
 
-    print(f'Writing .ark files to {generated_features_folder}')
+
+    arkFileData = {}
+    all_data_frames = []
+    curr_index = 0
+
+    print(f'Transforming and PCAing .ark files')
     
     for arkFile in tqdm.tqdm(arkFiles):
-        num_features = createNewArkFile(arkFile, trainedClassifier, pca_components, no_pca, generated_features_folder, parallel, n_jobs)
+        curr_content = read_ark_files(arkFile)
+        arkFileData[arkFile] = [curr_index, curr_index + len(curr_content)]
+        all_data_frames.extend(trainedClassifier.getTransformedFeatures(curr_content, parallel, n_jobs))
+        curr_index += len(curr_content)
+    
+    if not no_pca:
+        pca = PCA(n_components=pca_components)
+        reduced_all_data_frames = pca.fit_transform(all_data_frames)
+
+    
+    print(f'Writing .ark files to {generated_features_folder}')
+    createNewArkFiles(reduced_all_data_frames, arkFileData, generated_features_folder)
