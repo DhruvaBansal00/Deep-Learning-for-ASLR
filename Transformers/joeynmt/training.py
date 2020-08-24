@@ -627,8 +627,7 @@ def train(cfg_file: str) -> None:
     # load the data
     train_data, dev_data, _, trg_vocab = load_data(data_cfg=cfg["data"], get_test = False)
 
-    print(f'dev data details = {str(len(dev_data[0]))} and {str(len(dev_data[1]))}')
-
+    print(f'Building model...')
     # build an encoder-decoder model
     model = build_model(cfg["model"], trg_vocab=trg_vocab)
 
@@ -648,9 +647,10 @@ def train(cfg_file: str) -> None:
     trainer.logger.info(str(model))
 
     # store the vocabs
-    trg_vocab_file = "{}/trg_vocab.txt".format(cfg["training"]["model_dir"])
-    trg_vocab.to_file(trg_vocab_file)
+    # trg_vocab_file = "{}/trg_vocab.txt".format(cfg["training"]["model_dir"])
+    # trg_vocab.to_file(trg_vocab_file)
 
+    print(f'Initiating Training...')
     # train the model
     trainer.train_and_validate(train_data=train_data, valid_data=dev_data)
 
