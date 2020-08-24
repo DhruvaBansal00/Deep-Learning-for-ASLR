@@ -152,29 +152,29 @@ if __name__ == '__main__':
 
                 print(f'Starting feature generation')
 
-                generator = generateFeatures(curr_alignment_file, "../data/ark/", classifier=args.classifier, include_state=args.include_state, 
+                generateFeatures(curr_alignment_file, "../data/ark/", classifier=args.classifier, include_state=args.include_state, 
                             include_index=args.include_index, n_jobs=args.n_jobs, parallel=args.parallel, trainMultipleClassifiers=args.multiple_classifiers,
                             knn_neighbors=int(args.knn_neighbors), generated_features_folder=f'../data/transformed/{curr_user}/', pca_components=args.pca_components,
                             no_pca=args.no_pca)
-            
-            transformedFiles = glob.glob(f'../data/transformed/{curr_user}/*.ark')
-            train_paths = []
-            train_labels = []
-            test_paths = []
-            test_labels = []
-            for filePath in transformedFiles:
-                if curr_user in filePath.split("/")[-1]:
-                    test_paths.append(filePath)
-                    test_labels.append(getLabels([filePath])[0])
-                else:
-                    train_paths.append(filePath)
-                    train_labels.append(getLabels([filePath])[0])
-            
-            print(f'Number of elements in train_paths = {str(len(train_paths))}')
-            print(f'Number of elements in test_paths = {str(len(test_paths))}')
-            
-            writeFiles(train_paths, train_labels, test_paths, test_labels)
-            all_results.append(train(args.config_path))    
+            else: 
+                transformedFiles = glob.glob(f'../data/transformed/{curr_user}/*.ark')
+                train_paths = []
+                train_labels = []
+                test_paths = []
+                test_labels = []
+                for filePath in transformedFiles:
+                    if curr_user in filePath.split("/")[-1]:
+                        test_paths.append(filePath)
+                        test_labels.append(getLabels([filePath])[0])
+                    else:
+                        train_paths.append(filePath)
+                        train_labels.append(getLabels([filePath])[0])
+                
+                print(f'Number of elements in train_paths = {str(len(train_paths))}')
+                print(f'Number of elements in test_paths = {str(len(test_paths))}')
+                
+                writeFiles(train_paths, train_labels, test_paths, test_labels)
+                all_results.append(train(args.config_path))    
             
 
     elif args.test_type == 'cross_val':
