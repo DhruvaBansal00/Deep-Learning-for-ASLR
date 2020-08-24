@@ -71,7 +71,7 @@ if __name__ == '__main__':
     parser.add_argument('--n_jobs', default=1, type=int)
     parser.add_argument('--parallel', action='store_true')
     parser.add_argument('--multiple_classifiers', action='store_true')
-    parser.add_argument('--knn_neighbors', default=50)
+    parser.add_argument('--knn_neighbors', default=70)
     parser.add_argument('--pca_components', default=92)
     parser.add_argument('--no_pca', action='store_true')
     args = parser.parse_args()

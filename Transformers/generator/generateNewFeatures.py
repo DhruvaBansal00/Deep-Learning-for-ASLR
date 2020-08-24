@@ -64,7 +64,7 @@ def generateFeatures(resultFile: str, arkFolder: str, classifier: str, include_s
     all_data_frames = []
     curr_index = 0
 
-    print(f'Transforming and PCAing .ark files')
+    print(f'Transforming .ark files')
     
     for arkFile in tqdm.tqdm(arkFiles):
         curr_content = read_ark_files(arkFile)
@@ -73,9 +73,9 @@ def generateFeatures(resultFile: str, arkFolder: str, classifier: str, include_s
         curr_index += len(curr_content)
     
     if not no_pca:
+        print(f'PCAing .ark files')
         pca = PCA(n_components=pca_components)
-        reduced_all_data_frames = pca.fit_transform(all_data_frames)
+        all_data_frames = pca.fit_transform(all_data_frames)
 
-    
     print(f'Writing .ark files to {generated_features_folder}')
-    createNewArkFiles(reduced_all_data_frames, arkFileData, generated_features_folder)
+    createNewArkFiles(all_data_frames, arkFileData, generated_features_folder)
