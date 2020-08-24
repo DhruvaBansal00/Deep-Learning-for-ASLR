@@ -284,6 +284,8 @@ class TrainManager:
         leftover_batch_size = len(
             train_data) % (self.batch_multiplier * self.batch_size)
 
+        del(train_data)
+
         for epoch_no in range(self.epochs):
             self.logger.info("EPOCH %d", epoch_no + 1)
 
@@ -620,9 +622,10 @@ def train(cfg_file: str) -> None:
 
     # set the random seed
     set_seed(seed=cfg["training"].get("random_seed", 42))
-    
+
+    print(f'Loading data...')
     # load the data
-    train_data, dev_data, test_data, trg_vocab = load_data(data_cfg=cfg["data"])
+    train_data, dev_data, _, trg_vocab = load_data(data_cfg=cfg["data"], get_test = False)
 
     print(f'dev data details = {str(len(dev_data[0]))} and {str(len(dev_data[1]))}')
 
