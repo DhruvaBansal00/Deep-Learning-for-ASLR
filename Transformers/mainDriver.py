@@ -77,7 +77,7 @@ if __name__ == '__main__':
     args = parser.parse_args()
     ###################################################################
 
-    print("Version 0.0.2")
+    print("Version 0.0.3")
 
     cross_val_methods = {'kfold': (KFold, False),
                          'leave_one_phrase_out': (LeaveOneGroupOut(), True),
