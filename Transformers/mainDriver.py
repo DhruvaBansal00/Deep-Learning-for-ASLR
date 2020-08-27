@@ -19,12 +19,12 @@ def writeFiles(trainPaths, trainLabels, testPaths, testLabels):
     trainFiles = "\n".join(trainPaths)
     testFiles = "\n".join(testPaths)
 
-    trainPathFile = open('../data/lists/train.data', 'w')
-    trainLabelFile = open('../data/lists/train.en', 'w')
-    devPathFile = open('../data/lists/dev.data', 'w')
-    devLabelFile = open('../data/lists/dev.en', 'w')
-    testPathFile = open('../data/lists/test.data', 'w')
-    testLabelFile = open('../data/lists/test.en', 'w')
+    trainPathFile = open(f'../data/{args.feature_extractor}/lists/train.data', 'w')
+    trainLabelFile = open(f'../data/{args.feature_extractor}/lists/train.en', 'w')
+    devPathFile = open(f'../data/{args.feature_extractor}/lists/dev.data', 'w')
+    devLabelFile = open(f'../data/{args.feature_extractor}/lists/dev.en', 'w')
+    testPathFile = open(f'../data/{args.feature_extractor}/lists/test.data', 'w')
+    testLabelFile = open(f'../data/{args.feature_extractor}/lists/test.en', 'w')
 
     trainPathFile.write(trainFiles)
     devPathFile.write(testFiles)
@@ -74,6 +74,7 @@ if __name__ == '__main__':
     parser.add_argument('--knn_neighbors', default=70)
     parser.add_argument('--pca_components', default=92)
     parser.add_argument('--no_pca', action='store_true')
+    parser.add_argument('--feature_extractor', default='mediapipe')    
     args = parser.parse_args()
     ###################################################################
 
@@ -87,11 +88,11 @@ if __name__ == '__main__':
     cross_val_method, use_groups = cross_val_methods[args.cross_val_method]
 
     if len(args.users) == 0:
-        ark_filepaths = glob.glob('../data/ark/*ark')
+        ark_filepaths = glob.glob(f'../data/{args.feature_extractor}/ark/*ark')
     else:
         ark_filepaths = []
         for user in args.users:
-            ark_filepaths.extend(glob.glob(os.path.join("../data/ark", '*{}*.ark'.format(user))))
+            ark_filepaths.extend(glob.glob(os.path.join(f"../data/{args.feature_extractor}/ark", '*{}*.ark'.format(user))))
     
     ark_labels = getLabels(ark_filepaths)
     dataset_users = getUsers(ark_filepaths)
@@ -146,18 +147,18 @@ if __name__ == '__main__':
 
             print(f'Current user = {curr_user}')
 
-            curr_alignment_file = glob.glob(f'../data/alignment/{curr_user}/*.mlf')[-1]
+            curr_alignment_file = glob.glob(f'../data/{args.feature_extractor}/alignment/{curr_user}/*.mlf')[-1]
 
             if args.create_transform_files:
 
                 print(f'Starting feature generation')
 
-                generateFeatures(curr_alignment_file, "../data/ark/", classifier=args.classifier, include_state=args.include_state, 
+                generateFeatures(curr_alignment_file, f"../data/{args.feature_extractor}/ark/", classifier=args.classifier, include_state=args.include_state, 
                             include_index=args.include_index, n_jobs=args.n_jobs, parallel=args.parallel, trainMultipleClassifiers=args.multiple_classifiers,
-                            knn_neighbors=int(args.knn_neighbors), generated_features_folder=f'../data/transformed/{curr_user}/', pca_components=args.pca_components,
-                            no_pca=args.no_pca)
+                            knn_neighbors=int(args.knn_neighbors), generated_features_folder=f'../data/{args.feature_extractor}/transformed/{curr_user}/', 
+                            pca_components=args.pca_components, no_pca=args.no_pca)
             else: 
-                transformedFiles = glob.glob(f'../data/transformed/{curr_user}/*.ark')
+                transformedFiles = glob.glob(f'../data/{args.feature_extractor}/transformed/{curr_user}/*.ark')
                 train_paths = []
                 train_labels = []
                 test_paths = []

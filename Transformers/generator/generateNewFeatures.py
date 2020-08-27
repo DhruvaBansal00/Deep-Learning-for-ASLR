@@ -66,7 +66,7 @@ def generateFeatures(resultFile: str, arkFolder: str, classifier: str, include_s
 
     print(f'Transforming .ark files')
     
-    for arkFile in tqdm.tqdm(arkFiles):
+    for arkFile in tqdm.tqdm(arkFiles[:100]):
         curr_content = read_ark_files(arkFile)
         arkFileData[arkFile] = [curr_index, curr_index + len(curr_content)]
         all_data_frames.extend(trainedClassifier.getTransformedFeatures(curr_content, parallel, n_jobs))
@@ -76,6 +76,7 @@ def generateFeatures(resultFile: str, arkFolder: str, classifier: str, include_s
         print(f'PCAing .ark files')
         pca = PCA(n_components=pca_components)
         all_data_frames = pca.fit_transform(all_data_frames)
+        print(all_data_frames)
 
     print(f'Writing .ark files to {generated_features_folder}')
     createNewArkFiles(all_data_frames, arkFileData, generated_features_folder)
