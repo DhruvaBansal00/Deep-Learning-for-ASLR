@@ -65,7 +65,7 @@ def get_dataset(file_list: str, max_src_length: int, max_trg_length: int) -> obj
     
     return (curr_dataset_floats, curr_dataset_labels)
 
-def load_data(data_cfg: dict, get_test: bool = True) -> (object, object, Optional[object], Vocabulary):
+def load_data(data_cfg: dict, get_test: bool = True, trg_vocab: object = None) -> (object, object, Optional[object], Vocabulary):
     src_lang = data_cfg["src"]
     train_path = data_cfg["train"]
     dev_path = data_cfg["dev"]
@@ -77,30 +77,35 @@ def load_data(data_cfg: dict, get_test: bool = True) -> (object, object, Optiona
     trg_min_freq = data_cfg.get("trg_voc_min_freq", 1)
 
     trg_vocab_file = data_cfg.get("trg_vocab", None)
-    print(f'Getting train data...')
-    train_data = get_dataset(train_path+"."+src_lang, max_src_length, max_trg_length)
-
-    trg_vocab = build_vocab(field="trg", min_freq=trg_min_freq,
-                            max_size=trg_max_size,
-                            dataset=train_data, vocab_file=trg_vocab_file)
-    
-    print(f'Getting dev data...')
-    dev_data = get_dataset(dev_path+"."+src_lang, max_src_length, max_trg_length)
-    
+    train_data = None
+    dev_data = None
     test_data = None
+
+    if trg_vocab is None:
+        print(f'Getting train data...')
+        train_data = get_dataset(train_path+"."+src_lang, max_src_length, max_trg_length)
+
+        trg_vocab = build_vocab(field="trg", min_freq=trg_min_freq,
+                                max_size=trg_max_size,
+                                dataset=train_data, vocab_file=trg_vocab_file)
+    
+        print(f'Getting dev data...')
+        dev_data = get_dataset(dev_path+"."+src_lang, max_src_length, max_trg_length)
+        
+        print(f'Generating train labels')
+        train_data_labels = label_to_int(train_data[1], trg_vocab)
+        train_data = (train_data[0], train_data_labels)
+
+        print(f'Generating test labels')
+        dev_data_labels = label_to_int(dev_data[1], trg_vocab)
+        dev_data = (dev_data[0], dev_data_labels)
+    
     if test_path is not None and get_test:
         print(f'Getting test data...')
         test_data = get_dataset(test_path+"."+src_lang, max_src_length, max_trg_length)
         test_data_labels = label_to_int(test_data[1], trg_vocab)
         test_data = (test_data[0], test_data_labels)
     
-    print(f'Generating train labels')
-    train_data_labels = label_to_int(train_data[1], trg_vocab)
-    train_data = (train_data[0], train_data_labels)
-
-    print(f'Generating test labels')
-    dev_data_labels = label_to_int(dev_data[1], trg_vocab)
-    dev_data = (dev_data[0], dev_data_labels)
 
     return train_data, dev_data, test_data, trg_vocab
     

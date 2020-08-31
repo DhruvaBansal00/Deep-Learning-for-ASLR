@@ -183,7 +183,8 @@ def test(cfg_file,
          ckpt: str,
          output_path: str = None,
          save_attention: bool = False,
-         logger: Logger = None) -> None:
+         logger: Logger = None, 
+         trg_vocab: object = None) -> None:
     """
     Main test function. Handles loading a model from checkpoint, generating
     translations and storing them and attention plots.
@@ -225,8 +226,7 @@ def test(cfg_file,
     max_output_length = cfg["training"].get("max_output_length", None)
 
     # load the data
-    _, dev_data, test_data, trg_vocab = load_data(
-        data_cfg=cfg["data"])
+    _, _, test_data, trg_vocab = load_data(data_cfg=cfg["data"], trg_vocab=trg_vocab)
 
     data_to_predict = {"test": test_data}
 

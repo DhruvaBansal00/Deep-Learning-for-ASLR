@@ -659,7 +659,7 @@ def train(cfg_file: str) -> None:
     ckpt = "{}/{}.ckpt".format(trainer.model_dir, trainer.best_ckpt_iteration)
     output_name = "{:08d}.hyps".format(trainer.best_ckpt_iteration)
     output_path = os.path.join(trainer.model_dir, output_name)
-    return test(cfg_file, ckpt=ckpt, output_path=output_path, logger=trainer.logger)
+    return test(cfg_file, ckpt=ckpt, output_path=output_path, logger=trainer.logger, trg_vocab=trg_vocab)
 
 
 if __name__ == "__main__":
